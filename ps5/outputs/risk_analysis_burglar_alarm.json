@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-08-07T10:01:29.558940Z",
+  "source_bom": "bom_burglar_alarm.csv",
+  "summary": {
+    "total_parts": 8,
+    "total_component_count": 12,
+    "critical_count": 1,
+    "high_count": 2,
+    "medium_count": 0,
+    "low_count": 5,
+    "average_risk_score": 0.342,
+    "overall_bom_risk_band": "Critical",
+    "average_confidence_score": 0.95
+  },
+  "parts": [
+    {
+      "part_number": "REED-SW-14MM",
+      "references": [
+        "SW1"
+      ],
+      "raw_reference_str": "SW1",
+      "qty": 1,
+      "lifecycle_status": "Obsolete",
+      "lead_time_weeks": 52,
+      "stock": 0,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 1.0,
+      "risk_band": "Critical",
+      "risk_reasons": [
+        "Lifecycle: Obsolete part status",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (52 weeks)",
+        "Inventory: Zero stock available in supply chain",
+        "Criticality: High business/system impact",
+        "OVERRIDE: Obsolete + single-sourced (catastrophic supply bottleneck)",
+        "OVERRIDE: Zero stock + long lead time (>20 weeks)",
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 1.0
+    },
+    {
+      "part_number": "ATMEL-ATTINY85-20PU",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 26,
+      "stock": 150,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 0.837,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (26 weeks)",
+        "Criticality: High business/system impact",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)",
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 0.837
+    },
+    {
+      "part_number": "BUZZER-5V-ACTIVE",
+      "references": [
+        "BZ1"
+      ],
+      "raw_reference_str": "BZ1",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 16,
+      "stock": 450,
+      "has_second_source": false,
+      "criticality": "Medium",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.8,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Sourcing: Single-sourced component (no second source)",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)"
+      ],
+      "exposure_score": 0.8
+    },
+    {
+      "part_number": "LM7805CT",
+      "references": [
+        "U2"
+      ],
+      "raw_reference_str": "U2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 12000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "RES-10K-0201",
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "raw_reference_str": "R1-R4",
+      "qty": 4,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 500000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.062
+    },
+    {
+      "part_number": "CAP-100NF-0603",
+      "references": [
+        "C1",
+        "C2"
+      ],
+      "raw_reference_str": "C1-C2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 900000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "1N4007",
+      "references": [
+        "D1"
+      ],
+      "raw_reference_str": "D1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 100000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.015
+    },
+    {
+      "part_number": "LED-5MM-RED",
+      "references": [
+        "D2"
+      ],
+      "raw_reference_str": "D2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 250000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.008
+    }
+  ]
+}

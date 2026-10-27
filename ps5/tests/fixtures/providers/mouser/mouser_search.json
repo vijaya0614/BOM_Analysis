@@ -1,0 +1,38 @@
+{
+  "SearchResults": {
+    "NumberOfResult": 1,
+    "Parts": [
+      {
+        "Availability": "248 In Stock",
+        "AvailabilityInStock": "248",
+        "DataSheetUrl": "https://www.ti.com/lit/ds/symlink/tps65217.pdf",
+        "Description": "Power Management Specialized - PMIC Single Chip PM",
+        "Category": "Power Management ICs",
+        "LeadTime": "16 Weeks",
+        "LifecycleStatus": "New Product",
+        "Manufacturer": "Texas Instruments",
+        "ManufacturerPartNumber": "TPS65217C",
+        "Min": "1",
+        "Mult": "1",
+        "MouserPartNumber": "595-TPS65217CRSLR",
+        "ProductDetailUrl": "https://www.mouser.com/ProductDetail/Texas-Instruments/TPS65217CRSLR",
+        "ROHSStatus": "RoHS Compliant",
+        "SuggestedReplacement": "",
+        "PriceBreaks": [
+          {
+            "Quantity": 1,
+            "Price": "$4.21",
+            "Currency": "USD"
+          }
+        ],
+        "ProductAttributes": [
+          {
+            "AttributeName": "Package / Case",
+            "AttributeValue": "VQFN-48"
+          }
+        ]
+      }
+    ]
+  },
+  "Errors": []
+}

@@ -1,0 +1,4 @@
+snapshot_id,component_model_id,vendor_id,timestamp,stock_quantity,stock_status,lead_time_days,unit_price,currency,region,source,data_provenance
+snap_3481828a66b2,mdl_48134fac2009,vnd_mouser_electronics_in_in,2026-08-24T15:28:20Z,0,None,112,389.49,INR,IN,mouser,REAL_DISTRIBUTOR_DATA
+snap_0f67d8a76b23,mdl_2506cb41cc8b,vnd_mouser_electronics_in_in,2026-08-24T16:28:32Z,,,70,,INR,IN,mouser,REAL_DISTRIBUTOR_DATA
+snap_0b313806edd4,mdl_b0540d9c92f0,vnd_mouser_electronics_in_in,2026-08-24T16:29:29Z,137,137 In Stock,0,54.98,INR,IN,mouser,REAL_DISTRIBUTOR_DATA

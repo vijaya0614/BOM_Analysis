@@ -1,0 +1,4 @@
+vendor_record_id,component_model_id,vendor_id,vendor_part_number,region,country,stock_quantity,stock_status,lead_time_days,moq,unit_price,currency,authorized,last_updated,retrieved_at,expires_at,retrieval_state,provider,source_id,data_provenance,confidence
+vs_d00bcf107a3b,mdl_48134fac2009,vnd_mouser_electronics_in_in,595-TPS65217CRSLRG4,IN,IN,0,None,112,2500,389.49,INR,True,2026-08-24T15:28:20Z,2026-08-24T15:28:20Z,,LIVE,mouser,src_19ab020fbf4a,REAL_DISTRIBUTOR_DATA,MEDIUM
+vs_c78f82e9c5da,mdl_2506cb41cc8b,vnd_mouser_electronics_in_in,649-10118241-001RLF,IN,IN,,,70,8000,,INR,True,2026-08-24T16:28:32Z,2026-08-24T16:28:32Z,,LIVE,mouser,src_134e8abf22e7,REAL_DISTRIBUTOR_DATA,MEDIUM
+vs_ece37cdef97e,mdl_b0540d9c92f0,vnd_mouser_electronics_in_in,534-1839,IN,IN,137,137 In Stock,0,1,54.98,INR,True,2026-08-24T16:29:29Z,2026-08-24T16:29:29Z,,LIVE,mouser,src_aff658a0004a,REAL_DISTRIBUTOR_DATA,MEDIUM

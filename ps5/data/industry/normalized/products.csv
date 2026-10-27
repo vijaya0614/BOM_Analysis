@@ -1,0 +1,9 @@
+product_id,product_name,manufacturer,product_family,description,source_id
+beaglebone-black,BeagleBone Black,BeagleBoard.org,BeagleBone,Open BeagleBone Black single-board computer,src_47947c77e80b
+beaglebone-black-wireless,BeagleBone Black Wireless,BeagleBoard.org,BeagleBone,BeagleBone Black Wireless,src_pipeline_repair_idempotent
+beaglebone-ai,BeagleBone AI,BeagleBoard.org,BeagleBone,BeagleBone AI,src_12f0c5900970
+ti-tida-00222,TI TIDA-00222,Texas Instruments,TI Reference Design,TIDA-00222 reference design,src_d7f6807f2a97
+ti-tidep-0050,TI TIDEP0050,Texas Instruments,TI Reference Design,TIDEP0050 reference design,src_a3481b770b06
+tidri18,Tidri18,,Imported industry design,Automatically identified from imported source material,src_f105d69ffefa
+tidu430,Tidu430,,Imported industry design,Automatically identified from imported source material,src_40f72e67a68a
+tidual5,Tidual5,,Imported industry design,Automatically identified from imported source material,src_de57b597e5bb

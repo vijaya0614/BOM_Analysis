@@ -1,0 +1,310 @@
+{
+  "generated_at": "2026-08-08T06:02:10.836811Z",
+  "source_bom": "bom_mini_smart_cooling_controller.csv",
+  "summary": {
+    "total_parts": 10,
+    "total_component_count": 12,
+    "critical_count": 0,
+    "high_count": 1,
+    "medium_count": 0,
+    "low_count": 9,
+    "average_risk_score": 0.105,
+    "overall_bom_risk_band": "High",
+    "average_confidence_score": 0.86,
+    "total_bom_unit_cost_usd": 8.58,
+    "total_financial_exposure_usd": 2.8
+  },
+  "parts": [
+    {
+      "part_number": "ESP32-WROOM-32U",
+      "references": [
+        "U2"
+      ],
+      "raw_reference_str": "U2",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 12,
+      "stock": 4200,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": false,
+      "unit_cost_usd": 3.2,
+      "financial_exposure_usd": 2.56,
+      "taxonomy_category": "Microcontroller / SoC",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.8,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Sourcing: Single-sourced component (no second source)",
+        "Criticality: High business/system impact",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)"
+      ],
+      "exposure_score": 0.8
+    },
+    {
+      "part_number": "REG-5V-BUCK-01",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 25000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 1.0,
+      "financial_exposure_usd": 0.05,
+      "taxonomy_category": "General Component",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.7,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Synthesized default profile based on general component taxonomy"
+      ],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "TEMP-DIG-01",
+      "references": [
+        "U3"
+      ],
+      "raw_reference_str": "U3",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 25000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 1.0,
+      "financial_exposure_usd": 0.05,
+      "taxonomy_category": "General Component",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.7,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Synthesized default profile based on general component taxonomy"
+      ],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "NMOS-FAN-01",
+      "references": [
+        "Q1"
+      ],
+      "raw_reference_str": "Q1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 25000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 1.0,
+      "financial_exposure_usd": 0.05,
+      "taxonomy_category": "General Component",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.7,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Synthesized default profile based on general component taxonomy"
+      ],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "FAN-12V-40MM",
+      "references": [
+        "FAN1"
+      ],
+      "raw_reference_str": "FAN1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 25000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 1.0,
+      "financial_exposure_usd": 0.05,
+      "taxonomy_category": "General Component",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.7,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Synthesized default profile based on general component taxonomy"
+      ],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "TERM-BLOCK-5MM-2P",
+      "references": [
+        "J1"
+      ],
+      "raw_reference_str": "J1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 4,
+      "stock": 45000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 1.2,
+      "financial_exposure_usd": 0.04,
+      "taxonomy_category": "Electromechanical / Connector / Display",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.85,
+      "risk_score": 0.031,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Inferred from Connector/Display taxonomy"
+      ],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "CAP-100NF-0603",
+      "references": [
+        "C1",
+        "C2"
+      ],
+      "raw_reference_str": "C1-C2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 736848,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.03,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "RES-10K-0805",
+      "references": [
+        "R1",
+        "R2"
+      ],
+      "raw_reference_str": "R1-R2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 433459,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 0.01,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.99,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [criticality] via Inferred from Standard Passive/Discrete component taxonomy (multi-sourced, high stock)"
+      ],
+      "exposure_score": 0.015
+    },
+    {
+      "part_number": "LED-5MM-RED",
+      "references": [
+        "D1"
+      ],
+      "raw_reference_str": "D1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 260846,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.05,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.008
+    },
+    {
+      "part_number": "LED-5MM-BLUE",
+      "references": [
+        "D2"
+      ],
+      "raw_reference_str": "D2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 341754,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.05,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.008
+    }
+  ]
+}

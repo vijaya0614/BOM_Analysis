@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-08-23T05:46:09.361488Z",
+  "source_bom": "bom_burglar_alarm.csv",
+  "summary": {
+    "total_parts": 8,
+    "total_component_count": 12,
+    "critical_count": 3,
+    "high_count": 0,
+    "medium_count": 0,
+    "low_count": 5,
+    "average_risk_score": 0.391,
+    "overall_bom_risk_band": "Critical",
+    "average_confidence_score": 0.97,
+    "total_bom_unit_cost_usd": 10.04,
+    "total_financial_exposure_usd": 8.79
+  },
+  "parts": [
+    {
+      "part_number": "REED-SW-14MM",
+      "references": [
+        "SW1"
+      ],
+      "raw_reference_str": "SW1",
+      "qty": 1,
+      "lifecycle_status": "Obsolete",
+      "lead_time_weeks": 48,
+      "stock": 0,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": true,
+      "unit_cost_usd": 4.5,
+      "financial_exposure_usd": 4.5,
+      "taxonomy_category": "Legacy / EOL Component",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.95,
+      "risk_score": 1.0,
+      "risk_band": "Critical",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Matched EOL/Obsolete component taxonomy",
+        "Data Completeness Warning: incomplete supply-chain attributes",
+        "Lifecycle: Obsolete part status",
+        "Obsolescence: Weibull 5-year conditional probability 100.0% (Fuzzy AHP hybrid)",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (48 weeks)",
+        "Inventory: Zero stock available in supply chain",
+        "Criticality: High business/system impact",
+        "OVERRIDE: Obsolete + single-sourced (catastrophic supply bottleneck)",
+        "OVERRIDE: Zero stock + long lead time (>20 weeks)"
+      ],
+      "exposure_score": 1.0,
+      "obsolescence_probability_5y": 1.0
+    },
+    {
+      "part_number": "ATMEL-ATTINY85-20PU",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 26,
+      "stock": 150,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": false,
+      "unit_cost_usd": 1.95,
+      "financial_exposure_usd": 1.78,
+      "taxonomy_category": "NRND Legacy Microcontroller/IC",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.91,
+      "risk_band": "Critical",
+      "risk_reasons": [
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Obsolescence: Weibull 5-year conditional probability 82.0% (Fuzzy AHP hybrid)",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (26 weeks)",
+        "Criticality: High business/system impact",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)"
+      ],
+      "exposure_score": 0.91,
+      "obsolescence_probability_5y": 0.82
+    },
+    {
+      "part_number": "BUZZER-5V-ACTIVE",
+      "references": [
+        "BZ1"
+      ],
+      "raw_reference_str": "BZ1",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 26,
+      "stock": 450,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": true,
+      "unit_cost_usd": 2.8,
+      "financial_exposure_usd": 2.46,
+      "taxonomy_category": "NRND Legacy Microcontroller/IC",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.9,
+      "risk_score": 0.879,
+      "risk_band": "Critical",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Matched NRND (Not Recommended for New Designs) series",
+        "Data Completeness Warning: incomplete supply-chain attributes",
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Obsolescence: Weibull 5-year conditional probability 82.0% (Fuzzy AHP hybrid)",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (26 weeks)",
+        "Criticality: High business/system impact",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)"
+      ],
+      "exposure_score": 0.879,
+      "obsolescence_probability_5y": 0.82
+    },
+    {
+      "part_number": "LM7805CT",
+      "references": [
+        "U2"
+      ],
+      "raw_reference_str": "U2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 12000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.45,
+      "financial_exposure_usd": 0.04,
+      "taxonomy_category": "Power IC / Voltage Regulator",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.091,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Obsolescence: Weibull 5-year conditional probability 12.3% (Fuzzy AHP hybrid)"
+      ],
+      "exposure_score": 0.091,
+      "obsolescence_probability_5y": 0.1225
+    },
+    {
+      "part_number": "RES-10K-0201",
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "raw_reference_str": "R1-R4",
+      "qty": 4,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 500000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 0.05,
+      "financial_exposure_usd": 0.01,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.95,
+      "risk_score": 0.064,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [lifecycle_status, lead_time_weeks, stock, has_second_source, criticality] via Inferred from Standard Passive/Discrete component taxonomy (multi-sourced, high stock)",
+        "Data Completeness Warning: incomplete supply-chain attributes",
+        "Obsolescence: Weibull 5-year conditional probability 12.3% (Fuzzy AHP hybrid)"
+      ],
+      "exposure_score": 0.255,
+      "obsolescence_probability_5y": 0.1225
+    },
+    {
+      "part_number": "CAP-100NF-0603",
+      "references": [
+        "C1",
+        "C2"
+      ],
+      "raw_reference_str": "C1-C2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 736848,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.03,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.064,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Obsolescence: Weibull 5-year conditional probability 12.3% (Fuzzy AHP hybrid)"
+      ],
+      "exposure_score": 0.128,
+      "obsolescence_probability_5y": 0.1225
+    },
+    {
+      "part_number": "1N4007",
+      "references": [
+        "D1"
+      ],
+      "raw_reference_str": "D1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 100000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "unit_cost_usd": 0.03,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.99,
+      "risk_score": 0.064,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Dynamic Taxonomy Synthesis: Inferred missing signals [criticality] via Inferred from Standard Passive/Discrete component taxonomy (multi-sourced, high stock)",
+        "Data Completeness Warning: incomplete supply-chain attributes",
+        "Obsolescence: Weibull 5-year conditional probability 12.3% (Fuzzy AHP hybrid)"
+      ],
+      "exposure_score": 0.064,
+      "obsolescence_probability_5y": 0.1225
+    },
+    {
+      "part_number": "LED-5MM-RED",
+      "references": [
+        "D2"
+      ],
+      "raw_reference_str": "D2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 260846,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "unit_cost_usd": 0.05,
+      "financial_exposure_usd": 0.0,
+      "taxonomy_category": "Passive / Discrete Semiconductor",
+      "is_dynamically_inferred": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.057,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Obsolescence: Weibull 5-year conditional probability 12.3% (Fuzzy AHP hybrid)"
+      ],
+      "exposure_score": 0.057,
+      "obsolescence_probability_5y": 0.1225
+    }
+  ]
+}

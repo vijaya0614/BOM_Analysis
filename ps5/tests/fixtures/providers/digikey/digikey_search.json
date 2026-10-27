@@ -1,0 +1,37 @@
+{
+  "details": {
+    "Product": {
+      "ManufacturerProductNumber": "TPS65217C",
+      "Manufacturer": {
+        "Name": "Texas Instruments"
+      },
+      "Description": {
+        "ProductDescription": "IC PMIC POWER MANAGEMENT 48VQFN"
+      },
+      "Category": {
+        "Name": "Power Management (PMIC)"
+      },
+      "PackageType": {
+        "Name": "48-VQFN"
+      },
+      "PrimaryDatasheet": "https://www.ti.com/lit/ds/symlink/tps65217.pdf",
+      "ProductStatus": {
+        "Status": "Active"
+      },
+      "Parameters": [
+        {
+          "ParameterText": "Operating Temperature",
+          "ValueText": "-40°C ~ 105°C"
+        },
+        {
+          "ParameterText": "Input Voltage",
+          "ValueText": "2.7V ~ 5.8V"
+        },
+        {
+          "ParameterText": "Package / Case",
+          "ValueText": "48-VQFN"
+        }
+      ]
+    }
+  }
+}

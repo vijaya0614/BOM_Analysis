@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOM Risk Analysis Engine | Supply Chain Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">B</div>
+        <div class="brand-text">
+          <h1>BOM Risk Sentinel</h1>
+          <span class="badge-tag">Hackathon Edition</span>
+        </div>
+      </div>
+      <div class="header-controls">
+        <label for="projectSelector" class="control-label">Sample Project:</label>
+        <select id="projectSelector" class="select-dropdown">
+          <option value="industrial_iot">Industrial IoT Gateway (25 components)</option>
+          <option value="drone_controller">Smart Drone Flight Controller (30 components)</option>
+          <option value="medical_oximeter">Medical Oximeter (20 components)</option>
+          <option value="burglar_alarm">Burglar Alarm System (12 components)</option>
+          <option value="fan_controller">Mini Fan Controller (13 components)</option>
+          <option value="touch_lamp">Touch Sensor Lamp (30 components)</option>
+          <option value="water_level">Water Level Indicator (20 components)</option>
+        </select>
+        <button id="uploadBtn" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Upload Custom BOM
+        </button>
+        <input type="file" id="csvFileInput" accept=".csv" style="display:none">
+      </div>
+    </header>
+
+    <main class="dashboard-body">
+      <section class="metrics-grid">
+        <div class="metric-card card-glass" id="cardOverallRisk">
+          <div class="metric-header">
+            <span class="metric-title">Overall BOM Risk</span>
+            <span class="metric-icon" id="iconOverall">!</span>
+          </div>
+          <div class="metric-value" id="valOverallBand">CRITICAL</div>
+          <div class="metric-sub" id="subOverallScore">Max Risk Score: 1.000 / 1.000</div>
+        </div>
+
+        <div class="metric-card card-glass">
+          <div class="metric-header">
+            <span class="metric-title">Average Risk Score</span>
+            <span class="metric-icon">%</span>
+          </div>
+          <div class="metric-value" id="valAvgScore">0.342</div>
+          <div class="progress-bar-bg"><div class="progress-bar-fill" id="barAvgScore" style="width: 34%;"></div></div>
+        </div>
+
+        <div class="metric-card card-glass">
+          <div class="metric-header">
+            <span class="metric-title">Data Completeness</span>
+            <span class="metric-icon">?</span>
+          </div>
+          <div class="metric-value" id="valCompleteness">95%</div>
+          <div class="metric-sub" id="subCompleteness">Confidence Rate across Signals</div>
+        </div>
+
+        <div class="metric-card card-glass">
+          <div class="metric-header">
+            <span class="metric-title">BOM Volume</span>
+            <span class="metric-icon">#</span>
+          </div>
+          <div class="metric-value" id="valTotalParts">8 Lines</div>
+          <div class="metric-sub" id="subTotalUnits">12 Physical Components</div>
+        </div>
+      </section>
+
+      <section class="distribution-section card-glass">
+        <div class="section-title">
+          <h2>Risk Band Distribution</h2>
+          <div class="view-toggle">
+            <button class="toggle-btn active" id="btnSortSeverity">Sort by Severity</button>
+            <button class="toggle-btn" id="btnSortExposure">Sort by Business Exposure</button>
+          </div>
+        </div>
+
+        <div class="band-pills">
+          <div class="band-pill critical" id="pillCritical">Critical: 1</div>
+          <div class="band-pill high" id="pillHigh">High: 2</div>
+          <div class="band-pill medium" id="pillMedium">Medium: 0</div>
+          <div class="band-pill low" id="pillLow">Low: 5</div>
+        </div>
+
+        <div class="distribution-bar">
+          <div class="dist-segment critical" id="segCritical" style="width: 12.5%;"></div>
+          <div class="dist-segment high" id="segHigh" style="width: 25%;"></div>
+          <div class="dist-segment medium" id="segMedium" style="width: 0%;"></div>
+          <div class="dist-segment low" id="segLow" style="width: 62.5%;"></div>
+        </div>
+      </section>
+
+      <section class="table-controls card-glass">
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="Search by MPN, designator, or reason...">
+        </div>
+        <div class="filter-chips">
+          <button class="chip active" data-band="ALL">All Bands</button>
+          <button class="chip chip-critical" data-band="Critical">Critical</button>
+          <button class="chip chip-high" data-band="High">High</button>
+          <button class="chip chip-medium" data-band="Medium">Medium</button>
+          <button class="chip chip-low" data-band="Low">Low</button>
+        </div>
+      </section>
+
+      <section class="table-section card-glass">
+        <div class="table-container">
+          <table class="risk-table">
+            <thead>
+              <tr>
+                <th>Part Number</th>
+                <th>References</th>
+                <th>Qty</th>
+                <th>Risk Band</th>
+                <th>Score</th>
+                <th>Exposure Score</th>
+                <th>Confidence</th>
+                <th>Risk Triggers & Compounding Overrides</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

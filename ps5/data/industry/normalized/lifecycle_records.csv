@@ -1,0 +1,3 @@
+lifecycle_id,component_model_id,status,source_status,status_date,announcement_date,last_order_date,last_ship_date,replacement_mpn,pcn_number,support_status,source_id,confidence
+lc_f04a88522c7c,mdl_48134fac2009,UNCONFIRMED,New Product,,,,,,,,src_19ab020fbf4a,MEDIUM
+lc_b9ce8dd373aa,mdl_2506cb41cc8b,UNCONFIRMED,Factory Special Order,,,,,,,,src_134e8abf22e7,MEDIUM

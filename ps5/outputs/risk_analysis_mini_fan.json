@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-08-07T10:01:40.045632Z",
+  "source_bom": "bom_mini_fan_controller.csv",
+  "summary": {
+    "total_parts": 7,
+    "total_component_count": 13,
+    "critical_count": 1,
+    "high_count": 1,
+    "medium_count": 0,
+    "low_count": 5,
+    "average_risk_score": 0.27,
+    "overall_bom_risk_band": "Critical",
+    "average_confidence_score": 0.77
+  },
+  "parts": [
+    {
+      "part_number": "L298N-DRIVER",
+      "references": [
+        "U2"
+      ],
+      "raw_reference_str": "U2",
+      "qty": 1,
+      "lifecycle_status": "Obsolete",
+      "lead_time_weeks": 40,
+      "stock": 0,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 1.0,
+      "risk_band": "Critical",
+      "risk_reasons": [
+        "Lifecycle: Obsolete part status",
+        "Sourcing: Single-sourced component (no second source)",
+        "Lead Time: Extended lead time (40 weeks)",
+        "Inventory: Zero stock available in supply chain",
+        "Criticality: High business/system impact",
+        "OVERRIDE: Obsolete + single-sourced (catastrophic supply bottleneck)",
+        "OVERRIDE: Zero stock + long lead time (>20 weeks)",
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 1.0
+    },
+    {
+      "part_number": null,
+      "references": [
+        "Q1"
+      ],
+      "raw_reference_str": "Q1",
+      "qty": 1,
+      "lifecycle_status": null,
+      "lead_time_weeks": null,
+      "stock": null,
+      "has_second_source": null,
+      "criticality": "Medium",
+      "criticality_derived": true,
+      "missing_fields": [
+        "part_number",
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.0,
+      "risk_score": 0.75,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Missing or unassigned Part Number (TBD placeholder)",
+        "OVERRIDE: Unassigned part number (TBD design placeholder)",
+        "Data Completeness Warning: High uncertainty (6/5 fields missing: part_number, lifecycle_status, lead_time_weeks, stock, has_second_source, criticality)"
+      ],
+      "exposure_score": 0.75
+    },
+    {
+      "part_number": "DHT11-TEMP-HUM",
+      "references": [
+        "SEN1"
+      ],
+      "raw_reference_str": "SEN1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 8,
+      "stock": 3500,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 0.062,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 0.062
+    },
+    {
+      "part_number": "NE555P",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 4,
+      "stock": 50000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.031,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "CAP-100NF-0603",
+      "references": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "raw_reference_str": "C1-C4",
+      "qty": 4,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 900000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.062
+    },
+    {
+      "part_number": "RES-10K-0201",
+      "references": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "raw_reference_str": "R1-R3",
+      "qty": 3,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 500000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "SW-PUSH-6MM",
+      "references": [
+        "SW1",
+        "SW2"
+      ],
+      "raw_reference_str": "SW1-SW2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 65000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 0.031
+    }
+  ]
+}

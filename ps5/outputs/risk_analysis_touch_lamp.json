@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-08-07T10:01:48.332370Z",
+  "source_bom": "bom_touch_sensor_lamp.csv",
+  "summary": {
+    "total_parts": 7,
+    "total_component_count": 30,
+    "critical_count": 0,
+    "high_count": 1,
+    "medium_count": 1,
+    "low_count": 5,
+    "average_risk_score": 0.187,
+    "overall_bom_risk_band": "High",
+    "average_confidence_score": 0.83
+  },
+  "parts": [
+    {
+      "part_number": null,
+      "references": [
+        "U3"
+      ],
+      "raw_reference_str": "U3",
+      "qty": 1,
+      "lifecycle_status": null,
+      "lead_time_weeks": null,
+      "stock": null,
+      "has_second_source": null,
+      "criticality": "Medium",
+      "criticality_derived": true,
+      "missing_fields": [
+        "part_number",
+        "lifecycle_status",
+        "lead_time_weeks",
+        "stock",
+        "has_second_source",
+        "criticality"
+      ],
+      "confidence_score": 0.0,
+      "risk_score": 0.75,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Missing or unassigned Part Number (TBD placeholder)",
+        "OVERRIDE: Unassigned part number (TBD design placeholder)",
+        "Data Completeness Warning: High uncertainty (6/5 fields missing: part_number, lifecycle_status, lead_time_weeks, stock, has_second_source, criticality)"
+      ],
+      "exposure_score": 0.75
+    },
+    {
+      "part_number": "ESP32-WROOM-32U",
+      "references": [
+        "U2"
+      ],
+      "raw_reference_str": "U2",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 12,
+      "stock": 4200,
+      "has_second_source": false,
+      "criticality": "High",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.392,
+      "risk_band": "Medium",
+      "risk_reasons": [
+        "Sourcing: Single-sourced component (no second source)",
+        "Criticality: High business/system impact"
+      ],
+      "exposure_score": 0.392
+    },
+    {
+      "part_number": "TP4056-SOP8",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 8,
+      "stock": 18000,
+      "has_second_source": true,
+      "criticality": "Medium",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.087,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.087
+    },
+    {
+      "part_number": "CAP-10UF-ELECTRO",
+      "references": [
+        "C1",
+        "C2"
+      ],
+      "raw_reference_str": "C1-C2",
+      "qty": 2,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 4,
+      "stock": 150000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.031,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.062
+    },
+    {
+      "part_number": "PHOTO-RES-LDR",
+      "references": [
+        "R13"
+      ],
+      "raw_reference_str": "R13",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 4,
+      "stock": 14000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": true,
+      "missing_fields": [
+        "criticality"
+      ],
+      "confidence_score": 0.8,
+      "risk_score": 0.031,
+      "risk_band": "Low",
+      "risk_reasons": [
+        "Data Completeness Notice: Missing fields [criticality] (assumed default 0.5 risk)"
+      ],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "LED-5MM-RED",
+      "references": [
+        "LED1",
+        "LED2",
+        "LED3",
+        "LED4",
+        "LED5",
+        "LED6",
+        "LED7",
+        "LED8",
+        "LED9",
+        "LED10",
+        "LED11",
+        "LED12"
+      ],
+      "raw_reference_str": "LED1-LED12",
+      "qty": 12,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 250000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.092
+    },
+    {
+      "part_number": "RES-330-0805",
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "raw_reference_str": "R1-R12",
+      "qty": 12,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 600000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.092
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-08-07T10:01:34.059053Z",
+  "source_bom": "bom_water_level_indicator.csv",
+  "summary": {
+    "total_parts": 7,
+    "total_component_count": 20,
+    "critical_count": 0,
+    "high_count": 1,
+    "medium_count": 0,
+    "low_count": 6,
+    "average_risk_score": 0.131,
+    "overall_bom_risk_band": "High",
+    "average_confidence_score": 1.0
+  },
+  "parts": [
+    {
+      "part_number": "BUZZER-5V-ACTIVE",
+      "references": [
+        "BZ1"
+      ],
+      "raw_reference_str": "BZ1",
+      "qty": 1,
+      "lifecycle_status": "NRND",
+      "lead_time_weeks": 16,
+      "stock": 450,
+      "has_second_source": false,
+      "criticality": "Medium",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.8,
+      "risk_band": "High",
+      "risk_reasons": [
+        "Lifecycle: Not Recommended for New Designs (NRND)",
+        "Sourcing: Single-sourced component (no second source)",
+        "OVERRIDE: NRND + single-sourced (imminent obsolescence vulnerability)"
+      ],
+      "exposure_score": 0.8
+    },
+    {
+      "part_number": "LM7805CT",
+      "references": [
+        "U1"
+      ],
+      "raw_reference_str": "U1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 6,
+      "stock": 12000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.046,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "CAP-10UF-ELECTRO",
+      "references": [
+        "C1"
+      ],
+      "raw_reference_str": "C1",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 4,
+      "stock": 150000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.031,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.031
+    },
+    {
+      "part_number": "2N2222A",
+      "references": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5"
+      ],
+      "raw_reference_str": "Q1-Q5",
+      "qty": 5,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 2,
+      "stock": 85000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.015,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.077
+    },
+    {
+      "part_number": "RES-1K-0805",
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "raw_reference_str": "R1-R6",
+      "qty": 6,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 750000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.046
+    },
+    {
+      "part_number": "LED-5MM-GREEN",
+      "references": [
+        "LED1",
+        "LED2",
+        "LED3",
+        "LED4",
+        "LED5"
+      ],
+      "raw_reference_str": "LED1-LED5",
+      "qty": 5,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 200000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.038
+    },
+    {
+      "part_number": "LED-5MM-RED",
+      "references": [
+        "LED6"
+      ],
+      "raw_reference_str": "LED6",
+      "qty": 1,
+      "lifecycle_status": "Active",
+      "lead_time_weeks": 1,
+      "stock": 250000,
+      "has_second_source": true,
+      "criticality": "Low",
+      "criticality_derived": false,
+      "missing_fields": [],
+      "confidence_score": 1.0,
+      "risk_score": 0.008,
+      "risk_band": "Low",
+      "risk_reasons": [],
+      "exposure_score": 0.008
+    }
+  ]
+}

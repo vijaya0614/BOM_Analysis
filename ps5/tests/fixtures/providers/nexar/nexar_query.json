@@ -1,0 +1,49 @@
+{
+  "data": {
+    "supSearchMpn": {
+      "results": [
+        {
+          "part": {
+            "mpn": "TPS65217C",
+            "manufacturer": {
+              "name": "Texas Instruments"
+            },
+            "shortDescription": "Power Management IC for AM335x",
+            "category": {
+              "name": "PMIC"
+            },
+            "specs": [
+              {
+                "attribute": {
+                  "name": "Package / Case"
+                },
+                "displayValue": "48-VQFN"
+              }
+            ],
+            "sellers": [
+              {
+                "company": {
+                  "name": "Digi-Key"
+                },
+                "offers": [
+                  {
+                    "sku": "296-30232-1-ND",
+                    "inventoryLevel": 12500,
+                    "moq": 1,
+                    "prices": [
+                      {
+                        "quantity": 1,
+                        "price": 3.85,
+                        "currency": "USD"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

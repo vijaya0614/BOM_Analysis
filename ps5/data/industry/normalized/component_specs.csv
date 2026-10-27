@@ -1,0 +1,15 @@
+spec_id,component_model_id,parameter_name,nominal_value,min_value,max_value,unit,condition,source_document,source_page,confidence,provenance
+spc_tps65217_dcdc3_vin_min,mdl_48134fac2009,input_voltage_min_v,2.7,2.7,,V,DCDC3 buck VIN_DCDC3 input range,TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I),10,HIGH,Directly read from electrical-characteristics table
+spc_tps65217_dcdc3_vin_max,mdl_48134fac2009,input_voltage_max_v,5.8,,5.8,V,DCDC3 buck VIN_DCDC3 input range,TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I),10,HIGH,Directly read from electrical-characteristics table
+spc_tps65217_dcdc3_iout,mdl_48134fac2009,output_current_a,1.2,,1.2,A,DCDC3 buck continuous output-current range,TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I),10,HIGH,Directly read from electrical-characteristics table
+spc_tps65217_temp_max,mdl_48134fac2009,operating_temperature_max_c,105,,105,C,TPS65217C RSL package ordering table,TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I),84,HIGH,Directly read from TPS65217C ordering table
+spc_tps65218d0_dcdc3_vin_min,mdl_4ba7e403dcf9,input_voltage_min_v,2.7,2.7,,V,DCDC3 buck VIN_DCDC3 input range,TPS65218 Power Management for ARM Cortex-A8/A9 SoCs and FPGA (SLDS206E Rev. E),12,HIGH,Directly read from electrical-characteristics table
+spc_tps65218d0_dcdc3_vin_max,mdl_4ba7e403dcf9,input_voltage_max_v,5.5,,5.5,V,DCDC3 buck VIN_DCDC3 input range,TPS65218 Power Management for ARM Cortex-A8/A9 SoCs and FPGA (SLDS206E Rev. E),12,HIGH,Directly read from electrical-characteristics table
+spc_tps65218d0_dcdc3_iout,mdl_4ba7e403dcf9,output_current_a,1.8,,1.8,A,DCDC3 buck continuous output current,TPS65218 Power Management for ARM Cortex-A8/A9 SoCs and FPGA (SLDS206E Rev. E),12,HIGH,Directly read from electrical-characteristics table
+spc_tps65218d0_temp_max,mdl_4ba7e403dcf9,operating_temperature_max_c,105,,105,C,Device operating temperature range,TPS65218 Power Management for ARM Cortex-A8/A9 SoCs and FPGA (SLDS206E Rev. E),21,HIGH,Directly read from datasheet device overview
+sp_53d99d9b3e65,mdl_48134fac2009,Packaging,Reel,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA
+sp_30384f2478da,mdl_48134fac2009,Standard Pack Qty,2500,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA
+sp_7a3b556b7dab,mdl_2506cb41cc8b,Packaging,Reel,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA
+sp_0555cb546e1c,mdl_2506cb41cc8b,Standard Pack Qty,8000,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA
+sp_f5ea1fbb1c3c,mdl_b0540d9c92f0,Packaging,Bulk,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA
+sp_7971f112c047,mdl_b0540d9c92f0,Standard Pack Qty,1,,,,,mouser,,MEDIUM,REAL_DISTRIBUTOR_DATA

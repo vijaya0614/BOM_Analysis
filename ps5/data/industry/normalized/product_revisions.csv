@@ -1,0 +1,6 @@
+revision_id,product_id,revision,version,release_date,lifecycle_status,source_id
+beaglebone-black-rev-A,beaglebone-black,A,A,,UNKNOWN,src_13085bb549e3
+beaglebone-black-wireless-rev-A,beaglebone-black-wireless,A,A,,UNKNOWN,src_pipeline_repair_idempotent
+beaglebone-ai-rev-A,beaglebone-ai,A,A,,UNKNOWN,src_12f0c5900970
+ti-tida-00222-rev-A,ti-tida-00222,A,A,,UNKNOWN,src_bbfb2a39e2ae
+ti-tidep-0050-rev-A,ti-tidep-0050,A,A,,UNKNOWN,src_eda70b6f2d7d

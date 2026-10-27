@@ -1,0 +1,450 @@
+bom_line_id,product_id,revision_id,subsystem_id,reference_designator,component_type_id,component_model_id,quantity,unit,position,parent_assembly,original_manufacturer,original_mpn,original_description,source_id
+bl_936c5e1dd57d,beaglebone-black,beaglebone-black-rev-A,,U1,type_mpu,mdl_906676bde75c,1,ea,,,Texas Instruments,AM3358BZCZ100,MPU AM335x ARM Cortex-A8 1GHz 324-NFBGA,src_54b8fbf803fd
+bl_343a6ae3bb85,beaglebone-black,beaglebone-black-rev-A,,U2,type_mpu,mdl_48134fac2009,1,ea,,,Texas Instruments,TPS65217C,Power Management IC (PMIC) for AM335x,src_54b8fbf803fd
+bl_63610ddf9518,beaglebone-black,beaglebone-black-rev-A,,U3,type_etc,mdl_fc1ac5a50b3b,1,ea,,,Texas Instruments,TLV70233DBVR,IC REG LINEAR 3.3V 300MA SOT23-5,src_54b8fbf803fd
+bl_d6e4332d8d89,beaglebone-black,beaglebone-black-rev-A,,U4,type_etc,mdl_a5fae0b6ca5c,1,ea,,,Micron Technology,MT41K256M16TW-107:P,IC DRAM 4G BIT PARALLEL 96FBGA,src_54b8fbf803fd
+bl_9917d6eebbe2,beaglebone-black,beaglebone-black-rev-A,,U5,type_etc,mdl_82f053592c4e,1,ea,,,NXP Semiconductors,TDA19988BHN/C1,HDMI Transmitter 64-HVQFN,src_54b8fbf803fd
+bl_955ad44bb33b,beaglebone-black,beaglebone-black-rev-A,,U6,type_etc,mdl_67d79847075c,1,ea,,,Microchip Technology,LAN8710A-EZC,IC TRANSCEIVER FULL 1/1 32QFN,src_54b8fbf803fd
+bl_3538a95446e3,beaglebone-black,beaglebone-black-rev-A,,U7,type_memory,mdl_b2d0a93de673,1,ea,,,Kioxia,THGBMDG5D1LBAIL,IC FLASH 32GBIT EMMC 153WFBGA,src_54b8fbf803fd
+bl_79731e27a09e,beaglebone-black,beaglebone-black-rev-A,,Q1,type_mosfet,mdl_c796cbd7a14b,1,ea,,,Texas Instruments,CSD17308Q3,MOSFET N-CH 30V 42A 8VSON,src_54b8fbf803fd
+bl_d8c138c78696,beaglebone-black,beaglebone-black-rev-A,,R1-R10,type_resistor,mdl_367f5d74ccb0,10,ea,,,Yageo,RC0603FR-0710KL,RES SMD 10K OHM 1% 1/10W 0603,src_54b8fbf803fd
+bl_4608b8d4b402,beaglebone-black,beaglebone-black-rev-A,,C1-C20,type_capacitor,mdl_8f99534a72c2,20,ea,,,Samsung Electro-Mechanics,CL10B104KO8NNNC,CAP CER 0.1UF 16V X7R 0603,src_54b8fbf803fd
+bl_3b91e45bf016,ti-tida-00222,ti-tida-00222-rev-A,,U1,type_mpu,mdl_db5ec9fb834e,1,ea,,,Texas Instruments,AM3359BZCZA80,IC MPU AM335X 800MHZ 324NFBGA,src_bbfb2a39e2ae
+bl_7793194a9d7a,ti-tida-00222,ti-tida-00222-rev-A,,U2,type_etc,mdl_2f2c5450cf2a,1,ea,,,Texas Instruments,DP83867IRRGZ,IC TRANSCEIVER FULL 1/1 48VQFN,src_bbfb2a39e2ae
+bl_b0fafe385d62,ti-tida-00222,ti-tida-00222-rev-A,,U3,type_regulator,mdl_4ba7e403dcf9,1,ea,,,Texas Instruments,TPS65218D0RSLR,IC PMIC POWER MANAGEMENT 48VQFN,src_bbfb2a39e2ae
+bl_94abc5bf25b9,ti-tida-00222,ti-tida-00222-rev-A,,T1,type_transceiver,mdl_0a300e58724d,1,ea,,,Pulse Electronics,HX5008NL,TRANSFORMER ETHERNET GIGABIT 24SMD,src_bbfb2a39e2ae
+bl_0a44aae163b3,ti-tida-00222,ti-tida-00222-rev-A,,U4,type_etc,mdl_e69b1e885b39,1,ea,,,Texas Instruments,SN74LVC1G08DCKR,IC GATE AND 1CH 2-INP SC70-5,src_bbfb2a39e2ae
+bl_4dd1d9586760,ti-tida-00222,ti-tida-00222-rev-A,,U5,type_etc,mdl_96a430c01e02,1,ea,,,Texas Instruments,LM5118MH/NOPB,IC REG CTRLR BUCK-BOOST 20HTSSOP,src_bbfb2a39e2ae
+bl_81e5f2380268,ti-tida-00222,ti-tida-00222-rev-A,,R1-R6,type_resistor,mdl_3b7335cacb4c,6,ea,,,Vishay,CRCW060310K0FKEA,RES SMD 10K OHM 1% 1/10W 0603,src_bbfb2a39e2ae
+bl_bf19fea0dfbd,ti-tida-00222,ti-tida-00222-rev-A,,C1-C10,type_capacitor,mdl_209908b0660f,10,ea,,,KEMET,C0603C104K5RACTU,CAP CER 0.1UF 50V X7R 0603,src_bbfb2a39e2ae
+bl_7c327bed751d,ti-tidep-0050,ti-tidep-0050-rev-A,,U1,type_mpu,mdl_29db61d54065,1,ea,,,Texas Instruments,AM3352BZCZ60,IC MPU AM335X 600MHZ 324NFBGA,src_94310139f92d
+bl_dad1a027b542,ti-tidep-0050,ti-tidep-0050-rev-A,,U2,type_etc,mdl_992f48ad8d8b,1,ea,,,Texas Instruments,DRV8301DCAR,IC GATE DRIVER 3PHASE 56HTSSOP,src_94310139f92d
+bl_9976434d225e,ti-tidep-0050,ti-tidep-0050-rev-A,,Q1-Q6,type_mosfet,mdl_9efb350b41aa,6,ea,,,Texas Instruments,CSD18850Q5B,MOSFET N-CH 60V 100A 8VSON,src_94310139f92d
+bl_0cbdac88ac21,ti-tidep-0050,ti-tidep-0050-rev-A,,U3,type_etc,mdl_c1c5edf21173,1,ea,,,Texas Instruments,INA240A2PWR,IC CURR SENSE 1 CIRCUIT 8TSSOP,src_94310139f92d
+bl_48f6da125f26,ti-tidep-0050,ti-tidep-0050-rev-A,,U4,type_regulator,mdl_9c179efd4ecf,1,ea,,,Texas Instruments,TPS54331D,IC REG BUCK ADJ 3A 8SOIC,src_94310139f92d
+bl_c4ccc989189b,ti-tidep-0050,ti-tidep-0050-rev-A,,U5,type_etc,mdl_f7d065d3f252,1,ea,,,Texas Instruments,ISO7741DW,DGTL ISO 5000VRMS 4CH GP 16SOIC,src_94310139f92d
+bl_ccd378cc93e0,ti-tidep-0050,ti-tidep-0050-rev-A,,R1-R4,type_resistor,mdl_e4242f443603,4,ea,,,Yageo,RC1206FR-0710RL,RES SMD 10 OHM 1% 1/4W 1206,src_94310139f92d
+bl_6f0de163fa14,ti-tidep-0050,ti-tidep-0050-rev-A,,C1-C8,type_capacitor,mdl_240fb2c99cc0,8,ea,,,KEMET,C1206C104K5RACTU,CAP CER 0.1UF 50V X7R 1206,src_94310139f92d
+bl_dae2f5d6ddbb,beaglebone-black,beaglebone-black-rev-A,,U16,type_etc,mdl_6a3515d171ed,1.0,ea,,,TI,SN74LVC1G07DCKR,SMD IC Logic;SC-70-5,src_13085bb549e3
+bl_6a02f95145a5,beaglebone-black,beaglebone-black-rev-A,,P4,type_etc,mdl_031f2df54539,1.0,ea,,,HRS,UX60SC-MB-5ST(80),SMD USB2.0 Mini B Right Angle;5P+4P,src_13085bb549e3
+bl_10e64e6d479e,beaglebone-black,beaglebone-black-rev-A,,R136,type_resistor,mdl_6d2eafcac9bf,1.0,ea,,,YAGEO,RL0805JR-070R1L,SMD RES 0.1R-5%-1/8W;0805,src_13085bb549e3
+bl_d8bcc7f18db7,beaglebone-black,beaglebone-black-rev-A,,J1,type_connector,mdl_25e971bc6356,1.0,ea,,,SINOTOP,ST-PH-254-0087-1*6P-6T,DIP Black Male Header VERT;1*6P-2.54-2.5-11.5/3.0mm,src_13085bb549e3
+bl_2c436d95d147,beaglebone-black,beaglebone-black-rev-A,,"L1,L2,L3",type_etc,mdl_32ab3355ed46,3.0,ea,,,Murata,LQM2HPN2R2MG0L,SMD Inductor 2.2uH-20%-1.3A;2P-2520,src_13085bb549e3
+bl_a7ba4da00c83,beaglebone-black,beaglebone-black-rev-A,,"R2,R13,R15,R16,R18,R28,R31,R32,R35,R36,R38,R39,R40,R41,R42,R43,R44,R167,R168,R169,R170,R171,R172,R173",type_resistor,mdl_8e150740ada0,24.0,ea,,,YAGEO,RC0402JR-0733RL,SMD RES 33R-5%-1/16W;0402,src_13085bb549e3
+bl_1a60fd94b017,beaglebone-black,beaglebone-black-rev-A,,"C1,C2,C4,C7,C8,C9,C10,C11,C12,C13,C14,C15,C39,C40,C55,C62,C77,C95,C96,C118,C122,C126,C133,C153,C176",type_capacitor,mdl_bf51abf3d78d,25.0,ea,,,Samsung,CL21A106KOQNNNE,SMD CAP Ceramic 10uF-16V-±10%-X5R;0805-D*Hmm,src_13085bb549e3
+bl_d9e2b5d65889,beaglebone-black,beaglebone-black-rev-A,,"C16,C17,C18,C27,C125,C144,C146,C148,C151,C181,C185,C186",type_capacitor,mdl_4066f3abbb02,12.0,ea,,,YAGEO,CC0402KRX5R6BB225,SMD CAP Ceramic 2.2uF-10V-10%-X5R;0402,src_13085bb549e3
+bl_2834dd9eef1e,beaglebone-black,beaglebone-black-rev-A,,"P8,P9",type_connector,mdl_7881dc98ba18,2.0,ea,,,SINOTOP,FF-1236,DIP Black Female Header;2*23P-2.54*8.5-3.0mm,src_13085bb549e3
+bl_a38175e4e377,beaglebone-black,beaglebone-black-rev-A,,Y1,type_crystal,mdl_1c86d2d89f95,1.0,ea,,,Abracon,ABS25-32.768KHZ-T,SMD Crystal;32.768KHz-12.5pF-20PPM-50K-8*3.8*2.5mm;SOJ-4,src_13085bb549e3
+bl_c8d6db7aeebe,beaglebone-black,beaglebone-black-rev-A,,P5,type_etc,mdl_68bd1c8cdd9c,1.0,ea,,,LINK-PP,LPJ0011BBNL,DIP RJ45 W/P-10/100M;12P-21.25*15.93*13.3mm,src_13085bb549e3
+bl_97b79614bcc2,beaglebone-black,beaglebone-black-rev-A,,U4,type_regulator,mdl_6c07650cd8a7,1.0,ea,,,TI,TL5209DR,SMD IC PMIC;LDO-ADJ-500mA;SOIC-8,src_13085bb549e3
+bl_f1775e376c74,beaglebone-black,beaglebone-black-rev-A,,U15,type_etc,mdl_4e8347697bcd,1.0,ea,,,TI,SN74LVC2G241DCUR,SMD IC Logic;US8(8-VFSOP,src_13085bb549e3
+bl_f52c433aafd1,beaglebone-black,beaglebone-black-rev-A,,Y2,type_crystal,mdl_44592d57cb20,1.0,ea,,,JingYi,HF24000012,SMD Crystal;24MHz-20pF-10ppm-2P-5*3.2*0.8mm,src_13085bb549e3
+bl_8d4b97cea401,beaglebone-black,beaglebone-black-rev-A,,U12,type_memory,mdl_be257a102234,1.0,ea,,,Kingston,D2516ECMDXGJD-U,(BB) SMD IC Memory-DDR3L 4 Gb(256M x 16)-1866 Mbps-13.5*7.5*1.2mm;FBGA-96,src_13085bb549e3
+bl_51fd6e5475b2,beaglebone-black,beaglebone-black-rev-A,,R11,type_etc,mdl_240a6c7d113a,1.0,ea,,,YAGEO,RC0402FR-07280KL,SMD RES;280K-1%-1/16W-0402,src_13085bb549e3
+bl_bb382122ab6e,beaglebone-black,beaglebone-black-rev-A,,"C21,C22",type_capacitor,mdl_39c80f5fc976,2.0,ea,,,YAGEO,CC0402JRNPO9BN180,SMD CAP Ceramic 18pF-50V-5%-NPO;0402,src_13085bb549e3
+bl_2663df635ad1,beaglebone-black,beaglebone-black-rev-A,,"C137,C138,C139,C140",type_capacitor,mdl_e93b0257b3bb,4.0,ea,,,YAGEO,CC0402JRNPO9BN100,SMD CAP Ceramic 10pF-50V-5%-NPO;0402,src_13085bb549e3
+bl_502d697a4af5,beaglebone-black,beaglebone-black-rev-A,,R188,type_resistor,mdl_eebe4f216c62,1.0,ea,,,YAGEO,RC0402FR-0733KL,SMD RES 33K-1%-1/16W;0402,src_13085bb549e3
+bl_1467b622abdc,beaglebone-black,beaglebone-black-rev-A,,"R14,R21,R33,R34,R52,R53,R54,R96,R98,R100,R101,R102,R103,R104,R105,R106,R107,R108,R109,R110,R111,R115,R116,R117,R118,R135,R145,R150,R151,R152,R153,R154,R155,R156,R157,R158,R174,R176,R181,R183",type_resistor,mdl_f582cddaa069,40.0,ea,,,YAGEO,RC0402FR-0710KL,SMD RES 10K-1%-1/16W;0402,src_13085bb549e3
+bl_8419eed160fd,beaglebone-black,beaglebone-black-rev-A,,U14,type_transceiver,mdl_265bd60a3d17,1.0,ea,,,Microchip,LAN8710A-EZC-TR-ABC,SMD IC Ethernet 1-CH Transceiver 10Mbps/100Mbps ;SQFN-32,src_13085bb549e3
+bl_bf2af751714d,beaglebone-black,beaglebone-black-rev-A,,"C19,C136",type_capacitor,mdl_594ddcc8aa38,2.0,ea,,,YAGEO,CC0402KRX7R9BB471,SMD CAP Ceramic 470pF-50V-10%-X7R;0402,src_13085bb549e3
+bl_dcb6daca4f5e,beaglebone-black,beaglebone-black-rev-A,,C174,type_capacitor,mdl_e4387e91224a,1.0,ea,,,YAGEO,CC0402KRX5R6BB475,SMD CAP Ceramic 4.7uF-10V-10%-X5R;0402,src_13085bb549e3
+bl_9687674d7118,beaglebone-black,beaglebone-black-rev-A,,C34,type_capacitor,mdl_5e0692e0567a,1.0,ea,,,ST,CS1A101M-CRE54,SMD CAP Aluminum 100uF-10V;D6.3*H5.4mm,src_13085bb549e3
+bl_62678bec4a27,beaglebone-black,beaglebone-black-rev-A,,"C142,C143",type_capacitor,mdl_aa4994bfa3c4,2.0,ea,,,YAGEO,CC0402JRNPO9BN330,SMD CAP Ceramic 33pF-50V-5%-NPO;0402,src_13085bb549e3
+bl_a9dc39bc0d68,beaglebone-black,beaglebone-black-rev-A,,R177,type_etc,mdl_12a1cf532110,1.0,ea,,,Vishay,CRCW04025K60FKED,SMD RES;5.6K-1%-1/10W-0402,src_13085bb549e3
+bl_6a9eba60866f,beaglebone-black,beaglebone-black-rev-A,,U3,type_etc,mdl_44e9484521f6,1.0,ea,,,TI,SN74LVC1G06DCKR,SMD IC Logic;SC-70-5,src_13085bb549e3
+bl_62cad5a88974,beaglebone-black,beaglebone-black-rev-A,,"R5,R6,R7,R8,R19,R20,R27,R29,R30,R37,R46,R47,R48,R49,R50,R51,R137,R142,R159,R160,R161,R162,R175,R185",type_resistor,mdl_3c39c806c656,24.0,ea,,,YAGEO,RC0402JR-070RL,SMD RES 0R-5%-1/16W;0402,src_13085bb549e3
+bl_db3c5481ed19,beaglebone-black,beaglebone-black-rev-A,,U2,type_regulator,mdl_957ebaaabb96,1.0,ea,,,TI,TPS65217CRSLR,SMD IC PMIC;VQFN-48,src_13085bb549e3
+bl_05886056ec94,beaglebone-black,beaglebone-black-rev-A,,"FB1,FB2,FB3,FB4,FB5,FB6,FB7,FB9,FB10,FB11,FB12,FB13",type_etc,mdl_7edeefbe0d64,12.0,ea,,,Laird,LI0805H151R-10,SMD Ferrite Bead;150R-800mA-0805,src_13085bb549e3
+bl_51c1dd236c0d,beaglebone-black,beaglebone-black-rev-A,,"U1,U17",type_etc,mdl_19cb7e3ad917,2.0,ea,,,TI,SN74AHC1G09DCKR,SMD IC Logic;Single 2–Input Positive-AND Gate With Open-Drain Output;SC-70-5,src_13085bb549e3
+bl_76adac8134ea,beaglebone-black,beaglebone-black-rev-A,,R143,type_resistor,mdl_e6ca5e2aeace,1.0,ea,,,YAGEO,RC0402FR-0710RL,SMD RES 10R-1%-1/16W;0402,src_13085bb549e3
+bl_734847b35ae4,beaglebone-black,beaglebone-black-rev-A,,P3,type_etc,mdl_b6a10e0a52a3,1.0,ea,,,SUNGTECH,ST-USB-003AT-30,DIP USB Conn;TYPE-A-Female R/A-USB 2.0-1Port;4P+2P-L14.2*W14.1*H7mm,src_13085bb549e3
+bl_2fc9f691ed9b,beaglebone-black,beaglebone-black-rev-A,,D8,type_diode,mdl_f3bc2c57fbb6,1.0,ea,,,NXP,"RB751V40,115",SMD Diode Schottky 40V-120mA;SOD-323,src_13085bb549e3
+bl_19eccc3f98be,beaglebone-black,beaglebone-black-rev-A,,"D1,D2,D3,D4,D5",type_etc,mdl_344fd492d0a3,5.0,ea,,,Everlight,19-217/BHC-ZL1M2RY/6T,SMD LED Clear-Blue;0603,src_13085bb549e3
+bl_1aba58e50bef,beaglebone-black,beaglebone-black-rev-A,,R99,type_resistor,mdl_78e4e925f155,1.0,ea,,,YAGEO,RC0402FR-07240RL,SMD RES 240R-1%-1/16W;0402,src_13085bb549e3
+bl_92b299639c2b,beaglebone-black,beaglebone-black-rev-A,,"R3,R4,R97,R112,R113,R114,R119,R146,R147",type_resistor,mdl_b321ac1d9b85,9.0,ea,,,YAGEO,RC0402FR-071K5L,SMD RES 1.5K-1%-1/16W;0402,src_13085bb549e3
+bl_4402972eaa15,beaglebone-black,beaglebone-black-rev-A,,"R23,R24,R25,R26,R163,R164",type_etc,mdl_62b8cba56897,6.0,ea,,,YAGEO,RC0402FR-074K7L,SMD RES;4.7K-1%-1/16W-0402,src_13085bb549e3
+bl_e3bc8637f71f,beaglebone-black,beaglebone-black-rev-A,,"C192,C194,C195,C196,C197,C198",type_capacitor,mdl_d80f395a3ed0,6.0,ea,,,YAGEO,CC0402KRX7R9BB222,SMD CAP Ceramic 2.2nF-50V-10%-X7R;0402,src_13085bb549e3
+bl_2ceeb054e7b8,beaglebone-black,beaglebone-black-rev-A,,U6,type_regulator,mdl_0e999e60b5d6,1.0,ea,,,TI,TLV75512PDBVR,SMD IC PMIC;LDO-1.2V-500mA;SOT23-5,src_13085bb549e3
+bl_df71d74a2beb,beaglebone-black,beaglebone-black-rev-A,,"R12,R130,R132",type_resistor,mdl_5069304e1075,3.0,ea,,,YAGEO,RC0402JR-07470RL,SMD RES 470R-5%-1/16W;0402,src_13085bb549e3
+bl_636be5bc0cdb,beaglebone-black,beaglebone-black-rev-A,,Y4,type_clock,mdl_5c9ed0d95eb0,1.0,ea,,,ECEC,DS24576007,SMD Oscillator;24.576MHz-50ppm-3.3V-4P-2.5*2*1mm,src_13085bb549e3
+bl_939a5725aecf,beaglebone-black,beaglebone-black-rev-A,,"R75,R125,R126,R127,R128,R129,R131,R133,R134,R138,R139",type_resistor,mdl_cb33c2eaf1ec,11.0,ea,,,YAGEO,RC0402FR-07100RL,SMD RES 100R-1%-1/16W;0402,src_13085bb549e3
+bl_c858b07910a9,beaglebone-black,beaglebone-black-rev-A,,C141,type_capacitor,mdl_230bbd7eafe8,1.0,ea,,,YAGEO,CC0402KRX7R9BB223,SMD CAP Ceramic 22nF-50V-10%-X7R;0402,src_13085bb549e3
+bl_eae95cbaa020,beaglebone-black,beaglebone-black-rev-A,,"C161,C162,C163,C164,C165,C166,C167,C168,C169,C170,C171,C172,C173,C189,C190,C191",type_capacitor,mdl_78f370299585,16.0,ea,,,YAGEO,CC0402JRNPO9BN470,SMD CAP Ceramic 47pF-50V-5%-NP0;0402,src_13085bb549e3
+bl_9c551079a5d1,beaglebone-black,beaglebone-black-rev-A,,"U9,U10",type_diode,mdl_cfe469397b2c,2.0,ea,,,TI,TPD4S012DRYR,SMD Diode TVS;4-Ch USB ESD Solution with-SON-6（1.45x1）,src_13085bb549e3
+bl_87c21f406dcb,beaglebone-black,beaglebone-black-rev-A,,,type_etc,,1.0,ea,,,,,PCB;BeagleBone Black Commercial RevD_250421-Black-6L,src_13085bb549e3
+bl_3d2e99d44869,beaglebone-black,beaglebone-black-rev-A,,"C3,C20,C23,C28,C29,C30,C31,C33,C35,C36,C37,C38,C41,C42,C43,C44,C45,C46,C47,C48,C49,C50,C51,C52,C53,C54,C56,C57,C58,C59,C60,C61,C63,C64,C65,C66,C67,C68,C69,C70,C71,C72,C73,C74,C75,C76,C78,C79,C80,C81,C82,C83,C84,C85,C86,C87,C88,C92,C93,C94,C97,C98,C99,C100,C101,C102,C103,C105,C107,C108,C109,C110,C111,C112,C113,C114,C115,C116,C117,C119,C120,C121,C124,C127,C128,C129,C130,C131,C132,C135,C145,C147,C149,C150,C152,C154,C155,C156,C157,C158,C159,C160,C177,C178,C179,C180,C182,C184,C187,C188",type_capacitor,mdl_c3e3bf1123a9,110.0,ea,,,YAGEO,CC0402KRX7R7BB104,SMD CAP Ceramic 100nF-16V-10%-X7R;0402,src_13085bb549e3
+bl_86a6fc026148,beaglebone-black,beaglebone-black-rev-A,,R144,type_resistor,mdl_5a6181fdcfe1,1.0,ea,,,YAGEO,RC0402FR-0712K1L,SMD RES 12.1K-1%-1/16W;0402,src_13085bb549e3
+bl_4c8c4d1d844d,beaglebone-black,beaglebone-black-rev-A,,"C25,C26",type_capacitor,mdl_5dd3c26ebf5e,2.0,ea,,,YAGEO,CC0402JRNPO9BN300,SMD CAP Ceramic;30pF-50V-5%-NP0;0402,src_13085bb549e3
+bl_91a27c969080,beaglebone-black,beaglebone-black-rev-A,,"C6,C89,C90,C91,C104,C106,C134,C193",type_capacitor,mdl_133c686410bf,8.0,ea,,,Samsung,CL05A105KP5NNNC,SMD CAP Ceramic 1uF-10V-10%-X5R;0402,src_13085bb549e3
+bl_a0899e37b34e,beaglebone-black,beaglebone-black-rev-A,,P6,type_etc,mdl_2506cb41cc8b,1.0,ea,,,Amphenol,10118241-001RLF,SMD HDMI Type D Right Angle;SMT+DIP-19P,src_13085bb549e3
+bl_359c124ccdd5,beaglebone-black,beaglebone-black-rev-A,,"D9,D10,D11,D12,D13",type_diode,mdl_5356c07560bf,5.0,ea,,,Semitel,ESDPSA0402V05,SMD Diode ESD 0.05pF;0402,src_13085bb549e3
+bl_36073c4b7e51,beaglebone-black,beaglebone-black-rev-A,,U8,type_regulator,mdl_89c574fa107b,1.0,ea,,,TI,TPS2051BDGNR,SMD IC PMIC;MSOP-8,src_13085bb549e3
+bl_51ff91cee251,beaglebone-black,beaglebone-black-rev-A,,U7,type_memory,mdl_b017a0345079,1.0,ea,,,FMD,FT24C32A-ELRT,SMD IC Memory;32Kb-IIC Serial EEPROM;SOT23-5,src_13085bb549e3
+bl_0a3ad412a049,beaglebone-black,beaglebone-black-rev-A,,P1,type_etc,mdl_b349bf54bed5,1.0,ea,,,M&T,DC630-20D01,DIP DC Power Jack;3P-2.0-6.3mm;L9*14.7*H11mm,src_13085bb549e3
+bl_3d4636f0c0d9,beaglebone-black,beaglebone-black-rev-A,,RT1,type_etc,mdl_652fda25cce8,1.0,ea,,,Littelfuse,RF2579-000,DIP PPTC;100mA-60V;2P-5.0-W7.4*T3.0mm,src_13085bb549e3
+bl_c50852619554,beaglebone-black,beaglebone-black-rev-A,,"Q1,Q2",type_etc,mdl_b0c3ecbeb61c,2.0,ea,,,Diodes,DDC114YU-7-F,SMD Transistor Array 2 NPN-50V-100mA-SOT-363,src_13085bb549e3
+bl_95e8436e9c51,beaglebone-black,beaglebone-black-rev-A,,Y3,type_crystal,mdl_ca7f75270841,1.0,ea,,,JingYi,HF25000014,SMD Crystal;25MHz-20pF-10ppm-2P-5*3.2*0.8mm,src_13085bb549e3
+bl_cc407b740bcd,beaglebone-black,beaglebone-black-rev-A,,U5,type_mcu,mdl_906676bde75c,1.0,ea,,,TI,AM3358BZCZ100,SMD IC MCU;NFBGA-324(15x15）,src_13085bb549e3
+bl_6d327252bb2f,beaglebone-black,beaglebone-black-rev-A,,"R1,R56,R65,R66,R67,R68,R76,R77,R78,R79,R80,R82,R83,R84,R85,R86,R87,R88,R89,R94,R95,R165",type_resistor,mdl_4ffcc94adc26,22.0,ea,,,YAGEO,RC0402FR-07100KL,SMD RES 100K-1%-1/16W;0402,src_13085bb549e3
+bl_97cdac8a27ff,beaglebone-black,beaglebone-black-rev-A,,"C32,C123,C183",type_capacitor,mdl_f49f873cdbce,3.0,ea,,,YAGEO,CC0402KRX7R9BB102,SMD CAP Ceramic 1nF-50V-10%-X7R;0402,src_13085bb549e3
+bl_ce3b8bff79ab,beaglebone-black,beaglebone-black-rev-A,,R166,type_resistor,mdl_8aaea3b04cf7,1.0,ea,,,YAGEO,RC0402FR-0727KL,SMD RES 27K-1%-1/16W;0402,src_13085bb549e3
+bl_7f6d753efe40,beaglebone-black,beaglebone-black-rev-A,,R17,type_resistor,mdl_d638fde17e02,1.0,ea,,,YAGEO,RC0402FR-071ML,SMD RES 1M-1%-1/16W;0402,src_13085bb549e3
+bl_fbc7486d437a,beaglebone-black,beaglebone-black-rev-A,,P10,type_etc,mdl_5519cc5e38d6,1.0,ea,,,YuLiang,YL004-030-001,"SMD SD Card Holder;Reverse-Bottom,8P-14.3*16mm",src_13085bb549e3
+bl_b892be41d527,beaglebone-black,beaglebone-black-rev-A,,"D6,D7",type_diode,mdl_ac41880da235,2.0,ea,,,TI,TPD4E05U06DQAR,"SMD Diode Array ESD;4 Channel,6 Gbps,5.5V;USON-10",src_13085bb549e3
+bl_c30e6aecfa73,beaglebone-black,beaglebone-black-rev-A,,R10,type_resistor,mdl_5f9f819a2f37,1.0,ea,,,YAGEO,RC0402FR-07470KL,SMD RES 470K-1%-1/16W;0402,src_13085bb549e3
+bl_f1d8d7907f9b,beaglebone-black,beaglebone-black-rev-A,,R45,type_resistor,mdl_09ed25e2ef8a,1.0,ea,,,YAGEO,RC0402FR-0722RL,SMD RES 22R-1%-1/16W;0402,src_13085bb549e3
+bl_77d32dd2dda6,beaglebone-black,beaglebone-black-rev-A,,"R22,R120,R121,R122,R123",type_resistor,mdl_13c92fddc4e1,5.0,ea,,,YAGEO,RC0402FR-0749R9L,SMD RES 49.9R-1%-1/16W;0402,src_13085bb549e3
+bl_9721a22688b2,beaglebone-black,beaglebone-black-rev-A,,"R71,R72,R73,R74",type_resistor,mdl_5b38ea3de632,4.0,ea,,,YAGEO,RC0402JR-072K2L,SMD RES 2.2K-5%-1/16W;0402,src_13085bb549e3
+bl_444eac44831a,beaglebone-black,beaglebone-black-rev-A,,"S1,S2,S3",type_etc,mdl_8b3b0cc35322,3.0,ea,,,ChengQi,TC-CQ3*4*2,SMD Button;Top;250gf-0.7mm-4P;L4.6*W3*H2mm,src_13085bb549e3
+bl_693ccb81c1b9,beaglebone-black,beaglebone-black-rev-A,,U11,type_etc,mdl_311a728bab1c,1.0,ea,,,ITE,IT66122FN/CX,SMD IC Interface;HDMI Transmitter;QFN-64,src_13085bb549e3
+bl_662391348ef9,beaglebone-black,beaglebone-black-rev-A,,U13,type_memory,mdl_8a24d414087d,1.0,ea,,,Kingston,EMMC16G-MW28-01E10,"SMD IC Memory;16GB eMMC 5.1 HS400;VFBGA-153,11.5*13.0*0.73mm",src_13085bb549e3
+bl_ec6923651983,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_9b382eab2e58,1,ea,,,SunnyOptics,P212A,Camera Module 2Mp OV2659 CMOS,src_58a28329902e
+bl_df4fedeea116,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_1f2bb9b248e4,14,ea,,,TDK,C1005X7R1H104K,Capacitor 0.1uF 50V 10% 0402 X7R,src_58a28329902e
+bl_6b9437809cf6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_b0328e93ac5e,29,ea,,,AVX,0805YD106KAT2A,Capacitor 10uF 16V 10% Ceramic 0805,src_58a28329902e
+bl_ae9d78a6bb96,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_55b3193676b2,8,ea,,,TDK,C1005X7R1V223K050BB,Capacitor 0.022uF 35V 10% X7R Ceramic 0402,src_58a28329902e
+bl_ca0a1292b0f4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_909e1b25a72c,5,ea,,,Kemet,C0402C222K5RACTU,Capacitor 2200pF 50V 10% 0402 X7R,src_58a28329902e
+bl_ab5573d7de1a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_e0038fdc3a80,7,ea,,,TDK,C2012JB1V106K085AC,Capacitor 10uF 35V 10% Ceramic 0805,src_58a28329902e
+bl_f81bb6a43d7e,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_9738320acf77,158,ea,,,Kemet,C0402C103K4RACTU,Capacitor 0.01uF 16V 10% 0402,src_58a28329902e
+bl_55ded025d89e,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_d34cf43b8e7a,8,ea,,,AVX,0402ZD105KAT2A,Capacitor 1uF 10V Ceramic 10% 0402,src_58a28329902e
+bl_1cfc98e0ff15,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_f292c363c62b,2,ea,,,TDK,C3216X5R1H106K,Capacitor 10uF 50V 10% Ceramic 1206,src_58a28329902e
+bl_706f312b5095,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_7ce906a830b1,39,ea,,,Kemet,C0402C104K4RACT,Capacitor 0.1uF 16V 10% 0402 X7R,src_58a28329902e
+bl_2055a3d2e24f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_c61737bc6803,3,ea,,,Kemet,T491D227K016AT,Capacitor 220uF 16V 10% Tantalum,src_58a28329902e
+bl_f86244b8d730,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_ef1668b4502a,2,ea,,,TDK,C1005C0G1H240J,Capacitor 24pF 50V 5% 0402,src_58a28329902e
+bl_97ddc2a71ef0,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_ed5cd9696b55,2,ea,,,TDK,C3216X5R1C476M,Capacitor 47uF 16V Ceramic X5R 1206,src_58a28329902e
+bl_35cd57101e5c,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_bc21f99d1aec,13,ea,,,AVX,04025C102JAT2A,Capacitor 0.001uF 50V 5% 0402,src_58a28329902e
+bl_3d93dc6f9df7,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_e19bb71cc0eb,4,ea,,,TDK,C1005X7R1E473K050BC,Capacitor 47nF 25V 10% Ceramic 0402,src_58a28329902e
+bl_3a9fd407f182,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_2244d0c12d41,7,ea,,,TDK,C2012X5R1C226K125AC,Capacitor 22uF 16V Ceramic 10% 0805,src_58a28329902e
+bl_223ab2e44b99,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_90a7c05a1586,7,ea,,,Murata,GRM1555C1H181JA01D,Capacitor 180pF 50V 5% Ceramic 0402,src_58a28329902e
+bl_40a6c058af90,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_ec737c8bf430,10,ea,,,Kemet,C0402C101K3GACTU,Capacitor 100pF 25V 10% 0402,src_58a28329902e
+bl_32cb9b9fb935,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_4fd578a02669,3,ea,,,Murata,GRM155F51C474ZA01D,Capacitor 0.47uF 16V 10% 0402 X7R,src_58a28329902e
+bl_858969469441,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_7fe83f0f0d55,6,ea,,,Taiyo Yuden,UMK107BJ105KA-T,Capacitor 1uF 50V 10% Ceramic 0603,src_58a28329902e
+bl_dbd550295048,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_d9908d6923fb,1,ea,,,AVX,04025U100FAT2A,Capacitor 10pF 50V 1% Ceramic 0402,src_58a28329902e
+bl_36f11c28f51a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_17c2684e59c4,5,ea,,,Taiyo Yuden,EMK107ABJ475KA-T,Capacitor Ceramic 4.7uF 16V 10% 0603,src_58a28329902e
+bl_5a9b47bbaa3c,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_4e299e7aa237,3,ea,,,Kemet,C0805C225K4RACTU,Capacitor 2.2uF 16V 10% 0805,src_58a28329902e
+bl_854fcb8c2c70,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_e6a0b54796c4,4,ea,,,TDK,CGA2B2C0G1H180J,Capacitor Ceramic 18pF 50V 10% 0402,src_58a28329902e
+bl_8a2e7759fcbe,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_e43bb9f3558d,2,ea,,,Kemet,C0603C225K9PACTU,Capacitor 2.2uF 6.3V Ceramic 10% 0603,src_58a28329902e
+bl_f2c2f8e9d5a9,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_cbf71dd407e0,3,ea,,,Kemet,C0402C150J5GACTU,Capacitor Ceramic 15pF 50V 10% 0402,src_58a28329902e
+bl_70238d197cd3,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_d99fe9885a6c,2,ea,,,Kemet,C0402C472K5RACTU,Capacitor 4700pF 50V 10% 0402 X7R,src_58a28329902e
+bl_96b4890f7f1a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_bbc3c5550172,2,ea,,,Murata,GRM188R60J106ME47D,Capacitor 10uF 6.3V 20% Ceramic X5R 0603,src_58a28329902e
+bl_fa4a0a148181,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_268aa95dd0d8,2,ea,,,United Chemicon,EMVA350ADA101MF80G,Capacitor 100uF 35V Polymer 20% smd can,src_58a28329902e
+bl_360fab281c89,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_diode,mdl_21313f919451,5,ea,,,On Semiconductor,MBR0530T1,Diode 500mA 30V 0.3V Forward Drop,src_58a28329902e
+bl_543ee81c756a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_424ef934d762,10,ea,,,Dialight,598-8170-107F,LED Green SMD 20mA 3.2V 0805,src_58a28329902e
+bl_22d5ed251ddf,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_1663f37e9667,1,ea,,,Dialight,598-8110-107F,LED Red SMD 20mA 2V 0805,src_58a28329902e
+bl_bad9b1db2c23,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_diode,mdl_d64a05906674,3,ea,,,On Semiconductor,MBRS140T3G,Diode 1A 40V 600mV Forward Drop,src_58a28329902e
+bl_fb5f37938eb3,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_e8cf03e0c682,2,ea,,,LittleFuse,SMCJ26CA,Voltage Surpressor 26.0V,src_58a28329902e
+bl_6df08f01a05c,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_diode,mdl_2b3f10b63c96,1,ea,,,On Semiconductor,MMSD103T1G,Diode 200mA 250V 1.25V Forward Drop,src_58a28329902e
+bl_b769147e882b,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_162240805cab,1,ea,,,Littelfuse,0154004.DRT,Fuse Block with 4A Fuse,src_58a28329902e
+bl_338ea5597c5f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_7edeefbe0d64,10,ea,,,Laird-Signal Integrity Products,LI0805H151R-10,Ferrite Bead 150 Ohm 800mA,src_58a28329902e
+bl_e2f8052218f9,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_6d1e3398955d,4,ea,,,TDK,HF70ACB201209,Ferrite Bead 600mA 10ohm,src_58a28329902e
+bl_833623ef2867,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_b2ccd7e83ff9,3,ea,,,TDK,MPZ1608S221A,Ferrite Bead 220 Ohm 2A,src_58a28329902e
+bl_bfe972c1fc28,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_722753ec39c4,1,ea,,,FCI,66953-020LF,Header 20x2 0.1in pitch female throughhole,src_58a28329902e
+bl_64032dd963c7,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_7e9191503e65,1,ea,,,Sullins,PEC03SAAN,Single Line Header 3pin Tin 0.1in pitch,src_58a28329902e
+bl_b373e576c9b4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_3d80b3d5cf1b,1,ea,,,Sullins,PEC05DAAN,Dual Line Header 5x2pin Tin,src_58a28329902e
+bl_615d88f56018,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_a6b034e784a9,1,ea,,,Link,LPJG16314A4NL,Connector RJ-45 Jack w/mag and LED Gigabit,src_58a28329902e
+bl_aec509b6258d,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_d16033d11ac3,1,ea,,,Panasonic,AXK7L24223G,FPC Type Connector 24pin 0.4mm pitch socket,src_58a28329902e
+bl_530d53147e83,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_1313c250a5cd,2,ea,,,Link,LPJ16183A28NL,Connector MagRJ-45 Jack w/LED 10_100Mb - Auto MDIX,src_58a28329902e
+bl_e0ca36b9363e,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_4dd99cda90dd,1,ea,,,Samtec,FTR-110-03-G-D-06,Dual Line Header 10x2pin Tin,src_58a28329902e
+bl_083fb33042cf,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_9ee6f7d0b80c,2,ea,,,OnShoreTechnology,PH1-230/120-021,Single Line Header 2pin Tin 0.1in pitch,src_58a28329902e
+bl_9ad5a7faa365,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_a88afede7879,1,ea,,,Conec,43-01028,M12 Connector EnDAT 8pin female,src_58a28329902e
+bl_12d202e672b4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_fc5d5a13bd3e,1,ea,,,Switchcraft,RAPC722X,Jack Power Right Angle 2conductor 2.1mm center,src_58a28329902e
+bl_468544a265a0,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_e99d4cb7b734,1,ea,,,DNI,DNI,DNI,src_58a28329902e
+bl_b77627e63d45,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_15ccc1dc3a14,1,ea,,,OnShore Technology,OSTTC022162,Connector 2pin screw down 15A 300VAC blue,src_58a28329902e
+bl_c00bce8ae73d,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_8e6aaa0ba4da,1,ea,,,Sullins,PEC06SAAN,Single Line Header 6pin Tin,src_58a28329902e
+bl_09ee23d2bcfa,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_0b924fec2fef,1,ea,,,Sullins,NPPN302AFCN,Header Socket 30x2 2mm pitch Female,src_58a28329902e
+bl_bdfba7df359d,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_5e7da601e8fb,1,ea,,,OnShore Technology,OSTTC032162,Connector 3pin screw down 15A 300VAC blue,src_58a28329902e
+bl_f8b85b6dee12,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_eda9a562720f,1,ea,,,Hirose,ZX62-AB-5PA(11),Connector Micro USB AB RA,src_58a28329902e
+bl_d9e88dd94372,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_f7d202d8207b,1,ea,,,ALPS,SCHA5B0200,Connector compact low-profile Push Type Micro SD,src_58a28329902e
+bl_81e8660bd0ef,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_c9b9934b3bfc,3,ea,,,TDK,SLF7055T-4R7N3R1-3PF,Inductor 4.7uH 30% smt 3.1A,src_58a28329902e
+bl_ddcad8252f3b,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_4e768175fc58,1,ea,,,Coilcraft,MSS1038-473MLC,Inductor 47uH 20% 1.6A SMD,src_58a28329902e
+bl_f22eb24baace,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_1d93a9e313b1,1,ea,,,Coilcraft,XFL4020-102ME_1.0,Inductor 1uH 20% 4.5A SMD,src_58a28329902e
+bl_24d0cb6e11b2,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_d000d38d1d7d,1,ea,,,Coilcraft,MSS6132-104MLC,Inductor 100uH 20% 450mA SMD,src_58a28329902e
+bl_321199563516,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_0f912685fd79,1,ea,,,Coilcraft,MSS1038-104MLB,Inductor 100uH 20% smt 1.02A,src_58a28329902e
+bl_681c460b6d30,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_c67993e8960e,1,ea,,,Coilcraft,MSS6122-823MLC,Inductor 82uH 20% 370mA SMD,src_58a28329902e
+bl_c431526f20a2,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_24646f63362d,1,ea,,,Coilcraft,MSS6132-473MLC,Inductor 47uH 20% 720mA SMD,src_58a28329902e
+bl_1797488e8271,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_2f81805808b2,8,ea,,,BF Fastener,PMS 440 0025 PH,Screw #4-40 1/4in long zinc phillips,src_58a28329902e
+bl_28ac366c3284,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_b0540d9c92f0,4,ea,,,Keystone,1839,Standoff alum female/female 4-40 1/4 rd 5/8inlong,src_58a28329902e
+bl_d1c98eef24a1,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_36937a746fb5,4,ea,,,Keystone,720,Rubber Feet #4 screw hole size,src_58a28329902e
+bl_3fca04fa3aab,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_81caef7f484c,1,ea,,,TE Connectivity,382811-8,Shunt 0.1in pitch,src_58a28329902e
+bl_050677ad40bf,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_d128d30ea4c4,1,ea,,,TI,3K0008,AM437x Industrial EVM Bare PCB,src_58a28329902e
+bl_0dc4a4bbc073,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_mosfet,mdl_19dbaf6cfa01,8,ea,,,Diodes Inc.,BSS138-7-F,MOSFET Nchan 50V 200mA,src_58a28329902e
+bl_5d2f576e83ad,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_mosfet,mdl_5d265e88e181,1,ea,,,Fairchild,FDT434P,MOSFET Pchan -20V 6A,src_58a28329902e
+bl_b260b8ac5a4a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_mosfet,mdl_59332f8926a1,1,ea,,,Diodes Inc.,BSS84-7-F,MOSFET Pchan -50V 130mA,src_58a28329902e
+bl_948e3b7f92e4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_15ad31a4732c,12,ea,,,Stackpole Electronics,RMCF0402FT100K,Resistor 100Kohm 1/16W 1% 0402,src_58a28329902e
+bl_4ad368c605d7,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_4378aa56b3dc,55,ea,,,Rohm,MCR01MZPJ103,Resistor 10Kohm 1/16W 5% 0402,src_58a28329902e
+bl_9eb0fe7b0278,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_6df8e6112670,14,ea,,,Stackpole Electronics,RMCF0402JT150R,Resistor 150ohm 1/16W 5% 0402,src_58a28329902e
+bl_feb5fe78cac2,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_33859575694e,196,ea,,,Panasonic,ERJ-2GE0R00X,Resistor Zero ohm Jumper 0402,src_58a28329902e
+bl_c04076bf5e6e,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_7244926c609d,32,ea,,,Panasonic,ERJ-3GEY0R00V,Resistor Zero ohm Jumper 0603,src_58a28329902e
+bl_f2c1d8a0c756,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_868d7f868223,1,ea,,,Panasonic,ERJ-2RKF3402X,Resistor 34Kohm 1/10W 1% 0402,src_58a28329902e
+bl_c8fe2e687fa2,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_b983a5c5702d,12,ea,,,Stackpole Electronics,RMCF0402JT4K70,Resistor 4.7Kohm 1/16W 5% 0402,src_58a28329902e
+bl_73074ab2f407,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_7c6bf1a13258,5,ea,,,Stackpole Electronics,RMCF0402FT51K0,Resistor 51Kohm 1/16W 1% 0402,src_58a28329902e
+bl_7933d9dae33a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_c9ddb32ba173,1,ea,,,Panasonic-ECG,ERJ-2RKF4751X,Resistor 4.75KOHM 1/10W 1% 0402 SMD,src_58a28329902e
+bl_c5d9f2c43f18,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_7c8947209cab,11,ea,,,Panasonic,ERJ-2GEJ330X,Resistor 33ohm 1/16W 5% 0402,src_58a28329902e
+bl_4a700db548ea,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_5037a9f2f7d5,16,ea,,,Panasonic,ERA-2AEB49R9X,Resistor 49.9ohm 1/16W 1% 0402,src_58a28329902e
+bl_05d54b14dc02,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_5a6181fdcfe1,1,ea,,,Yageo,RC0402FR-0712K1L,Resistor 12.1K OHM 1/16W 1% 0402 SMD,src_58a28329902e
+bl_def8c62ff1e5,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_2347951c4dc8,18,ea,,,VishayDale,CRCW04022K20JNED,Resistor 2.2Kohm 1/16W 5% 0402,src_58a28329902e
+bl_9ea51cacf972,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_64e8fd6cb139,12,ea,,,Panasonic,ERJ-2GEJ102X,Resistor 1Kohm 1/16W 5% 0402,src_58a28329902e
+bl_3c49701e0b71,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_ed0e0c6f4f9b,3,ea,,,Yageo,RC0402FR-074K02L,Resistor 4.02Kohm 1/16W 1% 0402,src_58a28329902e
+bl_9340bc196b90,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_f68c845d35d7,1,ea,,,Stackpole Electronics,RMCF0402JT1K50C,Resistor 1.5Kohm 1/16W 5% 0402,src_58a28329902e
+bl_e986c108f9c8,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_414c9168961e,2,ea,,,Stackpole Electronics,RMCF0402FT1M00,Resistor 1Mohm 1/16W 1% 0402,src_58a28329902e
+bl_c94d2f714541,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_0d011e6ee918,1,ea,,,Stackpole Electronics,RMCF0402FT8K06,Resistor 8.06Kohm 1/16W 1% 0402,src_58a28329902e
+bl_eb2da2589c33,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_b786f798dd23,2,ea,,,Vishay Dale,CRCW040260K4FKED,Resistor 60.4Kohm 1/16W 1% 0402,src_58a28329902e
+bl_f09f28e7b513,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_9aafa74dc94b,12,ea,,,ROHM,MCR01MZPF22R0,Resistor 22 ohm 1/16W 1% 0402,src_58a28329902e
+bl_c26625bfc8be,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_35632784d3a0,4,ea,,,Stackpole Electronics,RMCF0402FT95K3,Resistor 95.3Kohm 1/16W 1% 0402,src_58a28329902e
+bl_c6d591d26d99,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_abb69cd1f9d7,6,ea,,,Stackpole Electronics,RMCF0402FT49K9,Resistor 49.9Kohm 1/16W 1% 0402,src_58a28329902e
+bl_ec234ebf2bef,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_43abcb39c440,1,ea,,,Yageo,RC0402FR-0716KL,Resistor 16Kohm 1/16W 1% 0402,src_58a28329902e
+bl_8c0b8fc4df8f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_f8e269dbb86d,1,ea,,,Stackpole Electronics,RMCF0402FT3K01,Resistor 3.01Kohm 1/16W 1% 0402,src_58a28329902e
+bl_c3b2bf56fe22,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_95a4223ec489,4,ea,,,Panasonic,ERJ-2RKF2200X,Resistor 220ohm 1/10W 1% 0402,src_58a28329902e
+bl_ce5cddeaab47,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_164bf98b4c42,1,ea,,,Panasonic,ERJ-2RKF2052X,Resistor 20.5Kohm 1/16W 1% 0402,src_58a28329902e
+bl_3791e79a0c69,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_e297d95dff53,1,ea,,,Stackpole Electronics,RMCF0402FT40K2,Resistor 40.2Kohm 1/16W 1% 0402,src_58a28329902e
+bl_cfe1f9b7b7ec,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_ff64274ba760,12,ea,,,VishayDale,CRCW040222K0FKED,Resistor 22Kohm 1/16W 1% 0402,src_58a28329902e
+bl_73a00a2b899f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_92d7c1fa89f3,4,ea,,,Vishay Dale,CRCW040228K7FKED,Resistor 28.7Kohm 1/16W 1% 0402,src_58a28329902e
+bl_283655d538bf,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_04fe0dd1efcd,2,ea,,,Stackpole Electronics,RMCF0402FT240R,Resistor 240 ohm 1/16W 1% 0402,src_58a28329902e
+bl_ef4a9e6d1d6c,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_7e5b1413bf59,24,ea,,,Stackpole Electronics,RMCF0402FT47R0,Resistor 47ohm 1/16W 1% 0402,src_58a28329902e
+bl_99f51b65e024,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_616230be9dfa,10,ea,,,Stackpole Electronics,RMCF0402FT4K99,Resistor 4.99Kohm 1/16W 1% 0402,src_58a28329902e
+bl_4d2972ca0449,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_1183a301089f,1,ea,,,Stackpole Electronics,RMCF0402FT402K,Resistor 402Kohm 1/16W 1% 0402,src_58a28329902e
+bl_a6977368dbb6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_24b3a9a9c7cf,1,ea,,,Stackpole Electronics,RMCF0402JT10R0,Resistor 10ohm 1/16W 5% 0402,src_58a28329902e
+bl_803554f4654b,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_affd6e5bebb6,2,ea,,,Stackpole Electronics,RMCF0402FT14K0,Resistor 14Kohm 1/16W 1% 0402,src_58a28329902e
+bl_619c036315b4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_301c62ed50a4,1,ea,,,Stackpole Electronics,RMCF0402JT24K0,Resistor 24Kohm 1/16W 1% 0402,src_58a28329902e
+bl_8f697130ea56,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_34852a39478a,8,ea,,,Vishay,MMU01020C1201FB300,Resistor 1.2Kohm 1/3W 1% MELF0102,src_58a28329902e
+bl_e0f256623d0a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_6fed42757592,2,ea,,,Stackpole Electronics,RMCF0402FT15K0,Resistor 15Kohm 1/16W 1% 0402,src_58a28329902e
+bl_556df738a5d1,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_3b956eeb93a8,1,ea,,,Stackpole Electronics,RMCF0402FT30K1,Resistor 30.1Kohm 1/16W 1% 0402,src_58a28329902e
+bl_97a75bc3fbfa,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_a7ca55331ff6,1,ea,,,Stackpole,RMCF0402JT39K0,Resistor 39Kohm 1/16W 5% 0402,src_58a28329902e
+bl_3a66c98e6a36,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_eb693a6b75fd,1,ea,,,Vishay,PNM0603E2502BST5,Resistor 25Kohm 1/10W 0.1% 0603,src_58a28329902e
+bl_1a8ae1d498ec,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_11743e0a8882,1,ea,,,Vishay,MMU01020C4999FB300,MELF Resistor 49.9ohm 1/3W 1% MELF0102,src_58a28329902e
+bl_aca00c044082,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_282fe3a1eedb,2,ea,,,Stackpole Electronics,RMCF0402FT4K87,Resistor 4.87Kohm 1/16W 1% 0402,src_58a28329902e
+bl_0040c0b6df30,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_fbe09bb6339d,4,ea,,,Stackpole Electronics,RMCF0402JT100R,Resistor 100ohm 1/16W 5% 0402,src_58a28329902e
+bl_57d1a20fc52b,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_c3ed28931c10,1,ea,,,Panasonic-ECG,ERJ-2RKF1002X,Resistor 10Kohm 1/10W 1% 0402,src_58a28329902e
+bl_9df1721b121a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_1f9d7b785c60,1,ea,,,Stackpole Electronics,RMCF0402JT12K0,Resistor 12Kohm 1/16W 1% 0402,src_58a28329902e
+bl_eee16212e077,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_ccb0166388cf,2,ea,,,Vishay/Dale,CRCW04022K20JNEDHP,Resistor 2.2Kohm 1/8W 5% 0402,src_58a28329902e
+bl_99aa13e0ed55,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_21e6fe9ab7d7,1,ea,,,Panasonic,ERJ-2RKF1802X,Resistor 18Kohm 1/10W 1% 0402,src_58a28329902e
+bl_61145fdf4d20,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_ea3813433b5b,4,ea,,,Stackpole Electronics,RMCF0402FT19K1,Resistor 19.1Kohm 1/16W 1% 0402,src_58a28329902e
+bl_4fb5e9092bb3,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_1f5c2b11df0e,1,ea,,,Vishay_Dale,CRCW0402120RFKED,Resistor 120ohm 1/16W 1% 0402,src_58a28329902e
+bl_eab1984040ee,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_36cd1411a5ab,3,ea,,,VishayDale,WSLP1206R0200FEA,Resistor 0.02ohm 1W 1% 1206,src_58a28329902e
+bl_dcea26efd4c6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_5f33ef042ab8,1,ea,,,Vishay Dale,CRCW12100000Z0EA,Resistor Zero ohm Jumper 1210,src_58a28329902e
+bl_e9100c9523ad,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_resistor,mdl_d8f2a9460493,1,ea,,,Stackpole Electronics,RMCF0402FT470K,Resistor 470Kohm 1/16W 1% 0402,src_58a28329902e
+bl_fc2e1632daa8,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_8909142ea0f5,2,ea,,,Omron,B3SL-1022P,Switch Push Button tactile NO,src_58a28329902e
+bl_23cde3929461,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_b94c8827b230,10,ea,,,Keystone Electronics,5002,Testpoint Miniature Through Hole,src_58a28329902e
+bl_0f3c4ec9c0d8,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,,11,ea,,,N/A,N/A,Testpoint SMD 1mm circle pad,src_58a28329902e
+bl_488e4367d0d4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_d2c62c2a0715,2,ea,,,Bivar,SM1210RGY,LED RedGreenYellow Tricolor 20mA 1.9/2.1V 1210 smd,src_58a28329902e
+bl_b5842f94458d,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_f6464b6db354,1,ea,,,TI,AM437XZDN,Cortex A9 SOC AM437x,src_58a28329902e
+bl_e360e41832a4,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_a130b6a724ea,5,ea,,,TI,TPS5402D,Step down power regulator w/FET 1.7A,src_58a28329902e
+bl_8e87e174e182,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_36b1e592d9ce,1,ea,,,TI,SN65HVS882PWP,Industrial 8digit Input Serializer,src_58a28329902e
+bl_2936b49eb9f6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_af74448ba106,1,ea,,,TI,TPIC2810D,8bit LED Driver with I2C Interface,src_58a28329902e
+bl_adca53df7a89,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_2741a70f0ca6,2,ea,,,TI,SN74LVC8T245PWR,8bit dual supply bus transceiver,src_58a28329902e
+bl_b2944b94b7ba,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_transceiver,mdl_f472f333fa60,2,ea,,,TI,TLK105LRHB,Industrial Ethernet 10/100 Mb/s PHY Transceiver,src_58a28329902e
+bl_9cfe450fd726,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_051b6d3aa7a8,1,ea,,,TI,SN74LVC1G04DCK,Inverter,src_58a28329902e
+bl_4460fae6b5dc,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_a27c046fbd85,2,ea,,,TI,SN74LV244APWRG3,Octal Line Buffer,src_58a28329902e
+bl_61bd6b7dc624,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_7efaaeb423af,1,ea,,,FTDI,FT2232HL-REEL,USBHS Dual UART/FIFO,src_58a28329902e
+bl_0505a738d41a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_memory,mdl_c41ac3f154fe,1,ea,,,Microchip,93LC56B-I/SN,E2PROM 2Kbit 3Mhz Memory,src_58a28329902e
+bl_aee4c0c5cac9,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_op_amp,mdl_c90956198e57,4,ea,,,TI,OPA365AIDBV,Opamp,src_58a28329902e
+bl_719d3abef59c,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_memory,mdl_b893e6eae8ce,2,ea,,,Micron,MT41K256M16HA-125,DDR3 SDRAM 4Gb (256Mx16) 1.35V,src_58a28329902e
+bl_96c93eec8b71,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_a443d13ec2f3,1,ea,,,TI,DRV8313PWP,Triple Half H-Bridge Driver,src_58a28329902e
+bl_d9f749e0af18,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_995c3a1e51fe,1,ea,,,TI,TPS51200DRC,DDR Termination Regulator SinkSource,src_58a28329902e
+bl_56648a126e0f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_1ec67bd476de,1,ea,,,TI,TPS386000RGP,Quad Supply Voltage Supervisor,src_58a28329902e
+bl_185c94c3f97a,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_8ae51d9841a8,1,ea,,,TI,TPD6E001RSE,ESD Protection Array 6Chan +-15kV,src_58a28329902e
+bl_1f733e3259bd,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_fc0549d6e574,1,ea,,,TI,LM4132CMF-1.8/NOPB,Precision 1.8V Low Dropout voltage Reference,src_58a28329902e
+bl_46b993aa3712,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_11e11aacd169,4,ea,,,TI,TPS22922BYZP,Load Switch Ultra Low Ron,src_58a28329902e
+bl_3d8d777f9467,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_ad99d3f48aa7,1,ea,,,TI,TPS79301DBV,LDO Regulator 200mA High PSRR,src_58a28329902e
+bl_1372575c0518,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_4a6c1d2989b5,1,ea,,,TI,TXS0102DCT,Bidirectional 2bit Voltage Translator Open Drain,src_58a28329902e
+bl_6730d5d256b6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_cb9eb6a5c214,1,ea,,,On Semiconductor,CAT24C256WI-G,EEPROM 256Kb I2C SOIC8,src_58a28329902e
+bl_dfdfc73cf078,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_f2386b5a17b0,1,ea,,,TI,CDCE913PWR,Programmable 1-PLL VCXO Clock Synthesizer,src_58a28329902e
+bl_a5e638e89245,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_921c032f0ee2,1,ea,,,TI,SN74AVC1T45DCK,Dual Voltage Translator,src_58a28329902e
+bl_c1509d5881cd,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_regulator,mdl_8209de8b57bf,1,ea,,,TI,TPS62362YZH,Regulator Switching 3A with Dig Voltage Scaling,src_58a28329902e
+bl_6baca7164ff3,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_40eb11c8ebee,5,ea,,,TI,SN74LVC1G07DCK,Driver Open Drain output,src_58a28329902e
+bl_f8c7ad05a584,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_transceiver,mdl_415aff6a2fbe,1,ea,,,Micrel,KSZ9031RNX,Gb Ethernet Transceiver PHY,src_58a28329902e
+bl_97ed61e8e1a8,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_15b9caa7aedf,2,ea,,,TI,SN74AVC4T245PW,Bus Transceiver 4bit Voltage Translator,src_58a28329902e
+bl_79240309b5f7,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_5b6b4937485f,2,ea,,,TI,SN74AVC2T244DQM,2bit Undirectional Voltage Translator,src_58a28329902e
+bl_88bb8cd2e377,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_ed611c261a08,2,ea,,,TI,SN74LVC1G08DCK,Single logic AND Gate,src_58a28329902e
+bl_bfdc83cc55a9,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_memory,mdl_88d80a966de0,1,ea,,,Macronix,MX66L51235FMI-10G,Quad Serial NOR Flash Memory 512Mb 3.3V,src_58a28329902e
+bl_5db04a92e949,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_4854d2bcc16a,2,ea,,,TI,TPD2E001DRL,ESD Protection Array 2Chan +-15kV,src_58a28329902e
+bl_7ce692a50584,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_32ffb134b2d6,1,ea,,,TI,SN74LVC1G00DCK,Single Two input positive NAND,src_58a28329902e
+bl_46d0faff3764,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_b8832c0bc76a,2,ea,,,TI,SN65HVD78D,RS-485 Transceiver with ESD protection,src_58a28329902e
+bl_70e823cd0b67,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_24df73fd371b,1,ea,,,TI,REF3025AIDBZ,CMOS Voltage Reference 2.5V,src_58a28329902e
+bl_14aa0513382f,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_crystal,mdl_bb79837ffd80,1,ea,,,Suntsu,SCM18B-24.000MHz TR,Crystal 24MHz,src_58a28329902e
+bl_cf733beac7c6,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_crystal,mdl_633a4ae67207,1,ea,,,Abracon,ABM3-25.000MHz-B2-T,Crystal 25MHz,src_58a28329902e
+bl_f99299e1a585,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_crystal,mdl_7a91e2890988,1,ea,,,Epson,MC-30632.7680k-A,Crystal 32.768KHz,src_58a28329902e
+bl_a93fcac7613e,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_capacitor,mdl_e7259328aa5b,1,ea,,,Abracon,ABM3-12.000MHz-D2Y-T,Crystal 12MHz 30ppm load cap 18pF,src_58a28329902e
+bl_d734c67b33fd,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_etc,mdl_0723812eef4b,1,ea,,,DarlingIndustrial,DC-OVBD420AH,Camera Module 2Mp OV2659 CMOS Fixed Focus,src_eda70b6f2d7d
+bl_0839d7dfccac,ti-tidep-0050,ti-tidep-0050-rev-A,,,type_connector,mdl_12cee80dc531,1,ea,,,Hirose,FH26-25S-0.3SHW(05),Connector 0.3mm pitch 25pin FFC,src_eda70b6f2d7d
+bl_c88b61c85843,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,BAG,type_etc,mdl_cc015fb4d78a,1,ea,,,"50-18, Desco",13605,3x5 Open Top Anti-Static Bag,src_pipeline_repair_idempotent
+bl_6a185f30d778,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,BOX,type_etc,,1,ea,,,,,BeagleBone Black Wireless Box,src_pipeline_repair_idempotent
+bl_dbcb9ba8cac8,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,CABLE,type_etc,mdl_f28ed67b0558,1,ea,,,"13564, Molex",68784-0002,USB 2.0 A to Micro B Cable 3ft,src_pipeline_repair_idempotent
+bl_e2941d6d8e1c,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,PCB,type_etc,mdl_5be8c0d7ff79,1,ea,,,BeagleBone Black Wireless,A5b,BeagleBone Black Wireless A5b,src_pipeline_repair_idempotent
+bl_de69fd802afc,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,QSG,type_etc,,1,ea,,,,,BeagleBone Black Wireless Quick Start,src_pipeline_repair_idempotent
+bl_3198606c5ee0,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"ANT1-1, ANT2-1",type_connector,mdl_7cf47ea876da,2,ea,,,Anaren Microwave,66089-2430,"2.4GHz Whip, Straight RF Antenna 3dBi Connector, U.FL Connector Mount",src_pipeline_repair_idempotent
+bl_16443aafc1f4,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"ANT1, ANT2",type_etc,mdl_44bdd8f52e59,2,ea,,,Hirose,U.FL-R-SMT-1(10),CONN UMC JACK STR 50 OHM SMD,src_pipeline_repair_idempotent
+bl_07a31675c40d,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"BT, PWR, USR0. USR1, USR2, USR3, WL",type_etc,mdl_2cf09c1572b3,7,ea,,,Lite-On,LTST-C191TBKT,LED BLUE CLEAR THIN 0603 SMD,src_pipeline_repair_idempotent
+bl_081bb323a226,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C1, C19, C20, C61",type_etc,mdl_27ea469f2960,4,ea,,,Samsung,CL10A106MQ8NNNC,CAP. 10uF 6.3V (0603),src_pipeline_repair_idempotent
+bl_a45b435b04e3,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C16, C55, C56",type_etc,mdl_cbd49c0e3d9e,3,ea,,,Samsung,CL10A225KQ8NNNC,CAP. 2.2uF 6.3V (0603),src_pipeline_repair_idempotent
+bl_c1e002f6b6c3,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C2, C13, C15, C17, C18, C21, C22, C24, C25, C43. C44, C45, C47, C48, C49, C50, C51, C52, C53, C58, C59, C63, C69",type_capacitor,mdl_605879340b98,23,ea,,,Murata,GRM155R60J104KA01D,CAP CER 0.1UF 6.3V 10% X5R 0402,src_pipeline_repair_idempotent
+bl_c261390c028b,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C39, C40, C41, C42",type_capacitor,mdl_78f370299585,16,ea,,,Yageo,CC0402JRNPO9BN470,CAP CER 47PF 50V 5% NPO 0402,src_pipeline_repair_idempotent
+bl_cf99d6e27aee,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C3, C4, C5, C6",type_capacitor,mdl_c824bb4afc9c,4,ea,,,NIC Components,NMC0402NPO180J50TRPF,CAP CER 18PF 50V C0G 5% 0402,src_pipeline_repair_idempotent
+bl_e486602bd0f9,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C46, C60",type_etc,mdl_229c3c27a75d,2,ea,,,Samsung,CL05C100JB5NNNC,CAP. 10pF 50V (0402),src_pipeline_repair_idempotent
+bl_c031d4c50241,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,C62,type_etc,mdl_263d4e52a7a9,1,ea,,,"AVX TAJD227M010RNJ, AVX",TAJD227K010RNJ,CAP. 220uF TANT. 10V (7343),src_pipeline_repair_idempotent
+bl_c3354ce2270d,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,C7,type_etc,mdl_3cc1cac23190,1,ea,,,Samsung,CL21A475KOFNNNE,CAP. 4.7uF (0805),src_pipeline_repair_idempotent
+bl_2d2a8370a809,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C8, C10, C64",type_capacitor,mdl_5d0f97872d86,3,ea,,,Murata,GRM155R60J105KE19D,CAP CER 1UF 6.3V 10% X5R 0402,src_pipeline_repair_idempotent
+bl_346d1df35580,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"C9, C12, C14, C54, C57",type_etc,mdl_84e0cb5a1c8a,5,ea,,,Samsung,CL21B225KOFNNNE,CAP. 2.2uF 16V (0805),src_pipeline_repair_idempotent
+bl_a699913045df,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,D1,type_diode,mdl_f3bc2c57fbb6,1,ea,,,NXP Semiconductors,"RB751V40,115",DIODE SCHOTTKY 40V 120MA SOD-323,src_pipeline_repair_idempotent
+bl_94c3c3c1fe97,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,D3. D4,type_etc,mdl_d4a9013485aa,2,ea,,,Diodes Inc.,B130L-13-F,B130L-13 (SMA),src_pipeline_repair_idempotent
+bl_2d031401a096,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,D8,type_etc,mdl_3f1c73bbe0ac,1,ea,,,ON Semiconductor,BAT54CLT1G,BAT54C (SOT-23),src_pipeline_repair_idempotent
+bl_b8a062f9e97c,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,F1,type_etc,mdl_37aeabe9e19a,1,ea,,,Littelfuse,1206L050YR,1206L050YR (1206),src_pipeline_repair_idempotent
+bl_de8116379acb,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,FB1,type_etc,mdl_0243d43d0e82,1,ea,,,Murata,BLM21AG221SN1D,FB 220 OHM 0805,src_pipeline_repair_idempotent
+bl_979d19d2b0fc,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,FB2,type_etc,mdl_4987ee161a16,1,ea,,,Murata,BLM18BD252SN1D,FB 2.5K (0603),src_pipeline_repair_idempotent
+bl_1c7c2ef8410c,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,FB3,type_etc,mdl_7edeefbe0d64,1,ea,,,Laird,LI0805H151R-10,Ferrite Bead 150 Ohm 800mA,src_pipeline_repair_idempotent
+bl_36c8b493a0ac,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"FB4, R17",type_resistor,mdl_1816c6ea88dd,2,ea,,,CTS Components,73L3R10J,RES .10 OHM 1/8W 5% 0805,src_pipeline_repair_idempotent
+bl_de0c78fb21a8,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"FB5, FB6, FB7",type_etc,mdl_8b4a00249976,3,ea,,,Murata,BLM15AG102SN1D,FERRITE BEAD 1 KOHM 0402 1LN,src_pipeline_repair_idempotent
+bl_d297d57c0034,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC1,type_etc,mdl_eee242d7c91a,1,ea,,,Octavo Systems,OSD3358-512M-BAS,OSD3358-512M-BAS-XB for Beagleboard.org,src_pipeline_repair_idempotent
+bl_b48a5ff479ce,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"IC10, IC11",type_etc,mdl_3299c5a937cc,2,ea,,,Texas Instruments,TXS0108ERGYR,IC XLATR VOLT-LVL 8B BDIR 20QFN,src_pipeline_repair_idempotent
+bl_92f799f6246a,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC12,type_regulator,mdl_89c574fa107b,1,ea,,,Texas Instruments,TPS2051BDGNR,IC 1.5A PWR DIST SWITCH 8-SOIC,src_pipeline_repair_idempotent
+bl_d0de034aa3e1,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC13,type_etc,mdl_7dc5aa4855cf,1,ea,,,Texas Instruments,SN74AUC1G74DCTR,IC D-TYPE POS TRG SNGL SM8,src_pipeline_repair_idempotent
+bl_e6aae5127540,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"IC14, IC15",type_etc,mdl_cfe469397b2c,2,ea,,,Texas Instruments,TPD4S012DRYR,IC 4CH ESD SOLUTION W/CLAMP 6SON,src_pipeline_repair_idempotent
+bl_ef3db898696e,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC17,type_etc,mdl_4e8347697bcd,1,ea,,,Texas Instruments,SN74LVC2G241DCUR,IC BUFF/DVR TRI-ST DL 8VSSOP,src_pipeline_repair_idempotent
+bl_c297bffd4ee0,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC18,type_regulator,mdl_f158d4d46118,1,ea,,,Texas Instruments,TL1963ADCQR,IC REG LDO ADJ 1.5A SOT223-6,src_pipeline_repair_idempotent
+bl_21757589c8f5,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC19,type_etc,mdl_94adc2bbe24e,1,ea,,,Diodes Inc.,AP2112K-1.8TRG1,AP2112K-1.8TRG1,src_pipeline_repair_idempotent
+bl_b95366040fe5,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC2,type_etc,mdl_6a3515d171ed,1,ea,,,Texas Instruments,SN74LVC1G07DCKR,IC BUFF/DVR NON-INVERT SC705,src_pipeline_repair_idempotent
+bl_a51f30f5fd1a,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC22,type_memory,mdl_019b4c58b2f4,1,ea,,,Kingston,EMMC04G-M627-X02U,"IC MEMORY, 4GB eMMC",src_pipeline_repair_idempotent
+bl_7a28f810544e,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC3,type_etc,mdl_44e9484521f6,1,ea,,,Texas Instruments,SN74LVC1G06DCKR,IC INVERTER SINGLE 1INPUT SC705,src_pipeline_repair_idempotent
+bl_4ca33a5377f9,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC4,type_etc,mdl_ca48d1c766b2,1,ea,,,Microchip,24LC32AT-I/OT,IC EEPROM 32KBIT 400KHZ SOT23-5,src_pipeline_repair_idempotent
+bl_96d6220aae31,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC5,type_etc,mdl_1273c70b5554,1,ea,,,Texas Instruments,TLVH433IDBZR,IC VREF SHUNT ADJ SOT23-3,src_pipeline_repair_idempotent
+bl_b09f19c44334,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"IC7, IC8",type_diode,mdl_e986113d6e0f,2,ea,,,NXP Semiconductors,IP4283CZ10-TBR,TVS DIODE 5.5VWM 9.5VC 10DFN,src_pipeline_repair_idempotent
+bl_74abd8c7fb16,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,IC9,type_etc,mdl_31113a389629,1,ea,,,NXP Semiconductors,"TDA19988BHN/C1,557",IC HDMI INTERFACE HVQFN64,src_pipeline_repair_idempotent
+bl_7dd249b3d0db,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,MOD1,type_etc,mdl_3c4048cd8f68,1,ea,,,Texas Instruments,WL1835MODGBMOCR,MODULE WIFI WILINK,src_pipeline_repair_idempotent
+bl_8658feba478b,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,OSC1,type_clock,mdl_e811bca45996,1,ea,,,Abracon,ASDMB-24.576MHZ-LC-T,"Oscillator, 24.576MHZ, 3.3V",src_pipeline_repair_idempotent
+bl_0a0b45eaab6d,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,OSC2,type_etc,mdl_65b576acbc7f,1,ea,,,NDK,NZ2520SB-32.768KHZ-NSA3534C,OSC XO 32.768KHZ CMOS SMD,src_pipeline_repair_idempotent
+bl_17ffb64d8903,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"P8, P9",type_connector,mdl_24c4f238fc91,2,ea,,,Major League Electronics,SSHS-123-D-02-GT-LF,"NN HEADER FMAL 46PS.1"" DL GOLD""",src_pipeline_repair_idempotent
+bl_13b9792085d6,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"POWER, RESET, S2",type_etc,mdl_f0413c7524f6,3,ea,,,"C&K Components KMR231GLFS, Zhejiang Jianfu Electronics Co., LTD.",TVAF02-NB-R,Mini Switch,src_pipeline_repair_idempotent
+bl_31ecf82573c5,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,Q2,type_etc,mdl_4c617c22bb6b,1,ea,,,"6K30032768K0702070401, Interquip",9CAA32768072TF70QT,3.2x1.5 2pads 32.768kHz 7pF 20ppm,src_pipeline_repair_idempotent
+bl_d0501663e75b,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,Q4,type_crystal,mdl_bf9f30669feb,1,ea,,,TXC,7A-24.000MAAJ-T,CRYSTAL 24.000 MHZ 18PF SMD,src_pipeline_repair_idempotent
+bl_52a1ca3b43ab,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R1, R2, R3, R4, R5, R6, R7, R12, R13, R16, R18, R19, R20, R23, R24, R25, R28, R30, R31, R32, R33, R40, R46, R98, R99, R101, R102, R103, R105, R119, R121",type_etc,mdl_7cdb339b4d13,31,ea,,,Samsung,RC1005F103CS,RES. 10K 1% (0402),src_pipeline_repair_idempotent
+bl_3bb982d675fe,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R10, R11",type_etc,mdl_9c277792c815,2,ea,,,Samsung,RC1005J154CS,RES. 150K 5% (0402),src_pipeline_repair_idempotent
+bl_bdc634f6d94b,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R120,type_resistor,mdl_8aaea3b04cf7,1,ea,,,Yageo,RC0402FR-0727KL,RES 27K OHM 1/16W 1% 0402 SMD,src_pipeline_repair_idempotent
+bl_1a3eb6a4f0aa,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R14, R26, R27, R29, R35, R36, R37, R38, R39, R54, R114, R122",type_resistor,mdl_3c39c806c656,12,ea,,,Yageo,RC0402JR-070RL,Resistor Zero ohm Jumper 0402,src_pipeline_repair_idempotent
+bl_0ab297211063,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R21, R22, R43, R52, R53, R55",type_resistor,mdl_f49c2c88c2fb,6,ea,,,NIC Components,NRC04F4751TRF,RES 4.75K OHM 1/16W 1% 0402 SMD,src_pipeline_repair_idempotent
+bl_5c9c0ed97df1,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R34,type_resistor,mdl_2e80f5e32f8d,1,ea,,,NIC Components,NRC04J220TRF,Resistor 22ohm 1/16W 1% 0402,src_pipeline_repair_idempotent
+bl_dbe33644c372,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R41, R42, R106, R115, R118",type_resistor,mdl_d638fde17e02,5,ea,,,"Yageo RC0402FR-071K5L,",RC0402FR-071ML,RES 1.50K OHM 1/16W 1% 0402 SMD,src_pipeline_repair_idempotent
+bl_e5e9b9d16898,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R44,type_etc,mdl_8558d8b64282,1,ea,,,Samsung,RC1005F4990CS,RES. 499 OHM 1% (0402),src_pipeline_repair_idempotent
+bl_581bbc013a68,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R47,type_etc,mdl_0f8a6564108b,1,ea,,,Samsung,RC1005F4022CS,RES. 40.2K 1% (0402),src_pipeline_repair_idempotent
+bl_64eaa714a868,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R57, R58, R61, R63, R65, R67, R69, R71, R73, R75, R76, R78, R80, R82, R85, R87, R123",type_resistor,mdl_4ffcc94adc26,17,ea,,,Yageo,RC0402FR-07100KL,Resistor 100Kohm 1/16W 1% 0402,src_pipeline_repair_idempotent
+bl_f85fef0d4953,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R60, R62, R64, R66, R68, R70, R72, R110, R140, R141, R142, R143",type_resistor,mdl_8e150740ada0,12,ea,,,Yageo,RC0402JR-0733RL,RES 33 OHM 1/16W 5% 0402 SMD,src_pipeline_repair_idempotent
+bl_bcdb542cc0bd,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R8, R95",type_resistor,mdl_d638fde17e02,2,ea,,,Yageo,RC0402FR-071ML,Resistor 1Mohm 1/16W 1% 0402,src_pipeline_repair_idempotent
+bl_2e629ffc672d,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R86, R126, R127, R128, R129, R130, R131, R134, R135, R136",type_etc,mdl_ccd98e8c2dfc,10,ea,,,Samsung,RC1608J330CS,RES. 33 OHM 5% (0603),src_pipeline_repair_idempotent
+bl_f7c7020e995a,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R88,type_etc,mdl_da61ffead3a5,1,ea,,,Samsung,RC1005F101CS,RES. 100 OHM 1% (0402),src_pipeline_repair_idempotent
+bl_843c75464100,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"R89, R90, R92, R96, R100, R104, R124, R125",type_etc,mdl_3eedb2e5ba4f,8,ea,,,Samsung,RC1005J102CS,RES. 1K 5% (0402),src_pipeline_repair_idempotent
+bl_e81bc2a35726,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R93,type_etc,mdl_a4a20397b1be,1,ea,,,Samsung,RC1005F7151CS,RES. 7.15K 1% (0402),src_pipeline_repair_idempotent
+bl_e40250887d15,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,R94,type_resistor,mdl_8a70f5bf76ba,1,ea,,,Samsung,RC1005F4121CS,RES 4.12K OHM 1/16W 1% 0402 SMD,src_pipeline_repair_idempotent
+bl_99ed2a1ae4ef,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,T1,type_etc,mdl_59a5211597d2,1,ea,,,ON Semiconductor,MMBT2907ALT1G,TRANS PNP 60V 0.6A SOT23,src_pipeline_repair_idempotent
+bl_be7a7d6329a4,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,"T3, T4",type_mosfet,mdl_f26152fbae67,2,ea,,,Diodes Inc.,BSS138W-7-F,MOSFET N-CH 50V 200MA SC70-3,src_pipeline_repair_idempotent
+bl_b967c76338bf,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X1,type_connector,mdl_9e439f458e7a,1,ea,,,FCI,68000-406HLF,"CONN HEADER 6POS, VERTICAL,  .100 STR TIN",src_pipeline_repair_idempotent
+bl_a192a1915a36,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X12,type_etc,mdl_94edb1c0cc87,1,ea,,,CUI,PJ-102A,Power Jack,src_pipeline_repair_idempotent
+bl_184d5fd458a0,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X2,type_connector,mdl_f7d202d8207b,1,ea,,,ALPS,SCHA5B0200,Connector SD/MMC,src_pipeline_repair_idempotent
+bl_a884146e8b1d,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X3,type_etc,mdl_463c1ed21cde,1,ea,,,"TE Connectivity / AMP 787616-1-P,",LY-USB-004-001-A1,Single Row USB Right Angle,src_pipeline_repair_idempotent
+bl_10df2f31c5ac,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X4,type_connector,mdl_6c8e2738947a,1,ea,,,FCI,10118192-0001LF,"USB - micro B USB 2.0 Receptacle Connector 5 Position Surface Mount, Right Angle, Horizontal",src_pipeline_repair_idempotent
+bl_f27744c6f0ce,beaglebone-black-wireless,beaglebone-black-wireless-rev-A,,X5,type_connector,mdl_2506cb41cc8b,1,ea,,,FCI,10118241-001RLF,HDMI / Displayport / DVI Connectors MICRO HDMI RCPT SMT DIP+ SMT LEG TYPE D,src_pipeline_repair_idempotent
+bl_0da8755cc218,beaglebone-ai,beaglebone-ai-rev-A,,,type_etc,mdl_d7c865800f68,1,ea,,,AVL,BeagleBone AI PCB Rev A1(Add FCC/CE Logo),"12 layers PCB,glossy white Soldermask,Black Silkscreen,Immersion gold,8636*54.61mm,BeagleBone AI PCB Rev A1 (Add FCC/CE Logo)",src_12f0c5900970
+bl_4f4c5bc58935,beaglebone-ai,beaglebone-ai-rev-A,,U4,type_etc,mdl_56987b1b6cb1,1,ea,,,TI,AM5729BABCXEAR,IC ARM Dual Cortex-A15 Microprocessor FCBGA(ABC)-760 SMD JEDEC TRAY,src_12f0c5900970
+bl_6db0230ccd84,beaglebone-ai,beaglebone-ai-rev-A,,U7,type_memory,mdl_e207a63aa01e,1,ea,,,kingston,EMMC16G-TB29-PZ90,"IC,Memory,16GB,EMMC,EMMC16G-TB29-PZ90 ,FBGA153,SMD",src_12f0c5900970
+bl_31ae3327bdce,beaglebone-ai,beaglebone-ai-rev-A,,U48,type_regulator,mdl_3a4927829046,1,ea,,,TI,TPS2051BDGN,"IC,Current-Limited Power-distribution Switches,TPS2051BDGN,8-MSOP-PowerPad,SMD",src_12f0c5900970
+bl_dc5a0456b7ad,beaglebone-ai,beaglebone-ai-rev-A,,U1,type_regulator,mdl_2409d4b86c2b,1,ea,,,Texas Instruments,TPS51200DRCR,IC CONV DDR DDR2 DDR3 10SON,src_12f0c5900970
+bl_b5473c989b2e,beaglebone-ai,beaglebone-ai-rev-A,,U10,type_regulator,mdl_18f158fb7683,1,ea,,,Texas Instruments,TPS3808G33DBVR,IC VOLT SUPERVISOR 3.3V SOT23-6,src_12f0c5900970
+bl_04f8e53fc554,beaglebone-ai,beaglebone-ai-rev-A,,"U2,U11",type_memory,mdl_bcd3f6631e34,2,ea,,,KINGSTON,D2516EC4BXGGB-U,DRAM Chip DDR3L SDRAM 4G-Bit 256Mx16 1.35V 96-Pin F-BGA,src_12f0c5900970
+bl_a4c5e2231222,beaglebone-ai,beaglebone-ai-rev-A,,U3,type_regulator,mdl_4569cc3bcec7,1,ea,,,TI,TPS6590379ZWSR,IC TPS659037 Power Management Unit (PMU) for Processor NFBGA-169 SMD,src_12f0c5900970
+bl_37d95f6e4614,beaglebone-ai,beaglebone-ai-rev-A,,U40,type_regulator,mdl_f5fec92c4c1d,1,ea,,,SG MICRO,SGM2032-ADJYN5G/TR,"IC,300mA Low Power Low Dropout RF Linear Regulators,SGM2032-ADJYN5G/TR,SOT23-5,SMD",src_12f0c5900970
+bl_df4e6cd1a3eb,beaglebone-ai,beaglebone-ai-rev-A,,U6,type_etc,mdl_e69b1e885b39,1,ea,,,TI,SN74LVC1G08DCKR,"IC,SINGLE 2-INPUT POSITIVE-AND GATE,SN74LVC1G08DCKR,SOT-353,SMD",src_12f0c5900970
+bl_907cead14494,beaglebone-ai,beaglebone-ai-rev-A,,U46,type_etc,mdl_4eac95781c72,1,ea,,,TI,SN74LVC2G241DCUT,"IC,Dual Buffer and Line Driver,SN74LVC2G241DCUT,US8,SMD",src_12f0c5900970
+bl_590d3ad72ebd,beaglebone-ai,beaglebone-ai-rev-A,,"U8,U90",type_etc,mdl_6a3515d171ed,2,ea,,,TI,SN74LVC1G07DCKR,"IC,SINGLE BUFFER/DRIVER WITH OPEN-DRAIN OUTPUT,SN74LVC1G07DCKR,SC-70,SMD",src_12f0c5900970
+bl_1204009a8861,beaglebone-ai,beaglebone-ai-rev-A,,U12,type_etc,mdl_9ffc830dfe0e,1,ea,,,TI,TXS0104ERGYR,"IC,TXS0104E 4-Bit Bidirectional Voltage-Level Translator For Open-Drain and Push-Pull
+Applications 14-QFN,SMD""",src_12f0c5900970
+bl_84c332a82eb1,beaglebone-ai,beaglebone-ai-rev-A,,U72,type_etc,mdl_b7de48008f00,1,ea,,,Pericom,PI3USB3102ZLE,IC USB3.0&USB2.0 SWITCH 32TQFN,src_12f0c5900970
+bl_f5e873f23bb2,beaglebone-ai,beaglebone-ai-rev-A,,U22,type_etc,mdl_0362af76900c,1,ea,,,Texas Instruments,TUSB322IRWBR,IC USB PORT CONTROL TYPE-C 12X2Q,src_12f0c5900970
+bl_3deed55fa7ca,beaglebone-ai,beaglebone-ai-rev-A,,U45,type_transceiver,mdl_d3cb773099a6,1,ea,,,ATHEROS,AR8035-AL1B,"IC,Ultra low-power single RGMII Gigabit Ethernet PHY,AR8035,QFN-40,SMD",src_12f0c5900970
+bl_5cd99fc72e12,beaglebone-ai,beaglebone-ai-rev-A,,U78,type_etc,mdl_efd9e0706f00,1,ea,,,ST,STMPE811QTR,"IC,S-Touch? advanced resistive touchscreen controller with 8-bit GPIO expander,STMPE811QTR,QFN-16,SMD",src_12f0c5900970
+bl_4823544ff6a8,beaglebone-ai,beaglebone-ai-rev-A,,"D6,D7",type_regulator,mdl_19106077becb,2,ea,,,TI,TLVH431CDBZR,"IC,Low-Voltage Adjustable Precision Shunt Regulators",src_12f0c5900970
+bl_b96cbde70fa8,beaglebone-ai,beaglebone-ai-rev-A,,"R7,R10,R14,R15,R55,R70,R89,R90,R100,R108,R130,R145,R146,R148,R149,R152,R159,R183,R201,R385,R461,R542,R543,R576,R577,R578,R579,R580,R611,R614,R615,R616,R617,R618,R619,R620,R621,R622,R623,R624,R625,R626,R627,R628,R629,R630,R631,R632,R633,R634,R635,R636,R637,R638,R639,R642,R643,R644,R645,R646,R652,R653,R662,R663,R664,R665,R666,R667,R668,R669,R680,R681,R682,R683,R684,R685,R686,R687,R688,R694,R695,R696,R697,R702,R706,R707",type_etc,mdl_3c39c806c656,86,ea,,,YAGEO,RC0402JR-070RL,"RES,0R,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_cae6d3978257,beaglebone-ai,beaglebone-ai-rev-A,,R84,type_etc,mdl_e6ca5e2aeace,1,ea,,,YAGEO,RC0402FR-0710RL,"RES,10R,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_879a920fe0b1,beaglebone-ai,beaglebone-ai-rev-A,,"R92,R93,R94,R95,R96,R97,R199,R200,R202",type_etc,mdl_24488cf3766d,9,ea,,,YAGEO,RC0402JR-0722RL,"RES,22R,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_a7dc1d92b724,beaglebone-ai,beaglebone-ai-rev-A,,"R333,R334,R336,R337,R458,R459,R460,R462,R464,R466,R469,R470,R581,R582,R583,R584,R585,R607,R608,R609,R610",type_etc,mdl_8e150740ada0,21,ea,,,YAGEO,RC0402JR-0733RL,"RES,33R,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_be0740e7aeba,beaglebone-ai,beaglebone-ai-rev-A,,"R26,R29,R468,R472,R473,R474,R476,R477,R479,R480",type_etc,mdl_13c92fddc4e1,10,ea,,,YAGEO,RC0402FR-0749R9L,"RES,49R9,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_11ec06ec0124,beaglebone-ai,beaglebone-ai-rev-A,,R294,type_etc,mdl_cb33c2eaf1ec,1,ea,,,YAGEO,RC0402FR-07100RL,"RES,100R,+/-1%,1/16W,SMD0402,ALT_CODE:15052701",src_12f0c5900970
+bl_61059dff5db4,beaglebone-ai,beaglebone-ai-rev-A,,"R83,R660",type_etc,mdl_996442e468fc,2,ea,,,YAGEO,RC0402JR-07100RL,"RES,100R,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_54ba2209ffb6,beaglebone-ai,beaglebone-ai-rev-A,,"R589,R595",type_etc,mdl_cf8b5d1b6700,2,ea,,,YAGEO,RC0402JR-07220RL,"RES,220R,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_c80af90be4f8,beaglebone-ai,beaglebone-ai-rev-A,,"R22,R88",type_etc,mdl_78e4e925f155,2,ea,,,YAGEO,RC0402FR-07240RL,"RES,240R,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_8a741570723c,beaglebone-ai,beaglebone-ai-rev-A,,R457,type_etc,mdl_822cb791db02,1,ea,,,YAGEO,RC0402FR-071KL,"RES,1K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_fd64fd729d6e,beaglebone-ai,beaglebone-ai-rev-A,,"R147,R150,R588,R590,R591,R592,R593,R594,R670,R671,R672,R673,R674,R675,R676,R677,R678,R679,R701",type_etc,mdl_35e4a45c1b3d,19,ea,,,YAGEO,RC0402JR-071KL,"RES,1K,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_13b0735b8fb1,beaglebone-ai,beaglebone-ai-rev-A,,R134,type_etc,mdl_ff7dda3f6040,1,ea,,,YAGEO,RC0402JR-071K5L,"RES,1K5,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_efecf826afa7,beaglebone-ai,beaglebone-ai-rev-A,,R551,type_etc,mdl_5b38ea3de632,1,ea,,,YAGEO,RC0402JR-072K2L,"RES,2K2,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_39a40e85dd78,beaglebone-ai,beaglebone-ai-rev-A,,R465,type_etc,mdl_6c60d2e26ca4,1,ea,,,YAGEO,RC0402FR-072K37L,"RES,2K37,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_a094f95e27d3,beaglebone-ai,beaglebone-ai-rev-A,,"R180,R189,R192,R193,R194,R554",type_etc,mdl_ce3f0f0d007c,6,ea,,,YAGEO,RC0402JR-074K7L,"RES,4K7,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_71e088e8d363,beaglebone-ai,beaglebone-ai-rev-A,,"R1,R2,R13,R86,R338,R409,R418,R419,R420,R422,R423,R455,R475,R481,R482,R483,R485,R487,R488,R489,R491,R516,R530,R531,R537,R561,R562,R563,R564,R565,R704,R705",type_etc,mdl_f582cddaa069,32,ea,,,YAGEO,RC0402FR-0710KL,"RES,10K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_124138ff3ab7,beaglebone-ai,beaglebone-ai-rev-A,,"R4,R18,R19,R20,R24,R27,R54,R74,R82,R98,R99,R101,R102,R103,R104,R107,R112,R113,R119,R121,R124,R139,R155,R157,R169,R174,R175,R176,R177,R178,R179,R184,R185,R186,R188,R493,R541,R552,R566,R567,R572,R596,R598,R599,R600,R601,R602,R603,R604,R605,R606,R661,R690,R691",type_etc,mdl_b82d8c6a1e31,54,ea,,,YAGEO,RC0402JR-0710KL,"RES,10K,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_22eda986261e,beaglebone-ai,beaglebone-ai-rev-A,,R58,type_etc,mdl_73cde553d200,1,ea,,,YAGEO,RC0402FR-0720KL,"RES,20K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_a2c48cf6ff69,beaglebone-ai,beaglebone-ai-rev-A,,"R17,R91",type_etc,mdl_6e62a19254c7,2,ea,,,YAGEO,RC0402FR-0740K2L,"RES,40K2,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_0b4ff7532e99,beaglebone-ai,beaglebone-ai-rev-A,,R658,type_etc,mdl_2200e1075313,1,ea,,,YAGEO,RC0402FR-0752K3L,"RES,52K3,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_b48f90b44748,beaglebone-ai,beaglebone-ai-rev-A,,"R3,R44,R168,R173,R387,R389,R390,R392,R553,R571,R689,R700,J92（ PIN1与PIN2之间）",type_etc,mdl_f4f5aeb79256,13,ea,,,YAGEO,RC0402JR-07100KL,"RES,100K,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_49b538a301d0,beaglebone-ai,beaglebone-ai-rev-A,,"R656,R659",type_etc,mdl_4ffcc94adc26,2,ea,,,YAGEO,RC0402FR-07100KL,"RES,100K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_7296196d153a,beaglebone-ai,beaglebone-ai-rev-A,,"R545,R546",type_etc,mdl_ac8f752fe8c9,2,ea,,,YAGEO,RC0402JR-07200KL,"RES,200K,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_204ed4669ea1,beaglebone-ai,beaglebone-ai-rev-A,,"R11,R12",type_etc,mdl_e75b1b6b722f,2,ea,,,YAGEO,RC0402JR-071ML,"RES,1M,+/-5%,1/16W,SMD0402",src_12f0c5900970
+bl_969c4b62857d,beaglebone-ai,beaglebone-ai-rev-A,,R640,type_etc,mdl_6d2eafcac9bf,1,ea,,,Yageo,RL0805JR-070R1L,"RES,0R1,+/-5%,1/8W,SMD0805",src_12f0c5900970
+bl_3e754133bf17,beaglebone-ai,beaglebone-ai-rev-A,,"R25,R30,R31,R33,R34,R36,R37,R39,R40,R42,R43,R123,R125,R126,R128,R129,R131,R132,R136,R137,R140,R142,R143,R160,R161",type_etc,mdl_4fd2496bd229,25,ea,,,YAGEO,RC0402FR-0747RL,"RES,47R,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_d3635452df19,beaglebone-ai,beaglebone-ai-rev-A,,R657,type_etc,mdl_fd4ef37c9214,1,ea,,,YAGEO,RC0402FR-0780K6L,"RES,80K6,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_8f09771f8865,beaglebone-ai,beaglebone-ai-rev-A,,"R9,R85",type_etc,mdl_61f9b1c828aa,2,ea,,,YAGEO,RC0402FR-07499RL,"RES,499R,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_17c309e20021,beaglebone-ai,beaglebone-ai-rev-A,,R57,type_etc,mdl_9f0bcda13609,1,ea,,,YAGEO,RC0402FR-0718KL,"RES,18K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_511134fd6f37,beaglebone-ai,beaglebone-ai-rev-A,,R540,type_etc,mdl_d879b04a5e03,1,ea,,,YAGEO,RC0402FR-07909KL,"RES,909K,+/-1%,1/16W,SMD0402",src_12f0c5900970
+bl_9daf9b78eef2,beaglebone-ai,beaglebone-ai-rev-A,,C92,type_etc,mdl_f6c2c4594323,1,ea,,,MURATA,GRM1555C1H100JA01D,"CAP,10PF,+/-5%,C0G,50V,SMD0402",src_12f0c5900970
+bl_c0f13ca0fd56,beaglebone-ai,beaglebone-ai-rev-A,,"C334,C337",type_etc,mdl_2f83e3df6105,2,ea,,,MURATA,GRM1555C1H220JA01D,"CAP,22PF,+/-5%,C0G,50V,SMD0402",src_12f0c5900970
+bl_a5bf620b70dc,beaglebone-ai,beaglebone-ai-rev-A,,"C1,C462",type_etc,mdl_b23f46920b0f,2,ea,,,MURATA,GRM155R71H102KA01D,"CAP,1NF,+/-10%,X7R,50V,SMD0402",src_12f0c5900970
+bl_958a5f09e2ae,beaglebone-ai,beaglebone-ai-rev-A,,"C9,C10,C11,C17,C18,C19,C22,C23,C24,C25,C36,C40,C79,C95,C97,C100,C101,C102,C103,C104,C118,C119,C122,C125,C131,C136,C138,C139,C140,C141,C145,C146,C148,C154,C155,C158,C162,C165,C166,C171,C174,C175,C178,C181,C182,C185,C186,C187,C189,C190,C193,C197,C199,C201,C202,C203,C205,C206,C207,C209,C210,C211,C212,C213,C218,C220,C221,C222,C223,C224,C227,C230,C231,C232,C233,C234,C235,C236,C237,C238,C242,C245,C255,C256,C257,C258,C259,C261,C262,C269,C270,C271,C272,C299,C483,C494",type_etc,mdl_ba001db2c8e8,96,ea,,,MURATA,GRM155R71C103KA01D,"CAP,10NF,+/-10%,X7R,16V,SMD0402",src_12f0c5900970
+bl_6a3297aa6af1,beaglebone-ai,beaglebone-ai-rev-A,,"C5,C6,C8,C20,C35,C41,C42,C49,C60,C61,C69,C80,C81,C87,C88,C98,C99,C123,C143,C144,C147,C149,C153,C159,C163,C184,C225,C226,C281,C285,C286,C320,C321,C325,C327,C335,C336,C340,C345,C347,C348,C350,C351,C352,C353,C439,C440,C441,C443,C444,C445,C446,C457,C466,C472,C491,C492,C496,C497,C498",type_etc,mdl_90b8041bf869,60,ea,,,MURATA,GRM155R71C104KA88D,"CAP,100NF(0.1uf),+/-10%,X7R,16V,SMD0402",src_12f0c5900970
+bl_47b37a7f9982,beaglebone-ai,beaglebone-ai-rev-A,,"C106,C107,C108,C109,C179,C204,C214,C254,C260,C273,C274,C275,C276,C277,C279,C283,C339,C346,C480,C489,C490,C495",type_etc,mdl_aa06b30d1ad9,22,ea,,,MURATA,GRM155R61A105KE15D,"CAP,1UF,+/-10%,X5R,10V,SMD0402",src_12f0c5900970
+bl_72a15caaa262,beaglebone-ai,beaglebone-ai-rev-A,,C216,type_etc,mdl_63da36daad75,1,ea,,,MURATA,GRM155R61C105KA12D,"CAP,1UF,+/-10%,X5R,16V,SMD0402",src_12f0c5900970
+bl_b85abafc9a5b,beaglebone-ai,beaglebone-ai-rev-A,,"C38,C43,C117,C121,C133,C134,C151,C152,C157",type_etc,mdl_4724e50f8d26,9,ea,,,MURATA,GRM155R60J225ME15D,"CAP,2.2UF,+/-20%,X5R,6.3V,SMD0402",src_12f0c5900970
+bl_1a4efce932df,beaglebone-ai,beaglebone-ai-rev-A,,"C126,C164,C169,C172,C278,C282",type_etc,mdl_baf32fdbef61,6,ea,,,MURATA,GRM188R61C225KE15D,"CAP,2.2UF,+/-10%,X5R,16V,SMD0603",src_12f0c5900970
+bl_fe03bd284573,beaglebone-ai,beaglebone-ai-rev-A,,"C2,C3,C464",type_etc,mdl_8cfc41eb43f5,3,ea,,,MURATA,GRM188R61A475KE15D,"CAP,4.7UF,+/-10%,X5R,10V,SMD0603,Alt_Code:15051801",src_12f0c5900970
+bl_307d382f8050,beaglebone-ai,beaglebone-ai-rev-A,,"C114,C115,C127,C128,C132,C156,C194,C195,C196,C442,C456",type_etc,mdl_ab8a837ae40d,11,ea,,,MURATA,GRM188R61C475KAAJD,"CAP,4.7UF,+/-10%,X5R,16V,SMD0603",src_12f0c5900970
+bl_3fc7a47bc7b9,beaglebone-ai,beaglebone-ai-rev-A,,"C4,C7,C37,C89,C90,C91,C113,C116,C120,C124,C130,C161,C170,C180,C198,C208,C291,C292,C295,C300,C344,C349,C461",type_etc,mdl_ddc4071a78c9,23,ea,,,MURATA,GRM188R61A106KE69D,"CAP,10UF,+/-10%,X5R,10V,SMD0603",src_12f0c5900970
+bl_ac86e8e119cf,beaglebone-ai,beaglebone-ai-rev-A,,"C39,C96,C188",type_etc,mdl_01666854c2c5,3,ea,,,MURATA,GRM188R60J226MEA0D,"CAP,22UF,+/-20%,X5R,6.3V,SMD0603",src_12f0c5900970
+bl_58db02ee9bd8,beaglebone-ai,beaglebone-ai-rev-A,,"C12,C26,C93,C94,C105,C111,C192,C263,C264,C265,C266,C293,C294,C297,C298",type_etc,mdl_5ccb037e2721,15,ea,,,MURATA,GRM21BR60J476ME15L,"CAP,47UF,+/-20%,X5R,6.3V,SMD0805",src_12f0c5900970
+bl_0c965ddd703d,beaglebone-ai,beaglebone-ai-rev-A,,C326,type_etc,mdl_d24777e81d39,1,ea,,,MURATA,GRM32ER61A476ME20L,"CAP,47UF,+/-20%,X5R,10V,SMD1210",src_12f0c5900970
+bl_7679ad844039,beaglebone-ai,beaglebone-ai-rev-A,,"C481,C482",type_etc,mdl_e293524f5f24,2,ea,,,MURATA,GRM32ER60J107ME20L,"CAP,100UF,+/-20%,X5R,6.3V,SMD1210,1000pcs/Reel",src_12f0c5900970
+bl_bbae60d82154,beaglebone-ai,beaglebone-ai-rev-A,,"C13,C14,C15,C16",type_etc,mdl_bd4f6a114837,4,ea,,,MURATA,GRM1555C1H240JA01D,"CAP,24pF,+/-5%,C0G,50V,SMD0402",src_12f0c5900970
+bl_3da70e04bf16,beaglebone-ai,beaglebone-ai-rev-A,,C58,type_etc,mdl_9cc173ca1b90,1,ea,,,MURATA,GRM188R61A226ME15D,"CAP, CERM, 22uF, 10V, +/-20%, X5R, 0603",src_12f0c5900970
+bl_adde01bfedf2,beaglebone-ai,beaglebone-ai-rev-A,,"C51,C52,C68,C338,C341,C342,C343,C463",type_etc,mdl_c4c4280a5fe5,8,ea,,,MURATA,GRM1555C1H150GA01D,"CAP,15pF,+/-2%,C0G,50V,SMD0402",src_12f0c5900970
+bl_ba26a1faecce,beaglebone-ai,beaglebone-ai-rev-A,,"C110,C112,C168,C176,C177,C183,C200,C215,C217,C296",type_etc,mdl_2d72584068b2,10,ea,,,Yageo,CC0402MRX5R5BB106,"CAP,10UF,+/-20%,X5R,6.3V,SMD0402",src_12f0c5900970
+bl_f36efdf70d9c,beaglebone-ai,beaglebone-ai-rev-A,,C268,type_capacitor,mdl_6bcd7ea6fe2a,1,ea,,,MURATA,GRM1555C1H1R5CA01D,"Cap  Ceramic 1.5pF, +-0.25pF, 50V, C0G, 0402",src_12f0c5900970
+bl_e94a32105256,beaglebone-ai,beaglebone-ai-rev-A,,"L16,L17,L18,L19,L20,L21,L22",type_etc,mdl_dafe3980fe22,7,ea,,,Gausstek,DI20A102M1U,"Inductor,1uH,+/-20%,Ir=2.2A,Is=3.1,0.085ohm,SMD,2.5*2.0*1mm",src_12f0c5900970
+bl_f069b03b26a1,beaglebone-ai,beaglebone-ai-rev-A,,L30,type_etc,mdl_596413bb9b41,1,ea,,,TDK,VLS252012ET-4R7M,"Power Inductor,Magnetic shielded,4.7uH,1.05A,0.338ohm,2.5x2.0x1.2mm,SMD",src_12f0c5900970
+bl_c6efdbb6aa75,beaglebone-ai,beaglebone-ai-rev-A,,L15,type_etc,mdl_3556cd8e6563,1,ea,,,SUMIDA,CDRH2D18/HPNP-4R7NC,"Power Inductor,Magnetic shielded,4.7uH,1.2A,0.14ohm,3X3X1.8mm,SMD",src_12f0c5900970
+bl_b256749e82f1,beaglebone-ai,beaglebone-ai-rev-A,,"L1,L2",type_etc,mdl_77c70316908a,2,ea,,,GAUSSTEK,SP04O203M1U,"Power Inductor,Magnetic shielded,1uH,idc4.5A,27mohm,4.3x4.0x2.0mm,20%,SMD,TR",src_12f0c5900970
+bl_433e578e7d44,beaglebone-ai,beaglebone-ai-rev-A,,"FB2,FB3,FB6",type_etc,mdl_4a5f74bfd94a,3,ea,,,MURATA,BLM18PG181SN1D,"Ferrite Bead,180ohm@100MHz,+/-25%,1500mA,0.09ohm,SMD0603",src_12f0c5900970
+bl_7804c4db9055,beaglebone-ai,beaglebone-ai-rev-A,,FB5,type_etc,mdl_baf99ec42fc1,1,ea,,,MURATA,BLM15PD121SN1D,"Ferrite Bead,120ohm@100MHz,+/-25%,1300mA,0.09ohm,SMD0402",src_12f0c5900970
+bl_d1475bb79669,beaglebone-ai,beaglebone-ai-rev-A,,"D1,D2,D3,D4,D5,D8",type_etc,mdl_d24f4ea319cf,6,ea,,,EVERLIGHT,19-217/G7C-AN1P2/3T,"LED,Super Yellow Green,Water Clear,20mA,SMD0603, 569.5~577.5nm",src_12f0c5900970
+bl_bfcc1198014f,beaglebone-ai,beaglebone-ai-rev-A,,D77,type_diode,mdl_5165067da2d8,1,ea,,,DIODES,1N5819HW-7-F,"Diode,Schottky Diode,1N5819HW-7-F,40V,1A,SOD-123,SMD,-65~125,TR",src_12f0c5900970
+bl_83bc82aa37ae,beaglebone-ai,beaglebone-ai-rev-A,,"D81,D82",type_diode,mdl_b073a9501cac,2,ea,,,DIODES,B360A-13-F,"Diode,Schottky Diode,B360A-13-F,60V,3A,SMA,SMD",src_12f0c5900970
+bl_86596cf9d5db,beaglebone-ai,beaglebone-ai-rev-A,,Q19,type_diode,mdl_e17984d17370,1,ea,,,NXP,"BAT54C,215","Diode,Schottky Barrier(Double) Diodes,BAT54C,215,30V,200mA,SOT-23,SMD",src_12f0c5900970
+bl_ac90d6aeb023,beaglebone-ai,beaglebone-ai-rev-A,,D76,type_diode,mdl_8f4aa26213d8,1,ea,,,ON,MM5Z5V1ST1G,"Diode,Zener Diode,MM5Z5V1ST1G,5.1V,+/-2%,200 mW,SOD523,SMD,-65~155,AEC-Q101,TR",src_12f0c5900970
+bl_db1fc5cd12a2,beaglebone-ai,beaglebone-ai-rev-A,,"D78,D79",type_diode,mdl_4a81dacf200a,2,ea,,,NXP,"PRTR5V0U2X,215","Diode,TVS,PRTR5V0U2X, 5.5V,SOT-143B,SMD",src_12f0c5900970
+bl_1016a010f78c,beaglebone-ai,beaglebone-ai-rev-A,,"D21,D22,D23,D24,D25",type_diode,mdl_ce0656aa7314,5,ea,,,ON,ESD5B5.0ST1G,"Diode,TVS,ESD5B5.0ST1G,5V,50W,SOD-523,SMD",src_12f0c5900970
+bl_029487bdf372,beaglebone-ai,beaglebone-ai-rev-A,,"D46,D47",type_diode,mdl_04bb11c4b9c0,2,ea,,,TOPS,ESD0402-V05L,"Diode,TVS,ESD0402-V05L, 5V, 0.1pF,0402,SMD",src_12f0c5900970
+bl_e12ba49effd5,beaglebone-ai,beaglebone-ai-rev-A,,"Q1,Q4,Q14",type_etc,mdl_2ac1253fc676,3,ea,,,DIODES,MMBT2907A-7-F,"Transistor,PNP,MMBT2907A-7-F,60V,600MA,SOT-23,SMD",src_12f0c5900970
+bl_787e6e387b68,beaglebone-ai,beaglebone-ai-rev-A,,Q15,type_mosfet,mdl_77c917766db9,1,ea,,,FAIRCHILD,FDMA908PZ,"MOSFET,Single P-Channel PowerTrench MOSFET,-12A, -12V,12.5 mohm,microFET2x2(8Pin),SMD",src_12f0c5900970
+bl_bd204793165b,beaglebone-ai,beaglebone-ai-rev-A,,Q17,type_mosfet,mdl_3c9543732e01,1,ea,,,FAIRCHILD,2N7002,"Mosfet,N-Channel,2N7002,60V,115mA,SOT-23,SMD",src_12f0c5900970
+bl_1e189eea189d,beaglebone-ai,beaglebone-ai-rev-A,,Q18,type_mosfet,mdl_df345b43b860,1,ea,,,ON,BSS138LT1G,"Mosfet,N-Channel,BSS138LT1G,50V,0.2A,SOT-23,SMD",src_12f0c5900970
+bl_3bb1ef89a5e8,beaglebone-ai,beaglebone-ai-rev-A,,"T1,T2",type_mosfet,mdl_382217509f00,2,ea,,,VISHAY,Si1902CDL-T1-GE3,"Mosfet,N-Channel,Si1902CDL-T1-GE3,20V,385mohm,1.5A,SOT-363,SMD",src_12f0c5900970
+bl_43cea0c61759,beaglebone-ai,beaglebone-ai-rev-A,,OSC1,type_clock,mdl_9573ca119760,1,ea,,,INTERQUIP,1651-L3273-BTBQYA,"Oscillator,1651-L3273-BTBQYA,32.768KHz,+/-30ppm,3.3V,2520-4 pads,SMD",src_12f0c5900970
+bl_43075a87f4d8,beaglebone-ai,beaglebone-ai-rev-A,,X4,type_etc,mdl_0f97435f96ef,1,ea,,,AEL,X37M400000S002,"XTAL,37.4MHz,12PF 1.6x1.2mm,,X37M400000S002, SMT TR (ftol;10ppm,ftmp:10ppm,ESR:60ohm(max),-10~60)",src_12f0c5900970
+bl_0844d4a1ca72,beaglebone-ai,beaglebone-ai-rev-A,,X6,type_crystal,mdl_2f1c420312a1,1,ea,,,Interquip,5ZAA16384102TFA5Q3,"Crystal,5ZAA16384102TFA5Q3,16.384MHZ,+/-20PPM,10PF,-40 to + 85°C,SMD2520-4 pad",src_12f0c5900970
+bl_cea63a3eb458,beaglebone-ai,beaglebone-ai-rev-A,,X7,type_crystal,mdl_9cc0e15bbefd,1,ea,,,Interquip,5ZAA20000181TFA2Q3,"Crystal,5ZAA20000181TFA2Q3,20MHZ,+/-10PPM,18PF,-40 to + 85°C,SMD2520-4 pad",src_12f0c5900970
+bl_8ab333b76c14,beaglebone-ai,beaglebone-ai-rev-A,,X8,type_crystal,mdl_87dba29c97ea,1,ea,,,Interquip,5ZAA22579182TFA0Q3,"Crystal,5ZAA22579182TFA0Q3,22.5792MHZ,+/-20PPM,18PF,-40 to + 85°C,SMD2520-4 pad",src_12f0c5900970
+bl_66dfd0ff516b,beaglebone-ai,beaglebone-ai-rev-A,,X9,type_crystal,mdl_c2d1ea90110d,1,ea,,,Interquip,5ZAA25000202TFA0Q3,"Crystal,5ZAA25000202TFA0Q3,25MHZ,+/-20PPM,20PF,-40 to + 85°C,SMD2520-4 pad",src_12f0c5900970
+bl_9c0604908d6b,beaglebone-ai,beaglebone-ai-rev-A,,"P8,P9",type_connector,mdl_c041252225fd,2,ea,,,MTCONN,JT254F-D180-850-223-001-G,"Connector,Pin Socket,Straight,Female,2x23Pin,2.54MM pitch,8.5,3.0,Gold Flash 1u, black,DIP",src_12f0c5900970
+bl_141729e907da,beaglebone-ai,beaglebone-ai-rev-A,,J42,type_connector,mdl_18031f4c3326,1,ea,,,MTCONN,UBF31-0170,"Connector,USB type C port,female,flat insert,SMT/THT;",src_12f0c5900970
+bl_b9d635c5ab7c,beaglebone-ai,beaglebone-ai-rev-A,,J41,type_connector,mdl_698cf6447827,1,ea,,,Foxcon,UB11123-4H9-4F,"Connector,USB A port,4 Position,female,Right Angle,30u GXT Contact,black,DIP",src_12f0c5900970
+bl_4cf27dc0da84,beaglebone-ai,beaglebone-ai-rev-A,,J91,type_connector,mdl_2506cb41cc8b,1,ea,,,FCI,10118241-001RLF,"Connector,HDMI Receptacle, Type D, Right Angle,DIP+ SMT leg",src_12f0c5900970
+bl_c01d94022145,beaglebone-ai,beaglebone-ai-rev-A,,J92,type_connector,mdl_32ace0bad063,1,ea,,,JST,B3B-ZR(LF)(SN),"Connector, Wire-To-Board Top Entry, ZH Series, Through Hole, Header, 3PIN, 1.5 mm, Tin Plated Contacts",src_12f0c5900970
+bl_7a8df855dcc3,beaglebone-ai,beaglebone-ai-rev-A,,J90,type_connector,mdl_0170a2fed3f9,1,ea,,,MTCONN,MCTF-0606,"Connector,MicroSD Card CONN with detect switch,Gold Flash,Black,SMD",src_12f0c5900970
+bl_9e7b8a7a1b7b,beaglebone-ai,beaglebone-ai-rev-A,,J33,type_connector,mdl_44bdd8f52e59,1,ea,,,HIROSE,U.FL-R-SMT-1(10),"Connector,Coaxial Connector,U.FL-R-SMT-1,6GHZ,SMD,TR  U.FL-R-SMT-1(10) Packing for2,500 pcs/reel or U.FL-R-SMT-1(40) Packing for4,000 pcs/reel or U.FL-R-SMT(01) Packing for 1000pcs/pack",src_12f0c5900970
+bl_270817f586df,beaglebone-ai,beaglebone-ai-rev-A,,J37,type_connector,mdl_5813397461c1,1,ea,,,MTCONN,JTRJ45-4118NLF,"Connector,RJ45 Jack with integrated magnetics and G/(G+Y) leds,Right Angle,1000M,Top contact,Gold Flash 6u,Black,21.35x15.95x13.54MM,DIP",src_12f0c5900970
+bl_02136040ac25,beaglebone-ai,beaglebone-ai-rev-A,,"S1,S3",type_etc,mdl_5a00bd914ac2,2,ea,,,C&K,KMR231GLFS,"Switch,Tactile,300gf+/-50gf,black housing,black plunger,4.6*2.8*1.9MM,SMD",src_12f0c5900970
+bl_e8d0b547578c,beaglebone-ai,beaglebone-ai-rev-A,,"FL1,FL2",type_capacitor,mdl_4223e0e9d7b8,2,ea,,,Murata,NFM21PC474R1C3D,CAP Feedthru 0.47UF 20% 16V 0805,src_12f0c5900970
+bl_c3d1d3499856,beaglebone-ai,beaglebone-ai-rev-A,,"U88,U89",type_etc,mdl_78243f2fdb3f,2,ea,,,NXP,PCMF2USB30Z,Common-mode EMI filter for differential channels with integrated ESD protection,src_12f0c5900970
+bl_7b0eb72c0052,beaglebone-ai,beaglebone-ai-rev-A,,"U91,U92",type_etc,mdl_3277dbcff688,2,ea,,,Nexperia,PCMF2HDMI2S,"EMI filter with integrated ElectroStatic Discharge protection two differential channels,PCMF2HDMI2S,SMD",src_12f0c5900970
+bl_cc5b081c06b0,beaglebone-ai,beaglebone-ai-rev-A,,U37,type_etc,mdl_95e138dd75e0,1,ea,,,AzureWave,AW-CM256SM,"IEEE 802.11 a/b/g/n/ac WIFI with Bluetooth 4.2 combo SDIO and UART Stamp Module,AW-CM256SM,SMD",src_12f0c5900970

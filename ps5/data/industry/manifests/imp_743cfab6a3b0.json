@@ -1,0 +1,651 @@
+{
+  "bom_rows": 650,
+  "boms_detected": [
+    {
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx",
+      "rows": 124,
+      "unique_mpns": 104,
+      "unresolved": 5
+    },
+    {
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_bom.csv",
+      "rows": 107,
+      "unique_mpns": 107,
+      "unresolved": 0
+    },
+    {
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/BBB_BOM.xls",
+      "rows": 73,
+      "unique_mpns": 72,
+      "unresolved": 1
+    },
+    {
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_3A.xlsx",
+      "rows": 173,
+      "unique_mpns": 166,
+      "unresolved": 0
+    },
+    {
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_4A.xlsx",
+      "rows": 173,
+      "unique_mpns": 166,
+      "unresolved": 0
+    }
+  ],
+  "dry_run": false,
+  "duplicates": [
+    "beaglebone-ai-master.zip:beaglebone-ai-master/SW/buildroot/local/board/beagleboneai/rootfs-overlay/usr/lib/firmware/brcm/brcmfmac43455-sdio.txt",
+    "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/art_param.txt",
+    "tidrb50.zip:IMP NOTICE FOR REF DESIGNS.pdf",
+    "tidrc77a.zip:tidrc77a/Assembly_Drawings/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_BOTTOM.pdf",
+    "tidrc77a.zip:tidrc77a/Assembly_Drawings/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_TOP.pdf",
+    "tidrc77a.zip:tidrc77a/Assembly_Drawings/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_BOTTOM.pdf",
+    "tidrc77a.zip:tidrc77a/Assembly_Drawings/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_TOP.pdf",
+    "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/art_param.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_FAB_PACKAGE/art_aper.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_FAB_PACKAGE/art_param.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_FAB_PACKAGE/nc_param.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_FAB_PACKAGE/nc_tools_auto.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_FAB_PACKAGE/art_aper.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_FAB_PACKAGE/art_param.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_FAB_PACKAGE/nc_param.txt",
+    "tidrc77a.zip:tidrc77a/FabPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_FAB_PACKAGE/nc_tools_auto.txt",
+    "tidrc77a.zip:tidrc77a/Important Notice for TI Reference Design.pdf",
+    "tidrc77a.zip:tidrc77a/Read Me.pdf",
+    "tidrc78a.zip:Read Me.pdf",
+    "tidrc78a.zip:sszz031e Important Notice for TI Reference Design.pdf",
+    "tidrc79a.zip:schematic_tidrc79a/Read Me.pdf",
+    "tidrc79a.zip:schematic_tidrc79a/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_schematic_REV1_3A.pdf",
+    "tidrc79a.zip:schematic_tidrc79a/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_schematic_REV1_4A.pdf",
+    "tidrc79a.zip:schematic_tidrc79a/sszz031e Important Notice for TI Reference Design.pdf"
+  ],
+  "enrichment": null,
+  "errors": [],
+  "files_classified": [
+    {
+      "document_type": "archive",
+      "file": "beaglebone-ai-master.zip",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "bom",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_RevA2_brd.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_RevA2_sch.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "bom",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_bom.csv",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_brd.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/BeagleBone-AI_sch.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/HW/cds2f_BeagleBone-AI.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/MFG/art_param.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/MFG/nc_param.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/buildroot/README.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/buildroot/local/board/beagleboneai/readme.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/buildroot/local/board/beagleboneai/rootfs-overlay/uEnv.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/buildroot/local/board/beagleboneai/rootfs-overlay/usr/lib/firmware/brcm/brcmfmac43455-sdio.beagleboard.org,am5729-beagleboneai.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "tabular",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/data/PinmuxConfigSummary.csv",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/data/devicetree.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/data/genericFileFormatIOdelay.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/data/genericFileFormatPadConf.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/output/iodelay.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/SW/u-boot/pinmux/output/iopad.txt",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/BeagleBone-AI_RoHS_Declaration.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/3500-RED BEAGLEBOARD....(26.07.19)...219601-signed.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WE EN301489-1-17 .pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WH EN 62311.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WR01 EN300328 V2.1.1 BT 3.0.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WR02 EN300328 V2.1.1 BT4.0.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WR03 EN300328 V2.1.1 WIFI.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WR04 EN 301893 RLAN B1 2 3.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WR05 EN 300 440 5.8G.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/CE-RED/CTL1906244051-WS Test Report.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/378621CERTCAB(FCC ID 2ATUT-BBONE-AI)-DSS.PDF",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/378621CERTCAB(FCC\u00a0ID\u00a02ATUT-BBONE-AI)-DTS.PDF",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/378621CERTCAB(FCC\u00a0ID\u00a02ATUT-BBONE-AI)-JAB.PDF",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/378621CERTCAB(FCC\u00a0ID\u00a02ATUT-BBONE-AI)-NII.PDF",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/CTL1906244051-F  Test Report.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/CTL1906244051-WF01 FCC 15.247  BT3.0.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/CTL1906244051-WF02 FCC 15.247  BT4.0.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/CTL1906244051-WF03 FCC 15.247 WIFI with N40.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/CTL1906244051-WF04 FCC 15.407.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/FCC_ID/Important Surveillance Information - Feb 2018.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-ai-master.zip:beaglebone-ai-master/regulatory/Validation_Z1613110.pdf",
+      "product_id": "beaglebone-ai"
+    },
+    {
+      "document_type": "archive",
+      "file": "beaglebone-black-master (1).zip",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/BBB-SCH.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "bom",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/BBB_BOM.xls",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/BeagleBone Black_RevC_ASSY_210222.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "tabular",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/BeagleBone Black_RevC_ASSY_XY_210222.xlsx",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/nc_param.txt",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/nc_tools_auto.txt",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/MFG/ncroutebits_auto.txt",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/docs/OLD_BBB_SRM.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/docs/PCN/PCN_BBBI_v0.2.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/docs/PCN/PCN_BBB_v0.2.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/AUS Doc Beaglebone Black.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/BeagleBone-Export-Info.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/BeagleBoneBlack-REACHCertification.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/CE/DSS_SZEM210200207401 RPT.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/CE/DSS_SZEM210200207401 Ver_CE.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/EU Doc Beaglebone Black.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/FCC/DSS_SZEM210200207301 RPT.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-master (1).zip:beaglebone-black-master/regulatory/FCC/DSS_SZEM2102002073Ver_FCC SDOC Part 15.pdf",
+      "product_id": "beaglebone-black"
+    },
+    {
+      "document_type": "archive",
+      "file": "beaglebone-black-wireless-master.zip",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "tabular",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/BeagleBone_Black_Wireless_BOM.csv",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/BeagleBone_Black_Wireless_BRD.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/BeagleBone_Black_Wireless_SCH.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/docs/BeagleBone_Black_Wireless_ShortSpec.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/firmware/WL18xx-BT-Service-Pack-4.7/TILAW-#279184-v1-WBU_TSPA_Software_License.txt",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/firmware/WL18xx-BT-Service-Pack-4.7/WL18xx_BT_SP_4.7-Release_Notes.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "text",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/firmware/readme.txt",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/regulatory/7169001582-001.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "beaglebone-black-wireless-master.zip:beaglebone-black-wireless-master/regulatory/BeagleBone_Black_Wireless_Export_Classification.pdf",
+      "product_id": "beaglebone-black-wireless"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrb46.pdf",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrb47.pdf",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrb48.zip",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrb48.zip:ASSY/Assembly Drawings.PDF",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "tabular",
+      "file": "tidrb48.zip:ASSY/Pick Place for TIDA-00222.xlsx",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrb48.zip:IMP NOTICE FOR REF DESIGNS.pdf",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrb49.pdf",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrb50.zip",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrb50.zip:Design Files - TIDA-00222/Project Outputs/Status Report.Txt",
+      "product_id": "ti-tida-00222"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrc76a.zip",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_BOTTOM.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_TOP.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_BOTTOM.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_TOP.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:Read Me.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc76a.zip:sszz031e Important Notice for TI Reference Design.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrc77a.zip",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/art_aper.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/art_param.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/nc_param.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/nc_tools_auto.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/Place_Body_Center.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/Place_Pin_1.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_3A_ASSEMBLY_PACKAGE/Place_Symbol_Origin.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/art_aper.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/nc_param.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/nc_tools_auto.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/Place_Body_Center.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/Place_Pin_1.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "text",
+      "file": "tidrc77a.zip:tidrc77a/AssemblyPackage/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_PCB_REV1_4A_ASSEMBLY_PACKAGE/Place_Symbol_Origin.txt",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "bom_pdf",
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_3A.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "bom",
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_3A.xlsx",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "bom_pdf",
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_4A.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "bom",
+      "file": "tidrc77a.zip:tidrc77a/BOM/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_4A.xlsx",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc77a.zip:tidrc77a/Schematics/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_schematic_REV1_3A.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidrc77a.zip:tidrc77a/Schematics/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_schematic_REV1_4A.pdf",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrc78a.zip",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "archive",
+      "file": "tidrc79a.zip",
+      "product_id": "ti-tidep-0050"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidri18.pdf",
+      "product_id": "tidri18"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidu430.pdf",
+      "product_id": "tidu430"
+    },
+    {
+      "document_type": "pdf",
+      "file": "tidual5.pdf",
+      "product_id": "tidual5"
+    }
+  ],
+  "import_id": "imp_743cfab6a3b0",
+  "input_files": [
+    "beaglebone-ai-master.zip",
+    "beaglebone-black-master (1).zip",
+    "beaglebone-black-wireless-master.zip",
+    "tidrb46.pdf",
+    "tidrb47.pdf",
+    "tidrb48.zip",
+    "tidrb49.pdf",
+    "tidrb50.zip",
+    "tidrc76a.zip",
+    "tidrc77a.zip",
+    "tidrc78a.zip",
+    "tidrc79a.zip",
+    "tidri18.pdf",
+    "tidu430.pdf",
+    "tidual5.pdf"
+  ],
+  "products_detected": [
+    "beaglebone-ai",
+    "beaglebone-black",
+    "beaglebone-black-wireless",
+    "ti-tida-00222",
+    "ti-tidep-0050",
+    "tidri18",
+    "tidu430",
+    "tidual5"
+  ],
+  "timestamp": "2026-08-23T08:16:31Z",
+  "warnings": []
+}

@@ -1,0 +1,48 @@
+# Secrets — never commit credentials or local env
+.env
+.env.*
+!.env.example
+!ps5/.env.example
+!ps5/web/.env.example
+
+# Large zip archives
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.venv/
+venv/
+*.egg-info/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Frontend build & modules
+node_modules/
+dist/
+dist-ssr/
+ps5/web/node_modules/
+ps5/web/dist/
+ps5/web/dist-ssr/
+
+# Local caches / reports
+data/api_cache/
+data/api_raw/
+data/api_status/
+outputs/api_reports/
+outputs/api_uploads/
+ps5/data/api_cache/
+ps5/data/api_raw/
+ps5/data/api_status/
+ps5/outputs/api_reports/
+ps5/outputs/api_uploads/
+ps5/pytest-cache-files-*/
+ps5/tmp*/

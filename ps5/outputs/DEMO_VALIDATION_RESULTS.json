@@ -1,0 +1,954 @@
+{
+  "tests": {
+    "total": 168,
+    "passed": 168,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "summary_line": "168 passed, 65 warnings in 15.03s",
+    "command": "python -m pytest tests"
+  },
+  "spec_classification": {
+    "total_rows": 8,
+    "engineering_rows": 8,
+    "mechanical_rows": 0,
+    "identity_bom_rows": 0,
+    "other_rows": 0,
+    "unique_parameter_names": [
+      "input_voltage_max_v",
+      "input_voltage_min_v",
+      "operating_temperature_max_c",
+      "output_current_a"
+    ],
+    "models_with_useful_engineering_specs": 2,
+    "total_models": 526,
+    "pct_models_with_useful_engineering_specs": 0.38,
+    "useful_model_ids": [
+      "mdl_48134fac2009",
+      "mdl_4ba7e403dcf9"
+    ],
+    "counts_by_name": {
+      "input_voltage_max_v": 2,
+      "input_voltage_min_v": 2,
+      "operating_temperature_max_c": 2,
+      "output_current_a": 2
+    }
+  },
+  "u2_trace": {
+    "bom_lines": [
+      {
+        "bom_line_id": "bl_343a6ae3bb85",
+        "product_id": "beaglebone-black",
+        "revision_id": "beaglebone-black-rev-A",
+        "subsystem_id": "",
+        "reference_designator": "U2",
+        "component_type_id": "type_mpu",
+        "component_model_id": "mdl_48134fac2009",
+        "quantity": "1",
+        "unit": "ea",
+        "position": "",
+        "parent_assembly": "",
+        "original_manufacturer": "Texas Instruments",
+        "original_mpn": "TPS65217C",
+        "original_description": "Power Management IC (PMIC) for AM335x",
+        "source_id": "src_54b8fbf803fd"
+      },
+      {
+        "bom_line_id": "bl_db3c5481ed19",
+        "product_id": "beaglebone-black",
+        "revision_id": "beaglebone-black-rev-A",
+        "subsystem_id": "",
+        "reference_designator": "U2",
+        "component_type_id": "type_regulator",
+        "component_model_id": "mdl_957ebaaabb96",
+        "quantity": "1.0",
+        "unit": "ea",
+        "position": "",
+        "parent_assembly": "",
+        "original_manufacturer": "TI",
+        "original_mpn": "TPS65217CRSLR",
+        "original_description": "SMD IC PMIC;VQFN-48",
+        "source_id": "src_13085bb549e3"
+      }
+    ],
+    "original_mpn": "TPS65217C",
+    "component_model_id": "mdl_48134fac2009",
+    "lifecycle": "UNKNOWN",
+    "package": "48-VQFN",
+    "category": "regulator",
+    "specs_reaching_engine": {
+      "input_voltage_min_v": "2.7",
+      "input_voltage_max_v": "5.8",
+      "supply_voltage_min_v": "2.7",
+      "supply_voltage_max_v": "5.8",
+      "output_current_a": "1.2",
+      "operating_temperature_max_c": "105",
+      "output_voltage_v": null,
+      "package": null
+    },
+    "spec_ranges": {
+      "input_voltage_min_v": {
+        "nominal": "2.7",
+        "min": "2.7",
+        "max": "",
+        "unit": "V",
+        "provenance": "Directly read from electrical-characteristics table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "parameter_name": "input_voltage_min_v"
+      },
+      "input_voltage_max_v": {
+        "nominal": "5.8",
+        "min": "",
+        "max": "5.8",
+        "unit": "V",
+        "provenance": "Directly read from electrical-characteristics table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "parameter_name": "input_voltage_max_v"
+      },
+      "output_current_a": {
+        "nominal": "1.2",
+        "min": "",
+        "max": "1.2",
+        "unit": "A",
+        "provenance": "Directly read from electrical-characteristics table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "parameter_name": "output_current_a"
+      },
+      "operating_temperature_max_c": {
+        "nominal": "105",
+        "min": "",
+        "max": "105",
+        "unit": "C",
+        "provenance": "Directly read from TPS65217C ordering table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "84",
+        "confidence": "HIGH",
+        "parameter_name": "operating_temperature_max_c"
+      },
+      "supply_voltage_min_v": {
+        "nominal": "2.7",
+        "min": "2.7",
+        "max": "",
+        "unit": "V",
+        "provenance": "Directly read from electrical-characteristics table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "parameter_name": "input_voltage_min_v"
+      },
+      "supply_voltage_max_v": {
+        "nominal": "5.8",
+        "min": "",
+        "max": "5.8",
+        "unit": "V",
+        "provenance": "Directly read from electrical-characteristics table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "parameter_name": "input_voltage_max_v"
+      }
+    },
+    "normalized_csv_specs": [
+      {
+        "spec_id": "spc_tps65217_dcdc3_vin_min",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "input_voltage_min_v",
+        "nominal_value": "2.7",
+        "min_value": "2.7",
+        "max_value": "",
+        "unit": "V",
+        "condition": "DCDC3 buck VIN_DCDC3 input range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      {
+        "spec_id": "spc_tps65217_dcdc3_vin_max",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "input_voltage_max_v",
+        "nominal_value": "5.8",
+        "min_value": "",
+        "max_value": "5.8",
+        "unit": "V",
+        "condition": "DCDC3 buck VIN_DCDC3 input range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      {
+        "spec_id": "spc_tps65217_dcdc3_iout",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "output_current_a",
+        "nominal_value": "1.2",
+        "min_value": "",
+        "max_value": "1.2",
+        "unit": "A",
+        "condition": "DCDC3 buck continuous output-current range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      {
+        "spec_id": "spc_tps65217_temp_max",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "operating_temperature_max_c",
+        "nominal_value": "105",
+        "min_value": "",
+        "max_value": "105",
+        "unit": "C",
+        "condition": "TPS65217C RSL package ordering table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "84",
+        "confidence": "HIGH",
+        "provenance": "Directly read from TPS65217C ordering table"
+      }
+    ],
+    "demo_u2": {
+      "part_number": "ESP32-WROOM-32U",
+      "component_id": "U2",
+      "demo_data": true
+    },
+    "industry_never_returns_esp32": true,
+    "industry_candidates": [
+      "TPS65218D0RSLR"
+    ],
+    "demo_candidates": [
+      "ESP32-S3-WROOM-1",
+      "ESP32-C3-MINI-1",
+      "STM32F411CEU6",
+      "STM32F401RCT6"
+    ],
+    "pools_differ": true,
+    "compatibility_checks": [
+      {
+        "parameter": "input_voltage_min_v",
+        "original": 2.7,
+        "candidate": 2.7,
+        "status": "MATCH",
+        "impact": "NONE",
+        "weight": 10
+      },
+      {
+        "parameter": "input_voltage_max_v",
+        "original": 5.8,
+        "candidate": 5.5,
+        "status": "MISMATCH",
+        "impact": "INCOMPATIBLE",
+        "weight": 10
+      },
+      {
+        "parameter": "output_voltage_v",
+        "original": null,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 25
+      },
+      {
+        "parameter": "output_current_a",
+        "original": 1.2,
+        "candidate": 1.8,
+        "status": "MATCH",
+        "impact": "NONE",
+        "weight": 20
+      },
+      {
+        "parameter": "operating_temperature_max_c",
+        "original": 105.0,
+        "candidate": 105.0,
+        "status": "MATCH",
+        "impact": "NONE",
+        "weight": 10
+      },
+      {
+        "parameter": "package",
+        "original": "48-VQFN",
+        "candidate": "48-VQFN",
+        "status": "MATCH",
+        "impact": "NONE",
+        "weight": 20
+      },
+      {
+        "parameter": "pinout",
+        "original": null,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 5
+      }
+    ],
+    "operating_limit_eval": {
+      "check_type": "OPERATING_LIMIT",
+      "parameter": "vin",
+      "operating_value": null,
+      "limit_min": null,
+      "limit_max": 5.8,
+      "required_min": null,
+      "required_max": null,
+      "candidate_min": null,
+      "candidate_max": null,
+      "margin": null,
+      "normalized_margin": null,
+      "unit": "",
+      "condition": "",
+      "source": "",
+      "confidence": "INSUFFICIENT_DATA",
+      "evidence_type": "MISSING_DATA",
+      "status": "INSUFFICIENT_DATA",
+      "legacy_status": "INSUFFICIENT_DATA",
+      "reason": "OPERATING_VALUE_MISSING"
+    },
+    "vendor": {
+      "status": "INSUFFICIENT_DATA",
+      "source_count": 0,
+      "regional_fit": false,
+      "available_stock": null,
+      "best_lead_time": null,
+      "lifecycle": "UNKNOWN",
+      "approved_source": false,
+      "reason_codes": [
+        "INSUFFICIENT_EVIDENCE",
+        "INSUFFICIENT_DATA"
+      ],
+      "data_source": "MISSING"
+    },
+    "reliability": {
+      "status": "NOT_FOUND",
+      "summary": "Exact-MPN quantitative reliability data unavailable"
+    },
+    "downstream": {
+      "status": "FOUND",
+      "count": 9
+    },
+    "graph_edges": [
+      {
+        "edge_id": "bbb-001",
+        "product_id": "beaglebone-black",
+        "source_node": "U2",
+        "target_node": "U1",
+        "relationship_type": "POWERS",
+        "function": "TPS65217C PMIC rails supply AM3358 MPU core, MPU, and 1.8 V domains",
+        "confidence": "HIGH",
+        "source": "BBB-SCH.pdf, sheet 2, nets VDD_CORE/VDD_MPU/VDD_1V8; sheet 5, AM3358 U1 supply pins"
+      },
+      {
+        "edge_id": "bbb-002",
+        "product_id": "beaglebone-black",
+        "source_node": "U2",
+        "target_node": "U12",
+        "relationship_type": "POWERS",
+        "function": "TPS65217C PMIC DDR supply rail powers DDR3L SDRAM",
+        "confidence": "HIGH",
+        "source": "BBB-SCH.pdf, sheet 2, net VDDS_DDR; sheet 7, U12 VDDS_DDR pins"
+      },
+      {
+        "edge_id": "bbb-005",
+        "product_id": "beaglebone-black",
+        "source_node": "U1",
+        "target_node": "U2",
+        "relationship_type": "CONTROLS",
+        "function": "AM3358 power-management enable controls TPS65217C PWR_EN",
+        "confidence": "HIGH",
+        "source": "BBB-SCH.pdf, sheet 2, U2 PWR_EN net PMIC_POWR_EN; sheet 4, U1 PMIC_POWER_EN"
+      }
+    ],
+    "decision_product_id": "beaglebone-black",
+    "decision_target": "U2",
+    "decision_generation": "normalized_industry_models",
+    "decision_candidates": [
+      "TPS65218D0RSLR"
+    ],
+    "decision_vendor": "INSUFFICIENT_DATA",
+    "decision_operating": {
+      "check_type": "OPERATING_LIMIT",
+      "parameter": "supply_voltage_v",
+      "operating_value": null,
+      "limit_min": null,
+      "limit_max": null,
+      "required_min": 2.7,
+      "required_max": 5.8,
+      "candidate_min": 2.7,
+      "candidate_max": 5.5,
+      "margin": -0.051724137931034454,
+      "normalized_margin": -0.051724137931034454,
+      "unit": "V",
+      "condition": "",
+      "source": "industry_component_specs",
+      "confidence": "INDUSTRY_EAV",
+      "evidence_type": "DERIVED_VALUE",
+      "status": "OUT_OF_LIMIT",
+      "legacy_status": "FAIL",
+      "reason": "OPERATING_LIMIT_FAIL"
+    }
+  },
+  "engineering_gates": {
+    "compatible_candidate": {
+      "part_number": "TPS65218D0RSLR",
+      "checks": [
+        {
+          "parameter": "input_voltage_min_v",
+          "original": 2.7,
+          "candidate": 2.7,
+          "status": "MATCH",
+          "impact": "NONE",
+          "weight": 10
+        },
+        {
+          "parameter": "input_voltage_max_v",
+          "original": 5.8,
+          "candidate": 5.5,
+          "status": "MISMATCH",
+          "impact": "INCOMPATIBLE",
+          "weight": 10
+        },
+        {
+          "parameter": "output_voltage_v",
+          "original": null,
+          "candidate": null,
+          "status": "UNKNOWN",
+          "impact": "REVIEW_REQUIRED",
+          "weight": 25
+        },
+        {
+          "parameter": "output_current_a",
+          "original": 1.2,
+          "candidate": 1.8,
+          "status": "MATCH",
+          "impact": "NONE",
+          "weight": 20
+        },
+        {
+          "parameter": "operating_temperature_max_c",
+          "original": 105.0,
+          "candidate": 105.0,
+          "status": "MATCH",
+          "impact": "NONE",
+          "weight": 10
+        },
+        {
+          "parameter": "package",
+          "original": "48-VQFN",
+          "candidate": "48-VQFN",
+          "status": "MATCH",
+          "impact": "NONE",
+          "weight": 20
+        },
+        {
+          "parameter": "pinout",
+          "original": null,
+          "candidate": null,
+          "status": "UNKNOWN",
+          "impact": "REVIEW_REQUIRED",
+          "weight": 5
+        }
+      ],
+      "unknown_count": 2,
+      "mismatch_count": 1
+    },
+    "incompatible_candidate": [
+      {
+        "parameter": "category",
+        "original": "regulator",
+        "candidate": "microcontroller",
+        "status": "MISMATCH",
+        "impact": "INCOMPATIBLE",
+        "weight": 100
+      }
+    ],
+    "missing_specification": [
+      {
+        "parameter": "input_voltage_min_v",
+        "original": 2.7,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 10
+      },
+      {
+        "parameter": "input_voltage_max_v",
+        "original": 5.8,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 10
+      },
+      {
+        "parameter": "output_voltage_v",
+        "original": null,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 25
+      },
+      {
+        "parameter": "output_current_a",
+        "original": 1.2,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 20
+      },
+      {
+        "parameter": "operating_temperature_max_c",
+        "original": 105.0,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 10
+      },
+      {
+        "parameter": "package",
+        "original": "48-VQFN",
+        "candidate": "48-VQFN",
+        "status": "MATCH",
+        "impact": "NONE",
+        "weight": 20
+      },
+      {
+        "parameter": "pinout",
+        "original": null,
+        "candidate": null,
+        "status": "UNKNOWN",
+        "impact": "REVIEW_REQUIRED",
+        "weight": 5
+      }
+    ],
+    "operating_limit_without_operating_point": {
+      "check_type": "OPERATING_LIMIT",
+      "parameter": "input_voltage_max_v",
+      "operating_value": null,
+      "limit_min": null,
+      "limit_max": 5.8,
+      "required_min": null,
+      "required_max": null,
+      "candidate_min": null,
+      "candidate_max": null,
+      "margin": null,
+      "normalized_margin": null,
+      "unit": "",
+      "condition": "",
+      "source": "",
+      "confidence": "INSUFFICIENT_DATA",
+      "evidence_type": "MISSING_DATA",
+      "status": "INSUFFICIENT_DATA",
+      "legacy_status": "INSUFFICIENT_DATA",
+      "reason": "OPERATING_VALUE_MISSING"
+    },
+    "operating_limit_with_operating_point": {
+      "check_type": "OPERATING_LIMIT",
+      "parameter": "vin",
+      "operating_value": 12.0,
+      "limit_min": null,
+      "limit_max": 28.0,
+      "required_min": null,
+      "required_max": null,
+      "candidate_min": null,
+      "candidate_max": null,
+      "margin": 16.0,
+      "normalized_margin": 0.5714285714285714,
+      "unit": "",
+      "condition": "",
+      "source": "",
+      "confidence": "INSUFFICIENT_DATA",
+      "evidence_type": "DERIVED_VALUE",
+      "status": "SAFE_MARGIN",
+      "legacy_status": "PASS",
+      "reason": "OPERATING_LIMIT_MARGIN"
+    },
+    "tolerance_available": {
+      "check_type": "TOLERANCE",
+      "parameter": "capacitance",
+      "nominal": 100.0,
+      "tolerance": 10.0,
+      "lower_bound": 90.0,
+      "upper_bound": 110.0,
+      "actual_value": null,
+      "design_value": 100.0,
+      "margin": 10.0,
+      "normalized_margin": 1.0,
+      "unit": "",
+      "condition": "",
+      "source": "",
+      "confidence": "INSUFFICIENT_DATA",
+      "evidence_type": "DERIVED_VALUE",
+      "status": "SAFE_MARGIN",
+      "legacy_status": "PASS",
+      "reason": "TOLERANCE_MARGIN"
+    },
+    "tolerance_unavailable": {
+      "check_type": "TOLERANCE",
+      "parameter": "resistance",
+      "nominal": 1000.0,
+      "tolerance": null,
+      "lower_bound": null,
+      "upper_bound": null,
+      "actual_value": null,
+      "design_value": 1000.0,
+      "margin": null,
+      "normalized_margin": null,
+      "unit": "",
+      "condition": "",
+      "source": "",
+      "confidence": "INSUFFICIENT_DATA",
+      "evidence_type": "MISSING_DATA",
+      "status": "INSUFFICIENT_DATA",
+      "legacy_status": "INSUFFICIENT_DATA",
+      "reason": "TOLERANCE_BOUNDS_MISSING"
+    },
+    "rating_not_treated_as_safe": true
+  },
+  "vendor_lifecycle": {
+    "vendor_rows": 0,
+    "lifecycle_rows": 0,
+    "vendor_status": "INSUFFICIENT_DATA",
+    "model_lifecycle": "UNKNOWN",
+    "merged_lifecycle": null,
+    "merged_stock": null,
+    "merged_lead_time_weeks": null,
+    "merged_confidence": 0.0,
+    "is_dynamically_inferred": false,
+    "evidence_status": "INSUFFICIENT_DATA",
+    "risk_band": "INSUFFICIENT_DATA",
+    "unknown_not_active": true,
+    "no_taxonomy_stock": true,
+    "no_taxonomy_lead": true
+  },
+  "isolation": {
+    "industry_u2": "TPS65217C",
+    "industry_model": "mdl_48134fac2009",
+    "demo_u2": "ESP32-WROOM-32U",
+    "industry_request_esp32": false,
+    "industry_generation": "normalized_industry_models",
+    "demo_generation": "deterministic_rules",
+    "pools_differ": true
+  },
+  "provenance": [
+    {
+      "parameter": "input_voltage_min_v",
+      "engine_value": "2.7",
+      "alias_value": "2.7",
+      "csv_row": {
+        "spec_id": "spc_tps65217_dcdc3_vin_min",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "input_voltage_min_v",
+        "nominal_value": "2.7",
+        "min_value": "2.7",
+        "max_value": "",
+        "unit": "V",
+        "condition": "DCDC3 buck VIN_DCDC3 input range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      "traced": true,
+      "provenance": "Directly read from electrical-characteristics table",
+      "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+      "source_page": "10"
+    },
+    {
+      "parameter": "input_voltage_max_v",
+      "engine_value": "5.8",
+      "alias_value": "5.8",
+      "csv_row": {
+        "spec_id": "spc_tps65217_dcdc3_vin_max",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "input_voltage_max_v",
+        "nominal_value": "5.8",
+        "min_value": "",
+        "max_value": "5.8",
+        "unit": "V",
+        "condition": "DCDC3 buck VIN_DCDC3 input range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      "traced": true,
+      "provenance": "Directly read from electrical-characteristics table",
+      "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+      "source_page": "10"
+    },
+    {
+      "parameter": "output_current_a",
+      "engine_value": "1.2",
+      "alias_value": null,
+      "csv_row": {
+        "spec_id": "spc_tps65217_dcdc3_iout",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "output_current_a",
+        "nominal_value": "1.2",
+        "min_value": "",
+        "max_value": "1.2",
+        "unit": "A",
+        "condition": "DCDC3 buck continuous output-current range",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "10",
+        "confidence": "HIGH",
+        "provenance": "Directly read from electrical-characteristics table"
+      },
+      "traced": true,
+      "provenance": "Directly read from electrical-characteristics table",
+      "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+      "source_page": "10"
+    },
+    {
+      "parameter": "operating_temperature_max_c",
+      "engine_value": "105",
+      "alias_value": null,
+      "csv_row": {
+        "spec_id": "spc_tps65217_temp_max",
+        "component_model_id": "mdl_48134fac2009",
+        "parameter_name": "operating_temperature_max_c",
+        "nominal_value": "105",
+        "min_value": "",
+        "max_value": "105",
+        "unit": "C",
+        "condition": "TPS65217C RSL package ordering table",
+        "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+        "source_page": "84",
+        "confidence": "HIGH",
+        "provenance": "Directly read from TPS65217C ordering table"
+      },
+      "traced": true,
+      "provenance": "Directly read from TPS65217C ordering table",
+      "source_document": "TPS65217x Single-Chip PMIC for Battery-Powered Systems (SLVSB64I Rev. I)",
+      "source_page": "84"
+    }
+  ],
+  "api": {
+    "risk_projects": {
+      "status_code": 200,
+      "keys": [
+        "projects"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "risk_analyze_bbb": {
+      "status_code": 200,
+      "keys": [
+        "dashboard",
+        "project_name",
+        "report",
+        "report_path"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 82,
+      "bom_count": null
+    },
+    "industry_boms": {
+      "status_code": 200,
+      "keys": [
+        "boms",
+        "data_source"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": 5
+    },
+    "industry_components": {
+      "status_code": 200,
+      "keys": [
+        "components",
+        "data_source",
+        "product_id",
+        "total"
+      ],
+      "product_id": "beaglebone-black",
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "industry_component_mpn": {
+      "status_code": 200,
+      "keys": [
+        "data_source",
+        "documents",
+        "lifecycle_evidence",
+        "model",
+        "mpn",
+        "provenance",
+        "technical_specs",
+        "vendor_records"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": "mdl_48134fac2009",
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "vendor_feasibility": {
+      "status_code": 200,
+      "keys": [
+        "approved_source",
+        "available_stock",
+        "best_lead_time",
+        "data_source",
+        "lifecycle",
+        "reason_codes",
+        "regional_fit",
+        "source_count",
+        "status"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": "INSUFFICIENT_DATA",
+      "model_id": null,
+      "candidate_count": 0,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "decision": {
+      "status_code": 200,
+      "keys": [
+        "candidate_generation",
+        "candidates",
+        "product_id",
+        "ranking_rule",
+        "risk_trigger",
+        "status",
+        "target_component_id"
+      ],
+      "product_id": "beaglebone-black",
+      "target_component_id": "U2",
+      "status": "FOUND",
+      "model_id": null,
+      "candidate_count": 1,
+      "explanation_source": null,
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "industry_substitutes": {
+      "status_code": 200,
+      "keys": [
+        "advisory_warning",
+        "candidates",
+        "explanation_source",
+        "llm_used",
+        "original",
+        "recommendation_summary",
+        "vector_search_used"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 1,
+      "explanation_source": "normalized_industry_models",
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "demo_substitutes_u2": {
+      "status_code": 200,
+      "keys": [
+        "advisory_warning",
+        "candidates",
+        "explanation_source",
+        "llm_used",
+        "original",
+        "recommendation_summary",
+        "vector_search_used"
+      ],
+      "product_id": null,
+      "target_component_id": null,
+      "status": null,
+      "model_id": null,
+      "candidate_count": 4,
+      "explanation_source": "deterministic_rules",
+      "parts_count": 0,
+      "bom_count": null
+    },
+    "dashboard_u2": {
+      "pn": "TPS65217C",
+      "ref": "U2",
+      "component_id": null,
+      "band": "INSUFFICIENT_DATA",
+      "score": null,
+      "lifecycle_status": "INSUFFICIENT_DATA",
+      "has_second_source": null,
+      "sparkline_data": [],
+      "evidence_status": "INSUFFICIENT_DATA"
+    },
+    "identity_checks": {
+      "decision_product_id": true,
+      "decision_target": true,
+      "decision_not_esp32": true,
+      "industry_subs_not_esp32": true,
+      "demo_subs_is_demo_pool": true,
+      "vendor_insufficient": true,
+      "dashboard_lifecycle_not_active": true,
+      "dashboard_second_source_not_no": true,
+      "component_payload_model": true,
+      "no_demo_catalog_id_on_industry_u2": true
+    }
+  },
+  "ui_source": {
+    "industry_substitute_route": true,
+    "decision_uses_session_product": true,
+    "no_hardcoded_beaglebone_default": true,
+    "second_source_insufficient_label": true,
+    "lifecycle_timeline_explicit_insufficient": true,
+    "sparkline_not_fabricated_for_insufficient": true,
+    "dashboard_avg_risk_insufficient": true,
+    "live_browser": "not_run_no_browser_mcp",
+    "notes": "Live browser click-through was not available. Honesty is checked from API payloads and UI source."
+  },
+  "parameter_aliases": {
+    "input_voltage_min_v": [
+      "supply_voltage_min_v"
+    ],
+    "input_voltage_max_v": [
+      "supply_voltage_max_v"
+    ]
+  },
+  "verdicts": {
+    "tests": true,
+    "u2_is_tps65217c": true,
+    "industry_never_esp32": true,
+    "engineering_params_reach_engine": true,
+    "identity_specs_removed": true,
+    "rating_not_safe_margin": true,
+    "vendor_insufficient": true,
+    "lifecycle_not_active": true,
+    "api_identity": true,
+    "provenance_traced": true,
+    "ui_source_honesty": true
+  },
+  "demo_ready": false,
+  "demo_ready_reason": "BeagleBone Black U2 is demoable with honest INSUFFICIENT_DATA gaps. Do not claim full industry demo-ready: vendor, lifecycle, operating-point, reliability, and most models still lack engineering specifications."
+}

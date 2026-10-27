@@ -1,0 +1,12 @@
+edge_id,product_id,source_node,target_node,relationship_type,function,confidence,source
+bbb-001,beaglebone-black,U2,U1,POWERS,"TPS65217C PMIC rails supply AM3358 MPU core, MPU, and 1.8 V domains",HIGH,"BBB-SCH.pdf, sheet 2, nets VDD_CORE/VDD_MPU/VDD_1V8; sheet 5, AM3358 U1 supply pins"
+bbb-002,beaglebone-black,U2,U12,POWERS,"TPS65217C PMIC DDR supply rail powers DDR3L SDRAM",HIGH,"BBB-SCH.pdf, sheet 2, net VDDS_DDR; sheet 7, U12 VDDS_DDR pins"
+bbb-003,beaglebone-black,U4,U1,POWERS,"TL5209 3.3 V regulator output supplies the AM3358 3.3 V domain",HIGH,"BBB-SCH.pdf, sheet 2, U4 OUT net VDD_3V3A; sheet 5, U1 VDD_3V3A pins"
+bbb-004,beaglebone-black,U6,U11,POWERS,"1.2 V LDO output supplies HDMI transmitter core supply",HIGH,"BBB-SCH.pdf, sheet 2, U6 OUT net VDD_1V2; sheet 10, U11 VDD_1V2 pins"
+bbb-005,beaglebone-black,U1,U2,CONTROLS,"AM3358 power-management enable controls TPS65217C PWR_EN",HIGH,"BBB-SCH.pdf, sheet 2, U2 PWR_EN net PMIC_POWR_EN; sheet 4, U1 PMIC_POWER_EN"
+bbb-006,beaglebone-black,U1,U12,FEEDS_SIGNAL,"AM3358 DDR interface drives DDR3L command, address, data, clock, and control nets",HIGH,"BBB-SCH.pdf, sheet 3, nets DDR_A[15..0]/DDR_D[15..0]/DDR_CLK/DDR_CSn; sheet 7, U12 DDR interface pins"
+bbb-007,beaglebone-black,U1,U13,FEEDS_SIGNAL,"AM3358 MMC1 interface connects to eMMC data, command, and clock",HIGH,"BBB-SCH.pdf, sheet 3, nets MMC1_DAT[7..0]/MMC1_CMD/MMC1_CLK; sheet 8, U13 MMC1 pins"
+bbb-008,beaglebone-black,U1,U14,FEEDS_SIGNAL,"AM3358 Ethernet MAC interface connects to LAN8710A PHY",HIGH,"BBB-SCH.pdf, sheet 4, GMII1/RMII1 interface nets; sheet 9, U14 LAN8710A Ethernet interface"
+bbb-009,beaglebone-black,U1,U14,CONTROLS,"AM3358 Ethernet reset GPIO drives LAN8710A reset",HIGH,"BBB-SCH.pdf, sheet 4, net ETH_RST_GPIO1_8; sheet 9, U14 ETH_RESETn/nRST"
+bbb-010,beaglebone-black,U1,U11,FEEDS_SIGNAL,"AM3358 LCD display interface feeds HDMI transmitter video inputs",HIGH,"BBB-SCH.pdf, sheet 4, LCD_DATA/LCD_PCLK/LCD_HSYNC/LCD_VSYNC nets; sheet 10, U11 D0-D23/clock/sync inputs"
+bbb-011,beaglebone-black,U11,U1,FEEDS_SIGNAL,"HDMI transmitter interrupt is reported to the AM3358",HIGH,"BBB-SCH.pdf, sheet 3, U1 HDMI_INT net; sheet 10, U11 HDMI_INT"

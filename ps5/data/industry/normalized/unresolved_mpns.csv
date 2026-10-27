@@ -1,0 +1,11 @@
+original_mpn,original_manufacturer,product_id,source_file,reason,resolution_status
+,,beaglebone-ai,data/industry/raw/beaglebone_ai/extracted/81080925bbb23e0b/beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx,missing_mpn,UNRESOLVED
+,,beaglebone-ai,data/industry/raw/beaglebone_ai/extracted/81080925bbb23e0b/beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx,missing_mpn,UNRESOLVED
+,,beaglebone-ai,data/industry/raw/beaglebone_ai/extracted/81080925bbb23e0b/beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx,missing_mpn,UNRESOLVED
+,,beaglebone-ai,data/industry/raw/beaglebone_ai/extracted/81080925bbb23e0b/beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx,missing_mpn,UNRESOLVED
+,,beaglebone-ai,data/industry/raw/beaglebone_ai/extracted/81080925bbb23e0b/beaglebone-ai-master/BeagleBone-AI_RevA2_BOM+DNP.xlsx,missing_mpn,UNRESOLVED
+,,beaglebone-black,data/industry/raw/beaglebone_black/extracted/04544a35b51ae98b/beaglebone-black-master/BBB_BOM.xls,missing_mpn,UNRESOLVED
+N/A,N/A,ti-tidep-0050,data/industry/raw/ti_tidep_0050/extracted/05fd80af7197736b/tidrc77a/BOM/Revision 1p3A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_3A.xlsx,placeholder_mpn,UNRESOLVED
+N/A,N/A,ti-tidep-0050,data/industry/raw/ti_tidep_0050/extracted/05fd80af7197736b/tidrc77a/BOM/Revision 1p4A/AM437X_INDUSTRIAL_EVM_3K0008_BOM_REV1_4A.xlsx,placeholder_mpn,UNRESOLVED
+,,beaglebone-black-wireless,data/industry/raw/beaglebone_black_wireless/extracted/5b6b89fd51d0a2b5/beaglebone-black-wireless-master/BeagleBone_Black_Wireless_BOM.csv,missing_mpn,UNRESOLVED
+,,beaglebone-black-wireless,C:/Users/lenovo/Downloads/ps5_vij/ps5Vijaya1/ps5/data/industry/raw/beaglebone_black_wireless/extracted/5b6b89fd51d0a2b5/beaglebone-black-wireless-master/BeagleBone_Black_Wireless_BOM.csv,missing_mpn,UNRESOLVED
