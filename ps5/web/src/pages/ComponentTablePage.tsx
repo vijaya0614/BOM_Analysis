@@ -7,7 +7,7 @@ import {
 import {
   Search, Grid, Table as TableIcon, ChevronRight, Filter,
   Cpu, Power, Layers, Radar, Waves, Package, ArrowUpDown,
-  ArrowUp, ArrowDown, Boxes, AlertTriangle, CheckCircle2, Flame, ShieldAlert,
+  ArrowUp, ArrowDown, Boxes, AlertTriangle, CheckCircle2, Flame, ShieldAlert, HelpCircle,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { buildPerformanceCurve, bandHex, hasNumericScore, scoreDisplay } from '../utils/riskUtils';
@@ -341,7 +341,7 @@ export const ComponentTablePage: React.FC<ComponentTablePageProps> = ({
         case 'lifecycle': return lifecycleFor(a).localeCompare(lifecycleFor(b)) * dir;
         case 'lead': return ((a.lead_time_weeks ?? 0) - (b.lead_time_weeks ?? 0)) * dir;
         case 'qty': return (a.qty - b.qty) * dir;
-        default: return (a.score - b.score) * dir;
+        default: return ((a.score ?? 0) - (b.score ?? 0)) * dir;
       }
     });
   }, [components, localBands, effectiveSingleBand, activeCats, searchQuery, sortKey, sortDir]);
@@ -353,16 +353,17 @@ export const ComponentTablePage: React.FC<ComponentTablePageProps> = ({
     HIGH: components.filter(c => c.band === 'HIGH').length,
     MEDIUM: components.filter(c => c.band === 'MEDIUM').length,
     LOW: components.filter(c => c.band === 'LOW').length,
+    INSUFFICIENT_DATA: components.filter(c => c.band === 'INSUFFICIENT_DATA').length,
   }), [components]);
 
-  const allBands: RiskBand[] = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW'];
+  const allBands: RiskBand[] = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INSUFFICIENT_DATA'];
   const bandIcons: Record<RiskBand, React.FC<{ className?: string }>> = {
-    CRITICAL: AlertTriangle, HIGH: Flame, MEDIUM: ShieldAlert, LOW: CheckCircle2,
+    CRITICAL: AlertTriangle, HIGH: Flame, MEDIUM: ShieldAlert, LOW: CheckCircle2, INSUFFICIENT_DATA: HelpCircle,
   };
 
   const riskDistribution = useMemo(() => riskDistributionCategories.map(category => ({
     category,
-    count: components.filter(component => distributionCategory(component) === category && component.score >= 0.3).length,
+    count: components.filter(component => distributionCategory(component) === category && (component.score ?? 0) >= 0.3).length,
   })), [components]);
 
   const setTableSort = (nextKey: typeof sortKey) => {

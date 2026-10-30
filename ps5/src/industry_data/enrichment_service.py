@@ -38,6 +38,7 @@ LIFECYCLE_MAP = {
     "discontinued": "OBSOLETE",
     "unconfirmed": "UNCONFIRMED",
 }
+DEFAULT_VENDOR_TTL_SECONDS = 24 * 60 * 60
 
 
 def map_lifecycle(raw: str) -> str:
@@ -104,7 +105,9 @@ def persist_part(part: ProviderPart, model_id: str, region: str, source_id: str,
         "mounting_type": existing_model.get("mounting_type", ""),
         "component_category": existing_model.get("component_category") or part.category or "",
         "datasheet_url": existing_model.get("datasheet_url") or part.datasheet_url or "",
-        "lifecycle_status": map_lifecycle(part.lifecycle_status) if part.lifecycle_status else existing_model.get("lifecycle_status", "UNKNOWN"),
+        # Lifecycle is stored in source-keyed lifecycle_records, where freshness
+        # and conflicts can be evaluated; the model master has no such lineage.
+        "lifecycle_status": existing_model.get("lifecycle_status", "UNKNOWN"),
     }
     upsert_by_key(
         "component_models.csv",
@@ -209,8 +212,9 @@ def persist_part(part: ProviderPart, model_id: str, region: str, source_id: str,
         expires_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(float(cached_at) + float(cache_ttl)))
         retrieval_state = "CACHED" if time.time() <= float(cached_at) + float(cache_ttl) else "STALE"
     else:
-        retrieved_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-        expires_at = ""
+        retrieved_epoch = time.time()
+        retrieved_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(retrieved_epoch))
+        expires_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(retrieved_epoch + DEFAULT_VENDOR_TTL_SECONDS))
         retrieval_state = "CACHED" if part.cache_hit else "LIVE"
     for offer in part.offers:
         vendor_id = _vendor_id(offer.vendor_name or part.provider, offer.region or region, offer.country or region)
@@ -279,28 +283,32 @@ def persist_part(part: ProviderPart, model_id: str, region: str, source_id: str,
 
 def detect_conflicts(model_id: str) -> int:
     records = [row for row in read_csv("lifecycle_records.csv") if row.get("component_model_id") == model_id]
-    statuses = {(row.get("source_id"), row.get("status"), row.get("source_status")) for row in records}
-    unique_status = {row.get("status") for row in records if row.get("status")}
-    if len(unique_status) <= 1:
+    by_status: Dict[str, set[str]] = {}
+    for row in records:
+        value = (row.get("status") or "").strip()
+        if value:
+            by_status.setdefault(value, set()).add(row.get("source_id") or "unknown_source")
+    if len(by_status) <= 1:
         return 0
-    providers = list(unique_status)
-    append_rows(
-        "data_conflicts.csv",
-        [
-            {
+    registry = {row.get("source_id"): row for row in SourceRegistry().rows()}
+    statuses = sorted(by_status)
+    rows = []
+    for left_index, left_status in enumerate(statuses):
+        for right_status in statuses[left_index + 1:]:
+            left_source = sorted(by_status[left_status])[0]
+            right_source = sorted(by_status[right_status])[0]
+            rows.append({
                 "component_model_id": model_id,
                 "field_name": "lifecycle_status",
-                "provider_a": "provider_a",
-                "value_a": providers[0],
-                "provider_b": "provider_b",
-                "value_b": providers[1] if len(providers) > 1 else "",
+                "provider_a": registry.get(left_source, {}).get("title") or left_source,
+                "value_a": left_status,
+                "provider_b": registry.get(right_source, {}).get("title") or right_source,
+                "value_b": right_status,
                 "detected_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 "resolution_status": "UNRESOLVED",
-            }
-        ],
-    )
-    _ = statuses
-    return 1
+            })
+    upsert_rows("data_conflicts.csv", ["component_model_id", "field_name", "provider_a", "provider_b"], rows)
+    return len(rows)
 
 
 def run_enrichment(

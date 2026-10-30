@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { getRiskColor } from '../components/primitives';
+import { SUBSTITUTE_API_BASE } from '../api';
 
 interface ReportDownloadPageProps {
   report: RiskReportDashboard | null;
@@ -18,35 +19,39 @@ interface ReportDownloadPageProps {
 // Helpers
 // ──────────────────────────────────────────────────────────────────────────────
 
-const BAND_CONFIG = {
-  CRITICAL: { bg: 'bg-red-500/15',    border: 'border-red-500/40',    text: 'text-red-400',    bar: 'bg-red-500',    label: 'Critical' },
-  HIGH:     { bg: 'bg-amber-500/15',  border: 'border-amber-500/40',  text: 'text-amber-400',  bar: 'bg-amber-500',  label: 'High' },
-  MEDIUM:   { bg: 'bg-yellow-400/15', border: 'border-yellow-400/40', text: 'text-yellow-400', bar: 'bg-yellow-400', label: 'Medium' },
-  LOW:      { bg: 'bg-emerald-500/15',border: 'border-emerald-500/40',text: 'text-emerald-400',bar: 'bg-emerald-500',label: 'Low' },
+const BAND_CONFIG: Record<string, { bg: string; border: string; text: string; bar: string; label: string }> = {
+  CRITICAL:          { bg: 'bg-red-500/15',    border: 'border-red-500/40',    text: 'text-red-400',    bar: 'bg-red-500',    label: 'Critical' },
+  HIGH:              { bg: 'bg-amber-500/15',  border: 'border-amber-500/40',  text: 'text-amber-400',  bar: 'bg-amber-500',  label: 'High' },
+  MEDIUM:            { bg: 'bg-yellow-400/15', border: 'border-yellow-400/40', text: 'text-yellow-400', bar: 'bg-yellow-400', label: 'Medium' },
+  LOW:               { bg: 'bg-emerald-500/15',border: 'border-emerald-500/40',text: 'text-emerald-400',bar: 'bg-emerald-500',label: 'Low' },
+  INSUFFICIENT_DATA: { bg: 'bg-gray-500/15',   border: 'border-gray-500/40',   text: 'text-gray-400',   bar: 'bg-gray-500',   label: 'Insufficient Data' },
 };
 
-const OVERALL_GRADIENT = {
-  CRITICAL: 'from-red-600 to-rose-700',
-  HIGH:     'from-amber-500 to-orange-600',
-  MEDIUM:   'from-yellow-400 to-amber-500',
-  LOW:      'from-emerald-500 to-teal-500',
+const OVERALL_GRADIENT: Record<string, string> = {
+  CRITICAL:          'from-red-600 to-rose-700',
+  HIGH:              'from-amber-500 to-orange-600',
+  MEDIUM:            'from-yellow-400 to-amber-500',
+  LOW:               'from-emerald-500 to-teal-500',
+  INSUFFICIENT_DATA: 'from-gray-500 to-slate-600',
 };
 
-const OVERALL_GLOW = {
-  CRITICAL: 'shadow-red-500/30',
-  HIGH:     'shadow-amber-500/30',
-  MEDIUM:   'shadow-yellow-400/30',
-  LOW:      'shadow-emerald-500/30',
+const OVERALL_GLOW: Record<string, string> = {
+  CRITICAL:          'shadow-red-500/30',
+  HIGH:              'shadow-amber-500/30',
+  MEDIUM:            'shadow-yellow-400/30',
+  LOW:               'shadow-emerald-500/30',
+  INSUFFICIENT_DATA: 'shadow-gray-500/30',
 };
 
 // Radial risk score gauge
-const RiskGauge: React.FC<{ score: number; band: string }> = ({ score, band }) => {
-  const pct = Math.min(score, 1);
+const RiskGauge: React.FC<{ score: number | null; band: string }> = ({ score, band }) => {
+  const numScore = score ?? 0;
+  const pct = Math.min(numScore, 1);
   const r = 36;
   const circ = 2 * Math.PI * r;
   const dash = circ * pct;
   const cfg = BAND_CONFIG[band as keyof typeof BAND_CONFIG] ?? BAND_CONFIG.LOW;
-  const strokeColor = getRiskColor(score);
+  const strokeColor = score == null ? '#94867F' : getRiskColor(numScore);
 
   return (
     <svg width="88" height="88" viewBox="0 0 88 88" className="shrink-0">
@@ -58,7 +63,7 @@ const RiskGauge: React.FC<{ score: number; band: string }> = ({ score, band }) =
         cx="44" cy="44" r={r} fill="none"
         stroke={strokeColor} strokeWidth="7"
         strokeLinecap="round"
-strokeDasharray={`${dash} ${circ}`}
+        strokeDasharray={`${dash} ${circ}`}
         transform="rotate(-90 44 44)"
         style={{ filter: `drop-shadow(0 1px 3px color-mix(in oklab, ${strokeColor} 45%, transparent))` }}
       />
@@ -66,7 +71,7 @@ strokeDasharray={`${dash} ${circ}`}
       <text x="44" y="40" textAnchor="middle" dominantBaseline="middle"
         className={cfg.text} fill={strokeColor}
         style={{ fontSize: '14px', fontWeight: 700, fontFamily: 'monospace' }}>
-        {(score * 100).toFixed(0)}
+        {score == null ? '—' : (score * 100).toFixed(0)}
       </text>
       <text x="44" y="55" textAnchor="middle" dominantBaseline="middle"
         fill="currentColor" style={{ fontSize: '8px', opacity: 0.4, fontFamily: 'monospace' }}>
@@ -77,13 +82,14 @@ strokeDasharray={`${dash} ${circ}`}
 };
 
 // Mini horizontal bar
-const RiskBar: React.FC<{ value: number; band: string }> = ({ value, band }) => {
+const RiskBar: React.FC<{ value: number | null; band: string }> = ({ value, band }) => {
+  const numVal = value ?? 0;
   const cfg = BAND_CONFIG[band as keyof typeof BAND_CONFIG] ?? BAND_CONFIG.LOW;
   return (
     <div className="h-1.5 w-full bg-[var(--bg-elevated)] rounded-full overflow-hidden">
       <div
         className={`h-full rounded-full ${cfg.bar}`}
-        style={{ width: `${Math.min(value * 100, 100)}%`, transition: 'width 0.8s cubic-bezier(0.16,1,0.3,1)' }}
+        style={{ width: `${Math.min(numVal * 100, 100)}%`, transition: 'width 0.8s cubic-bezier(0.16,1,0.3,1)' }}
       />
     </div>
   );
@@ -102,13 +108,13 @@ const BandPill: React.FC<{ count: number; band: keyof typeof BAND_CONFIG }> = ({
 
 // AI narrative generator
 const buildNarrative = (report: RiskReportDashboard): string => {
-  const topRisk = report.parts.reduce((a, b) => a.score > b.score ? a : b, report.parts[0]);
+  const topRisk = report.parts.reduce((a, b) => ((a.score ?? 0) > (b.score ?? 0) ? a : b), report.parts[0]);
   const singleSource = report.parts.filter(p => p.reasons.some(r => r.toLowerCase().includes('single'))).length;
   const eolCount = report.parts.filter(p => p.reasons.some(r => r.toLowerCase().includes('eol') || r.toLowerCase().includes('obsolescence'))).length;
+  const topScoreLabel = topRisk && topRisk.score != null ? `${(topRisk.score * 100).toFixed(0)}/100` : 'INSUFFICIENT_DATA';
 
   return `Sentinel's risk engine processed ${report.total_parts} unique line items covering ${report.total_units} total units across this BOM. ` +
-    `The overall supply-chain risk posture is rated ${report.overall} — driven primarily by ${topRisk.pn}, ` +
-    `which carries the highest individual risk score of ${(topRisk.score * 100).toFixed(0)}/100. ` +
+    `The overall supply-chain risk posture is rated ${report.overall}${topRisk ? ` — driven primarily by ${topRisk.pn}, which carries the highest individual risk score of ${topScoreLabel}. ` : '. '}` +
     (singleSource > 0 ? `${singleSource} component${singleSource > 1 ? 's' : ''} exhibit single-source exposure, presenting concentration risk. ` : '') +
     (eolCount > 0 ? `${eolCount} part${eolCount > 1 ? 's are' : ' is'} flagged for end-of-life obsolescence risk. ` : '') +
     `Data completeness across all catalog entries stands at ${report.completeness}%, with ${report.low} low-risk passives healthy and dual-sourced.`;
@@ -133,7 +139,7 @@ const ComponentCard: React.FC<{ comp: BOMComponent }> = ({ comp }) => {
       {/* Score bars */}
       <div className="space-y-1.5">
         <div className="flex items-center justify-between text-[10px] text-[var(--text-muted)] font-mono">
-          <span>Exposure</span><span>{(comp.exp * 100).toFixed(0)}%</span>
+          <span>Exposure</span><span>{comp.exp != null ? `${(comp.exp * 100).toFixed(0)}%` : '—'}</span>
         </div>
         <RiskBar value={comp.exp} band={comp.band} />
         <div className="flex items-center justify-between text-[10px] text-[var(--text-muted)] font-mono">
@@ -158,7 +164,7 @@ const ComponentCard: React.FC<{ comp: BOMComponent }> = ({ comp }) => {
 // ──────────────────────────────────────────────────────────────────────────────
 // Main Page
 // ──────────────────────────────────────────────────────────────────────────────
-export const ReportDownloadPage: React.FC<ReportDownloadPageProps> = ({ report, approvedSubstitutes: _approvedSubstitutes = {} }) => {
+export const ReportDownloadPage: React.FC<ReportDownloadPageProps> = ({ report, approvedSubstitutes = {} }) => {
   const [incVendorQuotes, setIncVendorQuotes] = useState(true);
   const [incHardwareTwin, setIncHardwareTwin] = useState(true);
 
@@ -185,12 +191,34 @@ export const ReportDownloadPage: React.FC<ReportDownloadPageProps> = ({ report, 
     if (!report?.parts) return;
     let csv = "data:text/csv;charset=utf-8,Part Number,Reference,Qty,Risk Band,Score,Exposure,Top Trigger\n";
     report.parts.forEach(p => {
-      csv += `"${p.pn}","${p.ref}",${p.qty},"${p.band}",${p.score.toFixed(3)},${p.exp.toFixed(3)},"${p.reasons[0] ?? ''}"\n`;
+      const s = p.score != null ? p.score.toFixed(3) : 'INSUFFICIENT_DATA';
+      const e = p.exp != null ? p.exp.toFixed(3) : 'INSUFFICIENT_DATA';
+      csv += `"${p.pn}","${p.ref}",${p.qty},"${p.band}",${s},${e},"${p.reasons[0] ?? ''}"\n`;
     });
     const a = document.createElement("a");
     a.href = encodeURI(csv);
     a.download = `Sentinel_Audit_${new Date().toISOString().slice(0, 10)}.csv`;
     document.body.appendChild(a); a.click(); a.remove();
+  };
+
+  const handleDownloadEngineeringAuditJson = async () => {
+    try {
+      const res = await fetch(`${SUBSTITUTE_API_BASE}/api/reports/full-engineering-audit`);
+      if (res.ok) {
+        const data = await res.json();
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `ps5_engineering_audit_report_${Date.now()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    } catch (err) {
+      console.error('Failed to download full engineering audit:', err);
+    }
   };
 
   if (!report) {
@@ -231,6 +259,10 @@ const healthyParts  = report.parts.filter(p => p.band === 'MEDIUM' || p.band ===
             className="px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-[var(--accent-gold)] text-white hover:opacity-90 transition-all shadow-lg cursor-pointer">
             <Printer className="w-3.5 h-3.5" /> PDF / Print
           </button>
+          <button onClick={handleDownloadEngineeringAuditJson}
+            className="px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 bg-[var(--bg-elevated)] text-[var(--accent-gold)] border border-[var(--border-strong)] hover:border-[var(--accent-gold)] transition-all cursor-pointer">
+            <Zap className="w-3.5 h-3.5 text-[var(--accent-gold)]" /> PS5 Full Audit
+          </button>
           <button onClick={handleDownloadJson}
             className="px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-subtle)] hover:border-[var(--border-strong)] transition-all cursor-pointer">
             <FileText className="w-3.5 h-3.5 text-blue-400" /> JSON
@@ -254,7 +286,7 @@ const healthyParts  = report.parts.filter(p => p.band === 'MEDIUM' || p.band ===
             </div>
             <p className="text-4xl font-black text-white tracking-tight">{report.overall}</p>
             <p className="text-white/70 text-xs font-mono">
-              Max score {(report.max_score * 100).toFixed(0)}/100 · Avg {(report.avg_score * 100).toFixed(0)}/100
+              Max score {report.max_score != null ? `${(report.max_score * 100).toFixed(0)}/100` : 'INSUFFICIENT_DATA'} · Avg {report.avg_score != null ? `${(report.avg_score * 100).toFixed(0)}/100` : 'INSUFFICIENT_DATA'}
             </p>
           </div>
 
@@ -273,7 +305,7 @@ const healthyParts  = report.parts.filter(p => p.band === 'MEDIUM' || p.band ===
         {[
           { icon: Cpu,       label: 'Total Parts',    value: `${report.total_parts}`,       sub: 'unique line items' },
           { icon: Activity,  label: 'Data Quality',   value: `${report.completeness}%`,     sub: 'catalog coverage' },
-          { icon: TrendingUp,label: 'Avg Risk Score', value: `${(report.avg_score*100).toFixed(0)}/100`, sub: 'across all parts' },
+          { icon: TrendingUp,label: 'Avg Risk Score', value: report.avg_score != null ? `${(report.avg_score * 100).toFixed(0)}/100` : 'INSUFFICIENT_DATA', sub: 'across all parts' },
           { icon: Zap,       label: 'Units in BOM',   value: `${report.total_units}`,       sub: 'total component count' },
         ].map(kpi => (
           <div key={kpi.label} className="glass-card p-4 rounded-2xl flex flex-col gap-2">
@@ -339,7 +371,7 @@ const healthyParts  = report.parts.filter(p => p.band === 'MEDIUM' || p.band ===
                 <div className={`w-2 h-2 rounded-full ${cfg.bar} shrink-0`} />
                 <span className="text-xs font-mono font-bold text-[var(--text-primary)] flex-1">{comp.pn}</span>
                 <span className="text-[10px] text-[var(--text-muted)] font-mono">{comp.ref}</span>
-                <span className={`text-[10px] font-bold font-mono ${cfg.text} ml-3`}>{(comp.score * 100).toFixed(0)}</span>
+                <span className={`text-[10px] font-bold font-mono ${cfg.text} ml-3`}>{comp.score != null ? (comp.score * 100).toFixed(0) : '—'}</span>
               </div>
             );
           })}

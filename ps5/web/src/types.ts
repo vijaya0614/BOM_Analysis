@@ -26,6 +26,8 @@ export interface BOMComponent {
   // Extra detailed mock/live fields
   lead_time_weeks?: number;
   stock_level?: number;
+  stock?: number;
+  description?: string;
   price?: number;
   sparkline_data?: number[];
   risk_factors?: RiskFactors;
@@ -35,8 +37,24 @@ export interface BOMComponent {
   /** Whether an independently qualified source is available. Null means unmeasured. */
   has_second_source?: boolean | null;
   evidence_status?: string;
+  source_quality?: {
+    vendor_supply?: string;
+    vendor_records_used?: number;
+    vendor_records_excluded?: number;
+    lifecycle?: string;
+    conflicts?: Array<{ field_name?: string; value_a?: string; value_b?: string }>;
+  };
   is_dynamically_inferred?: boolean;
   category?: 'Microcontroller' | 'Power Management' | 'Sensor' | 'Transistor' | 'Passive' | 'Interface';
+}
+
+export interface DemoSampleProject {
+  id: string;
+  name: string;
+  bom_lines: number;
+  unique_mpns: number;
+  total_quantity: number;
+  unresolved_lines: number;
 }
 
 export interface ProviderHealth {
@@ -125,7 +143,7 @@ export interface IndustryComponentData {
   lifecycle_evidence: Array<{ status: string; confidence: string; source_id: string }>;
   technical_specs: Array<{ parameter_name: string; nominal_value: string; provenance: string }>;
   provenance: Array<{ data_provenance: string; confidence: string; retrieved_at: string }>;
-  data_source: 'REAL_DISTRIBUTOR_DATA' | 'REAL_PUBLIC_SOURCE' | 'MISSING';
+  data_source: 'REAL_DISTRIBUTOR_DATA' | 'REAL_PUBLIC_SOURCE' | 'CURATED_STATIC_DEMO_DATA' | 'SYNTHETIC_DEMO_DATA' | 'MISSING';
 }
 
 export interface IndustryComponentSummary {
@@ -164,6 +182,20 @@ export interface RiskReportDashboard {
   high: number;
   medium: number;
   low: number;
+  input_integrity?: {
+    status: string;
+    source_bom?: string;
+    selected_revision?: string;
+    revision_verified?: boolean;
+    source_observed_at?: string[] | string;
+    limitations?: string[];
+  };
+  source_quality?: {
+    vendor_supply_current_parts?: number;
+    vendor_supply_stale_parts?: number;
+    vendor_supply_unknown_parts?: number;
+    parts_with_unresolved_conflicts?: number;
+  };
   parts: BOMComponent[];
 }
 
@@ -177,7 +209,7 @@ export interface CheckItem {
 export interface SubstituteCandidate {
   rank: number;
   part_number: string;
-  classification: 'DROP_IN_CANDIDATE' | 'REQUIRES_REDESIGN' | 'INCOMPATIBLE';
+  classification: 'DROP_IN_CANDIDATE' | 'REQUIRES_REDESIGN' | 'INCOMPATIBLE' | 'INSUFFICIENT_EVIDENCE';
   compatibility_score: number;
   confidence_score: number;
   supply_chain_score: number;
@@ -187,6 +219,7 @@ export interface SubstituteCandidate {
   has_second_source?: boolean;
   lifecycle?: string;
   checks?: CheckItem[];
+  drop_in_evidence?: DropInEvidence;
   evidence_summary?: {
     matched_parameters?: string[];
     mismatched_parameters?: string[];
@@ -219,6 +252,18 @@ export interface SubstituteCandidate {
     confidence: string;
     limitations: string[];
   };
+}
+
+export interface DropInEvidence {
+  status: 'SUPPORTED' | 'INSUFFICIENT_DATA';
+  unknown_parameters: string[];
+  limitations: string[];
+  requirements: Array<{
+    parameter: string;
+    status: string;
+    original: { value: unknown; status: string; source?: Record<string, unknown> | null };
+    candidate: { value: unknown; status: string; source?: Record<string, unknown> | null };
+  }>;
 }
 
 export interface EvidenceRecord {
@@ -398,6 +443,7 @@ export type PageId =
   | 'upload'
   | 'components'
   | 'detail'
+  | 'fmea'
   | 'decision'
   | 'vendor'
   | 'settings'
@@ -414,6 +460,7 @@ export interface CandidateDecision {
   candidate_id: string;
   candidate_part_number: string;
   classification: string;
+  drop_in_evidence?: DropInEvidence;
   candidate_generation: SubstituteCandidate;
   vendor_status: string;
   vendor_gate: Record<string, unknown>;
@@ -440,4 +487,275 @@ export interface CandidateDecisionResponse {
   ranking_rule: string;
   candidates: CandidateDecision[];
   reason_codes?: string[];
+}
+
+// ── PS5 Comprehensive Engineering Interfaces ──────────────────────────────────
+export interface HorizonForecast {
+  years: number;
+  unavailability_probability: number;
+  risk_category: 'LOW' | 'MODERATE' | 'HIGH' | 'CRITICAL';
+}
+
+export interface ObsolescenceForecastData {
+  part_number: string;
+  category: string;
+  current_status: string;
+  years_in_market: number;
+  weibull_shape_beta: number;
+  weibull_scale_eta_years: number;
+  methodology: string;
+  horizons: Record<string, HorizonForecast>;
+  is_high_risk: boolean;
+  recommended_mitigation: string;
+  assumptions: string[];
+}
+
+export interface ToleranceCheckItem {
+  parameter: string;
+  threshold_rule: string;
+  measured_value: string;
+  status: 'PASS' | 'FAIL' | 'UNKNOWN';
+  detail: string;
+}
+
+export interface MarketSupplyRiskData {
+  part_number: string;
+  available_stock: number | null;
+  weekly_demand: number | null;
+  inventory_coverage_weeks: number | null;
+  estimated_lead_time_weeks: number | null;
+  available_procurement_window_weeks: number | null;
+  lead_time_margin_weeks: number | null;
+  can_arrive_before_deadline: boolean | null;
+  hhi_concentration: number | null;
+  hhi_tier: string;
+  supply_pressure_index: number;
+  spi_risk_category: string;
+  tolerance_checks: Array<{
+    parameter: string;
+    configured_threshold: unknown;
+    observed_value: unknown;
+    status: 'PASS' | 'FAIL' | 'UNKNOWN';
+    explanation: string;
+  }>;
+}
+
+export interface MissionPhaseResult {
+  phase_name: string;
+  annual_hours: number;
+  ambient_temp_c: number;
+  power_watts: number;
+  temp_rise_delta_c: number;
+  junction_temp_c: number;
+  arrhenius_af: number;
+  phase_damage_fraction: number;
+  thermal_margin_c: number;
+  is_junction_temp_exceeded: boolean;
+}
+
+export interface MitigationComparison {
+  strategy: string;
+  peak_junction_temp_c: number;
+  thermal_margin_c: number;
+  projected_life_years: number;
+  life_consumption_pct: number;
+  adequate_for_target: boolean;
+}
+
+export interface MissionProfileData {
+  component_name: string;
+  part_number: string;
+  rated_temp_max_c: number;
+  thermal_resistance_c_per_w: number;
+  peak_junction_temp_c: number;
+  worst_thermal_margin_c: number;
+  annual_cumulative_damage_d: number;
+  projected_life_years: number;
+  life_consumption_over_target_pct: number;
+  is_service_life_adequate: boolean;
+  phases: MissionPhaseResult[];
+  mitigation_comparisons: MitigationComparison[];
+  assumptions: string[];
+}
+
+export interface SensitivityParam {
+  parameter: string;
+  sensitivity_derivative: number;
+  variance_contribution_pct: number;
+}
+
+export interface HistogramBin {
+  bin_start: number;
+  bin_end: number;
+  bin_center: number;
+  count: number;
+  frequency: number;
+}
+
+export interface ToleranceAnalysisData {
+  analysis_name: string;
+  nominal_output: number;
+  output_unit: string;
+  worst_case_min: number;
+  worst_case_max: number;
+  rss_sigma: number;
+  rss_3sigma_min: number;
+  rss_3sigma_max: number;
+  monte_carlo_samples: number;
+  monte_carlo_mean: number;
+  monte_carlo_std: number;
+  monte_carlo_violation_rate_pct: number;
+  spec_min_limit: number | null;
+  spec_max_limit: number | null;
+  histogram_bins: HistogramBin[];
+  sensitivity_ranking: SensitivityParam[];
+  assumptions: string[];
+}
+
+export interface FmeaEntry {
+  item_name: string;
+  function: string;
+  failure_mode: string;
+  local_effect: string;
+  end_system_effect: string;
+  potential_cause: string;
+  prevention_controls: string;
+  detection_controls: string;
+  severity: number;
+  occurrence: number;
+  detection: number;
+  rpn: number;
+  action_priority: 'HIGH' | 'MEDIUM' | 'LOW';
+  recommended_action: string;
+  residual_severity?: number;
+  residual_occurrence?: number;
+  residual_detection?: number;
+  residual_rpn?: number;
+}
+
+export interface CostScenarioItem {
+  strategy_key: string;
+  strategy_name: string;
+  parts_purchase_cost: number;
+  redesign_engineering_cost: number;
+  qualification_testing_cost: number;
+  inventory_holding_cost: number;
+  procurement_delay_cost: number;
+  disruption_risk_cost: number;
+  total_lifecycle_cost: number;
+  unit_cost_amortized: number;
+  net_savings_vs_baseline: number;
+  savings_pct_vs_baseline: number;
+}
+
+export interface CostComparisonData {
+  part_number: string;
+  production_volume: number;
+  scenarios: Record<string, CostScenarioItem>;
+  break_even_vs_substitute_units: number | null;
+  best_economic_strategy: string;
+  key_economic_tradeoffs: string[];
+}
+
+export interface DistributorQuote {
+  vendor_name: string;
+  stock: number;
+  unit_price: number;
+  moq: number;
+  lead_time_weeks: number;
+  packaging: string;
+  stock_share_pct: number;
+  authorized?: boolean | null;
+  currency?: string;
+  retrieval_state?: 'LIVE' | 'CACHED' | 'STALE' | 'UNKNOWN';
+  data_provenance?: string;
+}
+
+export interface GeologicalAvailability {
+  primary_fab_country: string;
+  primary_fab_city: string;
+  primary_fab_name: string;
+  seismic_risk_score: number;
+  water_stress_level: 'LOW' | 'MODERATE' | 'HIGH' | 'CRITICAL' | string;
+  tsunami_hazard_zone: boolean;
+  secondary_packaging_country: string;
+  secondary_packaging_name: string;
+  redundant_site_qualified: boolean;
+  rare_earth_dependence_pct: number;
+  geopolitical_exposure_score: number;
+  geopolitical_risk_tier: 'LOW' | 'MODERATE' | 'ELEVATED' | 'CRITICAL' | string;
+  regional_stock_americas_pct: number;
+  regional_stock_emea_pct: number;
+  regional_stock_apac_pct: number;
+  regional_stock_domestic_pct: number;
+}
+
+export interface VolumePriceBreak {
+  tier: string;
+  qty: number;
+  unit_price: number;
+  savings_pct: number;
+}
+
+export interface MarketSaturationData {
+  saturation_index_pct: number;
+  sourcing_status: 'SINGLE_SOURCE_PROPRIETARY' | 'DUAL_SOURCED' | 'MULTI_SOURCE_COMMODITY' | string;
+  qualified_manufacturers: string[];
+  hhi_index: number;
+  supply_pressure_index: number;
+  counterfeit_risk_score: number;
+  counterfeit_risk_level: 'LOW' | 'MEDIUM' | 'HIGH' | string;
+  distributors: DistributorQuote[];
+  volume_price_breaks: VolumePriceBreak[];
+  price_trend_12m: { month: string; unit_price: number; spot_market_price?: number }[];
+  lead_time_trend_12m: { month: string; lead_time_weeks: number; target_lead_time_weeks?: number }[];
+}
+
+export interface LifecycleDetails {
+  lifecycle_status: 'ACTIVE' | 'NRND' | 'EOL' | 'OBSOLETE' | 'PRE_RELEASE' | string;
+  introduction_year: number;
+  expected_eol_year: number;
+  ltb_date: string | null;
+  lts_date: string | null;
+  years_remaining: number;
+  phase_progress_pct: number;
+  weibull_shape_beta: number;
+  weibull_scale_eta_years: number;
+}
+
+export interface ResilienceRadar {
+  sourcing_security: number;
+  lead_time_resilience: number;
+  price_stability: number;
+  lifecycle_longevity: number;
+  geopolitical_safety: number;
+  geological_hardiness: number;
+}
+
+export interface ComponentVendorIntelligence {
+  part_number: string;
+  manufacturer: string;
+  description: string;
+  category: string;
+  lifecycle: LifecycleDetails;
+  geological: GeologicalAvailability;
+  market_saturation: MarketSaturationData;
+  resilience: ResilienceRadar;
+  normalized_specs: { parameter_name: string; nominal_value: string }[];
+  document_links: { title: string; url: string }[];
+  data_provenance?: string;
+  data_source?: string;
+  vendor_records?: Array<{
+    vendor_name: string;
+    vendor_part_number: string | null;
+    stock_quantity: number;
+    lead_time_days: number;
+    unit_price: number;
+    currency: string;
+    moq?: number;
+    packaging?: string;
+    authorized?: boolean | null;
+    retrieval_state?: 'LIVE' | 'CACHED' | 'STALE' | 'UNKNOWN';
+    data_provenance: string;
+  }>;
 }

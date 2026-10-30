@@ -35,3 +35,5 @@ web/dist-ssr/
 # Local reports / uploads that are generated at runtime
 outputs/api_reports/
 outputs/api_uploads/
+SENTINEL_demo_ready_validated.zip
+.pytest-workspace/

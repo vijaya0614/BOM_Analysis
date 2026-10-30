@@ -444,6 +444,7 @@ def run_import(
     existing_hashes = _existing_hashes() if not dry_run else set()
     seen_hashes: set[str] = set()
     imported_product_ids: set[str] = set()
+    replaced_bom_products: set[str] = set()
     registry = SourceRegistry()
     provenance = ProvenanceStore()
 
@@ -501,8 +502,14 @@ def run_import(
         if stub_name and summary["rows"] <= 12 and existing_count > summary["rows"]:
             report["warnings"].append(f"STUB_BOM_SKIPPED:{candidate.relative_path}")
             return
-        if summary["rows"] >= 20 and 0 < existing_count <= 12:
+        # Replace the prior normalized BOM once per product per import run,
+        # then allow other BOM documents in this same package to contribute.
+        # This prevents a newly imported revision from retaining rows that
+        # disappeared from the new source package.
+        if product_id not in replaced_bom_products:
             delete_where("bom_lines.csv", lambda row: row.get("product_id") == product_id)
+            delete_where("unresolved_mpns.csv", lambda row: row.get("product_id") == product_id)
+            replaced_bom_products.add(product_id)
         normalize_rows(candidate.product_key, rows, source_id, product_metadata=candidate.product_meta)
 
     for path in files:

@@ -11,11 +11,13 @@ from src.compatibility_rules import (
 )
 from src.component_intelligence import compare_reliability_outlook, final_engineering_recommendation
 from src.component_catalog import build_risk_profile, candidates_for, find_component
+from src.drop_in_evidence import assess_component_drop_in_evidence
 from src.models import ComponentSpec
 
 DROP_IN = "DROP_IN_CANDIDATE"
 REQUIRES_REDESIGN = "REQUIRES_REDESIGN"
 INCOMPATIBLE_CLASSIFICATION = "INCOMPATIBLE"
+INSUFFICIENT_EVIDENCE_CLASSIFICATION = "INSUFFICIENT_EVIDENCE"
 
 ADVISORY_WARNING = (
     "Substitute recommendations are rule-based advisory outputs from available data. "
@@ -26,6 +28,7 @@ CLASSIFICATION_PENALTIES = {
     DROP_IN: 0,
     REQUIRES_REDESIGN: 8,
     INCOMPATIBLE_CLASSIFICATION: 35,
+    INSUFFICIENT_EVIDENCE_CLASSIFICATION: 15,
 }
 
 
@@ -211,15 +214,17 @@ def add_rank_explanations(results: List[Dict[str, Any]]) -> None:
 
 
 def recommendation_summary(results: List[Dict[str, Any]]) -> Dict[str, Any]:
-    if not results:
+    verified = [item for item in results if item.get("classification") == DROP_IN]
+    if not verified:
         return {
             "recommended": None,
-            "why_recommended": "No verified substitute found.",
+            "why_recommended": "No candidate has complete traceable package, pinout, and rating evidence for both parts.",
             "why_next_not_selected": None,
+            "unverified_candidates": [item.get("part_number") for item in results if item.get("classification") == INSUFFICIENT_EVIDENCE_CLASSIFICATION],
         }
 
-    top = results[0]
-    next_candidate = results[1] if len(results) > 1 else None
+    top = verified[0]
+    next_candidate = verified[1] if len(verified) > 1 else None
     summary = {
         "recommended": top["part_number"],
         "why_recommended": top["why_ranked_here"],
@@ -241,6 +246,8 @@ def generate_explanation(original: ComponentSpec, candidate: ComponentSpec, resu
         opening = f"{candidate.part_number} is ranked as a drop-in candidate for {original.part_number}"
     elif classification == REQUIRES_REDESIGN:
         opening = f"{candidate.part_number} may replace {original.part_number}, but redesign or review is required"
+    elif classification == INSUFFICIENT_EVIDENCE_CLASSIFICATION:
+        opening = f"{candidate.part_number} cannot be confirmed as a drop-in for {original.part_number}"
     else:
         opening = f"{candidate.part_number} is not a suitable substitute for {original.part_number}"
 
@@ -268,6 +275,12 @@ def evaluate_candidate(original: ComponentSpec, candidate: ComponentSpec, data_d
     confidence = evidence_confidence_score(checks)
     evidence = evidence_summary(checks)
     classification = classify_candidate(checks)
+    drop_in_evidence = assess_component_drop_in_evidence(original, candidate, checks)
+    if classification == DROP_IN and drop_in_evidence["status"] != "SUPPORTED":
+        classification = INSUFFICIENT_EVIDENCE_CLASSIFICATION
+    evidence_coverage = sum(item["status"] == "SUPPORTED" for item in drop_in_evidence["requirements"])
+    evidence_confidence = round(100 * evidence_coverage / max(1, len(drop_in_evidence["requirements"])))
+    confidence = min(confidence, evidence_confidence)
     supply = supply_chain_score(candidate, data_dir)
     breakdown = score_breakdown(compat, supply, classification)
     factors = ranking_factors(candidate, checks)
@@ -281,12 +294,13 @@ def evaluate_candidate(original: ComponentSpec, candidate: ComponentSpec, data_d
         "ranking_score": breakdown["final_ranking_score"],
         "score_breakdown": breakdown,
         "classification": classification,
+        "drop_in_evidence": drop_in_evidence,
         "checks": checks,
         "evidence_summary": evidence,
-        "insufficient_evidence": evidence["insufficient_evidence"],
+        "insufficient_evidence": evidence["insufficient_evidence"] or drop_in_evidence["status"] != "SUPPORTED",
         "matched_parameters": evidence["matched_parameters"],
         "mismatched_parameters": evidence["mismatched_parameters"],
-        "unknown_parameters": evidence["unknown_parameters"],
+        "unknown_parameters": list(dict.fromkeys(evidence["unknown_parameters"] + drop_in_evidence["unknown_parameters"])),
         "lifecycle": candidate.lifecycle_status,
         "lead_time_weeks": candidate.lead_time_weeks,
         "stock": candidate.stock,
@@ -324,7 +338,13 @@ def recommend_substitutes(
     if not include_incompatible:
         results = [r for r in results if r["classification"] != INCOMPATIBLE_CLASSIFICATION]
 
-    results.sort(key=lambda r: (r["ranking_score"], r["compatibility_score"], r["supply_chain_score"]), reverse=True)
+    results.sort(key=lambda r: (
+        r["classification"] == DROP_IN,
+        r["classification"] == REQUIRES_REDESIGN,
+        r["ranking_score"],
+        r["compatibility_score"],
+        r["supply_chain_score"],
+    ), reverse=True)
     # Electrical/package incompatibility is a hard constraint.  Keep such
     # candidates available for audit when requested, but never let stock or
     # price-driven supply scoring make one the leading recommendation.
@@ -356,7 +376,13 @@ def recommend_industry_substitutes(product_id: str, reference_designator: str, d
         }
     candidates = industry_candidates_for(original)
     results = [evaluate_candidate(original, candidate, data_dir) for candidate in candidates]
-    results.sort(key=lambda result: (result["ranking_score"], result["compatibility_score"], result["supply_chain_score"]), reverse=True)
+    results.sort(key=lambda result: (
+        result["classification"] == DROP_IN,
+        result["classification"] == REQUIRES_REDESIGN,
+        result["ranking_score"],
+        result["compatibility_score"],
+        result["supply_chain_score"],
+    ), reverse=True)
     compatible = [item for item in results if item["classification"] != INCOMPATIBLE_CLASSIFICATION]
     incompatible = [item for item in results if item["classification"] == INCOMPATIBLE_CLASSIFICATION]
     results = compatible + incompatible

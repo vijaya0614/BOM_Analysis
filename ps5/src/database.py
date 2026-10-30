@@ -1,32 +1,45 @@
-# src/database.py
 """SQLAlchemy engine and session handling for the PS5 platform.
-Uses the Pydantic Settings defined in ``src/config.py``.
-Provides a ``init_db`` helper for quick dev startup and a FastAPI
-dependency ``get_db`` that yields a session.
+
+Supports both PostgreSQL and local SQLite databases.
+Provides init_db to create tables and FastAPI get_db dependency.
 """
 
+import os
+from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from src.config import settings
 from src.db_models import Base
 
-# Engine – echo enabled for DEBUG level
+# Ensure parent directory exists for SQLite files
+db_url = settings.DATABASE_URL
+if db_url.startswith("sqlite"):
+    path_str = db_url.replace("sqlite:///", "").replace("sqlite://", "")
+    if path_str and not path_str.startswith(":memory:"):
+        db_path = Path(path_str)
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+    connect_args = {"check_same_thread": False}
+else:
+    connect_args = {}
+
 engine = create_engine(
-    settings.DATABASE_URL,
+    db_url,
+    connect_args=connect_args,
     echo=settings.LOG_LEVEL.upper() == "DEBUG",
     future=True,
 )
 
-# Session factory
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False, future=True)
 
+
 def init_db() -> None:
-    """Create tables if they do not exist. In production you would run Alembic migrations."""
+    """Create tables if they do not exist."""
     Base.metadata.create_all(bind=engine)
 
-# FastAPI dependency
+
 def get_db():
+    """FastAPI dependency for database sessions."""
     db = SessionLocal()
     try:
         yield db

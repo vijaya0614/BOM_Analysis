@@ -1,0 +1,23 @@
+MPN,Manufacturer,Description,Reference,Quantity,Package,Stock_Level,Lead_Time_Weeks,Unit_Price_USD,Lifecycle_Status,Min_Order_Qty,Datasheet_URL
+NE556DR,Texas Instruments,Dual Timer 556 SO-14 (Legacy),U15,1,SO-14,450,52,0.65,EOL,2500,https://www.ti.com/lit/ds/symlink/ne556.pdf
+PTN78060WAH,Texas Instruments,Non-Isolated DC/DC Module 5V 6A Wide-Vin,U10,1,SIP-7,980,26,18.9,NRND,100,https://www.ti.com/lit/ds/symlink/ptn78060w.pdf
+ATMEGA328P-AU,Microchip (Atmel),AVR MCU 8-bit 32KB Flash 2KB SRAM TQFP-32,U17,1,TQFP-32,1200,22,2.8,NRND,500,https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf
+SMSC9514-JZX,Microchip Technology,USB2.0 Hub+Ethernet Controller 10/100 USB,U11,1,64-LQFP,1850,18,5.2,NRND,500,https://ww1.microchip.com/downloads/en/DeviceDoc/9514.pdf
+MT41K256M16TW-107:P,Micron Technology,DDR3L SDRAM 4Gb 1866MHz 78-FBGA,"U2,U3",2,78-FBGA,3200,20,4.75,NRND,500,https://media-www.micron.com/media/document/MT41K256M16TW.pdf
+LM1117IMPX-3.3/NOPB,Texas Instruments,LDO 3.3V 800mA SOT-223 (Aging Inventory Risk),U16,1,SOT-223,2100,16,0.95,NRND,1000,https://www.ti.com/lit/ds/symlink/lm1117.pdf
+TLV70233DBVR,Texas Instruments,LDO 3.3V 300mA SOT-23-5 Ultra-Low Noise,"U8,U9",2,SOT-23-5,45000,4,0.55,ACTIVE,3000,https://www.ti.com/lit/ds/symlink/tlv702.pdf
+AM3358BZCZ100,Texas Instruments,Sitara ARM Cortex-A8 MPU 1GHz 3D Graphics,U1,1,NFBGA-324,12400,14,13.25,ACTIVE,1000,https://www.ti.com/lit/ds/symlink/am3358.pdf
+IS61WV102416BLL-10TLI,Integrated Silicon Solution (ISSI),SRAM 16Mb 10ns 3.3V 48-TSOP,U7,1,48-TSOP,7800,8,2.35,ACTIVE,1000,https://www.issi.com/WW/pdf/61WV102416B.pdf
+TPS65217CRSLR,Texas Instruments,PMIC 3 Buck+LDO+USB-OTG I2C 48-VQFN,U4,1,48-VQFN,4500,6,3.85,ACTIVE,1000,https://www.ti.com/lit/ds/symlink/tps65217c.pdf
+GRM188R61E106KA73D,Murata,Cap MLCC 10uF 25V X5R 0603 ±10%,"C9,C10,C11,C12,C13,C14",6,0603,1800000,2,0.022,ACTIVE,4000,https://www.murata.com/en-global/products/productdetail?partno=GRM188R61E106KA73D
+UVZ1C101MPD1TD,Nichicon,Cap Aluminum Electrolytic 100uF 16V 105°C 6.3x5mm,"C15,C16,C17,C18",4,Radial-6.3x5,320000,4,0.18,ACTIVE,2000,https://www.nichicon.co.jp/english/products/pdfs/e-uvz.pdf
+TMP102AIDRLR,Texas Instruments,Temp Sensor Digital I2C ±0.5°C SOT-563,U14,1,SOT-563,78000,4,1.15,ACTIVE,3000,https://www.ti.com/lit/ds/symlink/tmp102.pdf
+GRM155R71C104KA88D,Murata,Cap MLCC 0.1uF 16V X7R 0402 ±10%,"C1,C2,C3,C4,C5,C6,C7,C8",8,0402,2500000,2,0.008,ACTIVE,10000,https://www.murata.com/en-global/products/productdetail?partno=GRM155R71C104KA88D
+ABLS-24.000MHZ-L4Q-T,Abracon,Crystal 24.000MHz ±30ppm 18pF SMD,Y1,1,SMD-4,120000,4,0.32,ACTIVE,3000,https://abracon.com/Resonators/ABLS.pdf
+SG-8002CA-32.768KHZ-TJHPA,Epson,Crystal 32.768kHz RTC ±20ppm SMD,Y2,1,SMD-2,95000,3,0.28,ACTIVE,5000,https://www5.epsondevice.com/en/products/crystal/sg8002ca.html
+SN65HVDA100QDRQ1,Texas Instruments,CAN Bus Transceiver AEC-Q100 3.3V SO-8,"U12,U13",2,SO-8,34000,6,1.85,ACTIVE,2500,https://www.ti.com/lit/ds/symlink/sn65hvda100-q1.pdf
+SN74AHC1G08DCKR,Texas Instruments,Single 2-Input AND Gate SC-70-5,"U5,U6",2,SC-70-5,890000,2,0.082,ACTIVE,3000,https://www.ti.com/lit/ds/symlink/sn74ahc1g08.pdf
+SRR1260-100Y,Bourns,Inductor 10uH 20% 2.9A 12x12mm Shielded,"L1,L2",2,12x12mm,85000,6,0.82,ACTIVE,500,https://www.bourns.com/docs/Product-Datasheets/SRR1260.pdf
+10118241-001RLF,Amphenol FCI,USB Type-A Receptacle 2.0 Through-Hole,"J1,J2",2,THT,280000,2,0.48,ACTIVE,100,https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/inputoutput/io_usb_10118241.pdf
+RC0402FR-0710KL,Yageo,Resistor 10kΩ ±1% 0.0625W 0402 Thick Film,"R1,R2,R3,R4,R5,R6,R7,R8,R9,R10",10,0402,8000000,1,0.004,ACTIVE,10000,https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf
+CRCW040249R9FKED,Vishay,Resistor 49.9Ω ±1% 0.0625W 0402 Thick Film,"R11,R12,R13,R14,R15",5,0402,5000000,1,0.005,ACTIVE,10000,https://www.vishay.com/docs/20035/dcrcwe3.pdf

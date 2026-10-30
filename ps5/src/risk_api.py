@@ -3,6 +3,8 @@ import os
 import re
 import tempfile
 import csv
+import hashlib
+from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from typing import Any, Dict
 from urllib.parse import parse_qs, urlparse
@@ -32,7 +34,7 @@ SAMPLE_PROJECTS = {
         "bom_path": os.path.join("data", "sample_projects", "bom_industrial_iot_gateway.csv"),
     },
     "drone_controller": {
-        "name": "Smart Drone Flight Controller",
+        "name": "Smart Drone Controller",
         "bom_path": os.path.join("data", "sample_projects", "bom_smart_drone_flight_controller.csv"),
     },
     "medical_oximeter": {
@@ -48,7 +50,7 @@ SAMPLE_PROJECTS = {
         "bom_path": os.path.join("data", "sample_projects", "bom_mini_fan_controller.csv"),
     },
     "smart_cooling": {
-        "name": "Mini Smart Cooling Controller",
+        "name": "Smart Cooling Controller",
         "bom_path": os.path.join("data", "sample_projects", "bom_mini_smart_cooling_controller.csv"),
     },
     "touch_lamp": {
@@ -222,8 +224,9 @@ def _sparkline_from_factors(factors: Dict[str, Any], score: Any) -> list:
 
 
 def _dashboard_payload(report: Dict[str, Any], project_name: str) -> Dict[str, Any]:
-    from src.industry_data.catalog_adapter import lifecycle_label_for_mpn, supply_overlay
+    from src.industry_data.catalog_adapter import conflicts_for_mpn, lifecycle_label_for_mpn, lifecycle_quality_for_mpn, supply_overlay
     from src.industry_data.identity import is_industry_mpn
+    from src.risk_engine import AHP_WEIGHTS, HORIZON_YEARS
 
     summary = report["summary"]
     parts = []
@@ -246,6 +249,7 @@ def _dashboard_payload(report: Dict[str, Any], project_name: str) -> Dict[str, A
         band = _normalize_band(part.get("risk_band"))
         taxonomy = part.get("taxonomy_category")
         overlay = supply_overlay(pn) if pn else {}
+        lifecycle_label = lifecycle_label_for_mpn(pn) if pn else None
         stock = part.get("stock")
         lead = part.get("lead_time_weeks")
         price = part.get("unit_cost_usd")
@@ -276,7 +280,14 @@ def _dashboard_payload(report: Dict[str, Any], project_name: str) -> Dict[str, A
                 "lead_time_weeks": lead,
                 "stock_level": stock,
                 "price": price,
-                "lifecycle_status": _lifecycle_ui(part.get("lifecycle_status") or (lifecycle_label_for_mpn(pn) if pn else None)),
+                "lifecycle_status": _lifecycle_ui(part.get("lifecycle_status") or lifecycle_label),
+                "source_quality": {
+                    "vendor_supply": overlay.get("freshness", "INSUFFICIENT_DATA"),
+                    "vendor_records_used": overlay.get("fresh_records", 0),
+                    "vendor_records_excluded": overlay.get("excluded_records", 0),
+                    "lifecycle": lifecycle_quality_for_mpn(pn) if pn else "INSUFFICIENT_DATA",
+                    "conflicts": conflicts_for_mpn(pn) if pn else [],
+                },
                 "has_second_source": second_source,
                 "evidence_status": part.get("evidence_status") or "",
                 "is_dynamically_inferred": bool(part.get("is_dynamically_inferred")),
@@ -302,6 +313,21 @@ def _dashboard_payload(report: Dict[str, Any], project_name: str) -> Dict[str, A
         "medium": summary["medium_count"],
         "low": summary["low_count"],
         "insufficient_data": summary.get("insufficient_data_count", 0),
+        "source_quality": {
+            "vendor_supply_current_parts": sum(1 for part in parts if part.get("source_quality", {}).get("vendor_supply") == "CURRENT"),
+            "vendor_supply_stale_parts": sum(1 for part in parts if part.get("source_quality", {}).get("vendor_supply") == "STALE"),
+            "vendor_supply_unknown_parts": sum(1 for part in parts if part.get("source_quality", {}).get("vendor_supply") in {"UNKNOWN", "INCOMPLETE", "CONFLICT", "INSUFFICIENT_DATA"}),
+            "parts_with_unresolved_conflicts": sum(1 for part in parts if part.get("source_quality", {}).get("conflicts")),
+        },
+        "model_metadata": {
+            "risk_score": {
+                "method": "Fuzzy AHP weighted risk dimensions with deterministic override floors",
+                "weights": AHP_WEIGHTS,
+                "obsolescence_horizon_years": HORIZON_YEARS,
+                "band_thresholds": {"LOW_MIN": 0.0, "MEDIUM_MIN": 0.30, "HIGH_MIN": 0.60, "CRITICAL_MIN": 0.85},
+                "weight_calibration_status": "EXPERT_JUDGMENT_PRIORS_NOT_OUTCOME_CALIBRATED",
+            }
+        },
         "parts": parts,
     }
 
@@ -315,11 +341,24 @@ def analyze_bom_path(bom_path: str, project_name: str) -> Dict[str, Any]:
     with open(output_path, mode="r", encoding="utf-8") as f:
         report = json.load(f)
 
+    with open(bom_path, "rb") as source_handle:
+        source_sha256 = hashlib.sha256(source_handle.read()).hexdigest()
+    input_integrity = {
+        "status": "USER_SUPPLIED_REVISION_UNVERIFIED",
+        "source_bom": os.path.basename(bom_path),
+        "source_sha256": source_sha256,
+        "observed_at": datetime.now(timezone.utc).isoformat(),
+        "limitations": ["Import time and file hash identify this input snapshot; they do not prove the BOM is the current released revision."],
+    }
+    report["input_integrity"] = input_integrity
+    dashboard = _dashboard_payload(report, project_name)
+    dashboard["input_integrity"] = input_integrity
     return {
         "project_name": project_name,
         "report_path": output_path,
         "report": report,
-        "dashboard": _dashboard_payload(report, project_name),
+        "dashboard": dashboard,
+        "input_integrity": input_integrity,
     }
 
 
@@ -342,8 +381,13 @@ def analyze_industry_product(project_id: str, project_name: str) -> Dict[str, An
     product_id = INDUSTRY_PROJECT_IDS.get(project_id)
     if not product_id:
         return {"error": "PROJECT_NOT_FOUND", "message": f"Unknown industry project '{project_id}'."}
-    lines = [row for row in read_csv("bom_lines.csv") if row.get("product_id") == product_id and row.get("original_mpn")]
+    from src.industry_data.revision_selection import select_product_bom
+
+    lines, revision_selection = select_product_bom(product_id, reader=read_csv)
+    sources = {row.get("source_id"): row for row in read_csv("source_registry.csv")}
     if not lines:
+        if revision_selection["status"] == "AMBIGUOUS_REVISION":
+            return {"error": "AMBIGUOUS_REVISION", "message": "Multiple BOM revisions are present without an unambiguous source observation time; no report was generated."}
         return {"error": "NO_IMPORTED_BOM", "message": f"No normalized BOM lines are available for {project_name}. Import its source package first."}
     os.makedirs(UPLOAD_DIR, exist_ok=True)
     bom_path = os.path.join(UPLOAD_DIR, f"normalized_{_safe_name(project_id)}.csv")
@@ -361,7 +405,37 @@ def analyze_industry_product(project_id: str, project_name: str) -> Dict[str, An
                     "Package": "",
                 }
             )
-    return analyze_bom_path(bom_path, project_name)
+    result = analyze_bom_path(bom_path, project_name)
+    selected_source_ids = sorted({row.get("source_id") for row in lines if row.get("source_id")})
+    retrieved = [sources[source_id].get("retrieved_at") for source_id in selected_source_ids if source_id in sources]
+    unresolved = [row for row in read_csv("unresolved_mpns.csv") if row.get("product_id") == product_id]
+    model_ids = {row.get("component_model_id") for row in lines if row.get("component_model_id")}
+    conflicts = [row for row in read_csv("data_conflicts.csv") if row.get("component_model_id") in model_ids and (row.get("resolution_status") or "UNRESOLVED").upper() != "RESOLVED"]
+    quality_status = (
+        "CONFLICT" if conflicts else
+        "INCOMPLETE" if unresolved or revision_selection["status"] == "INCOMPLETE" else
+        revision_selection["status"]
+    )
+    input_integrity = {
+        **revision_selection,
+        "status": quality_status,
+        "bom_line_count": len(lines),
+        "source_ids": selected_source_ids,
+        "source_document_count": len(selected_source_ids),
+        "source_observed_at": sorted({value for value in retrieved if value}),
+        "unresolved_mpn_count": len(unresolved),
+        "unresolved_conflict_count": len(conflicts),
+        "limitations": [
+            "Imported revision metadata is not treated as current manufacturer revision unless a release date is recorded.",
+            "Source observation time records when this package was imported; it does not prove the package is the latest released BOM.",
+        ],
+    }
+    result["input_integrity"] = input_integrity
+    if isinstance(result.get("report"), dict):
+        result["report"]["input_integrity"] = input_integrity
+    if isinstance(result.get("dashboard"), dict):
+        result["dashboard"]["input_integrity"] = input_integrity
+    return result
 
 
 class RiskRequestHandler(BaseHTTPRequestHandler):

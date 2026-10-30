@@ -140,6 +140,8 @@ def unresolved() -> Dict[str, Any]:
 
 def industry_status() -> Dict[str, Any]:
     """Compact, credential-safe status for the existing frontend surfaces."""
+    from src.industry_data.catalog_adapter import _vendor_freshness
+
     paths = ImportPaths.defaults()
     incoming_files = 0
     if paths.incoming.is_dir():
@@ -147,17 +149,24 @@ def industry_status() -> Dict[str, Any]:
     manifests = sorted(paths.manifests.glob("*.json"), key=lambda path: path.stat().st_mtime) if paths.manifests.is_dir() else []
     vendor_rows = read_csv("vendor_supply_records.csv")
     lifecycle_rows = read_csv("lifecycle_records.csv")
+    freshness_counts = {state: 0 for state in ("CURRENT", "STALE", "UNKNOWN", "UNTRUSTED_SOURCE")}
+    for row in vendor_rows:
+        state = _vendor_freshness(row)
+        freshness_counts[state] = freshness_counts.get(state, 0) + 1
+    observations = [row.get("retrieved_at") or "" for row in read_csv("source_registry.csv")]
     return {
         "incoming_files": incoming_files,
         "documents_registered": len(read_csv("documents.csv")),
         "bom_lines": len(read_csv("bom_lines.csv")),
         "unresolved_mpns": len(read_csv("unresolved_mpns.csv")),
         "vendor_supply_records": len(vendor_rows),
+        "vendor_record_freshness": freshness_counts,
         "lifecycle_records": len(lifecycle_rows),
         "vendor_status": "INSUFFICIENT_DATA" if not vendor_rows else "REAL_DATA",
         "lifecycle_status": "INSUFFICIENT_DATA" if not lifecycle_rows else "REAL_DATA",
         "providers": providers_health(),
         "latest_manifest": manifests[-1].name if manifests else "",
+        "latest_source_observed_at": max((value for value in observations if value), default=""),
         "data_source": "REAL_PUBLIC_SOURCE",
     }
 
@@ -234,6 +243,8 @@ def upload_industry_file(body: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def industry_components(query: Dict[str, list[str]]) -> Dict[str, Any]:
+    from src.industry_data.catalog_adapter import lifecycle_label_for_mpn, lifecycle_quality_for_mpn
+
     product_id = (query.get("product_id") or [""])[0]
     lines = read_csv("bom_lines.csv")
     if product_id:
@@ -248,7 +259,8 @@ def industry_components(query: Dict[str, list[str]]) -> Dict[str, Any]:
                 "manufacturer": model.get("manufacturer", ""),
                 "description": model.get("description", ""),
                 "package": model.get("package", ""),
-                "lifecycle_status": model.get("lifecycle_status", "UNKNOWN"),
+                "lifecycle_status": lifecycle_label_for_mpn(model.get("mpn", "")) or "UNKNOWN",
+                "lifecycle_evidence_status": lifecycle_quality_for_mpn(model.get("mpn", "")),
             }
             for model in models[:2000]
             if model.get("mpn")
@@ -260,17 +272,26 @@ def industry_components(query: Dict[str, list[str]]) -> Dict[str, Any]:
 
 
 def industry_boms() -> Dict[str, Any]:
-    lines = read_csv("bom_lines.csv")
+    from src.industry_data.catalog_adapter import _vendor_freshness
+    from src.industry_data.revision_selection import select_product_bom
+
     documents = read_csv("documents.csv")
-    vendor_models = {row.get("component_model_id") for row in read_csv("vendor_supply_records.csv") if row.get("component_model_id")}
+    vendor_models = {
+        row.get("component_model_id") for row in read_csv("vendor_supply_records.csv")
+        if row.get("component_model_id") and _vendor_freshness(row) == "CURRENT"
+    }
     boms = []
     for product in read_csv("products.csv"):
         product_id = product.get("product_id", "")
         if product_id not in INDUSTRY_PROJECT_KEYS:
             continue
-        product_lines = [row for row in lines if row.get("product_id") == product_id]
+        product_lines, revision_quality = select_product_bom(product_id, reader=read_csv)
         models = {row.get("component_model_id") for row in product_lines if row.get("component_model_id")}
-        source_documents = [row for row in documents if row.get("product_id") == product_id]
+        active_source_ids = {row.get("source_id") for row in product_lines if row.get("source_id")}
+        source_documents = [
+            row for row in documents if row.get("product_id") == product_id
+            and (not active_source_ids or row.get("source_id") in active_source_ids)
+        ]
         boms.append(
             {
                 "product_id": product_id,
@@ -282,6 +303,7 @@ def industry_boms() -> Dict[str, Any]:
                 "source_documents": len(source_documents),
                 "source_document": (source_documents[0].get("filename") or source_documents[0].get("title") or "") if source_documents else "",
                 "enriched_components": len(models & vendor_models),
+                "revision_quality": revision_quality,
                 "data_source": "REAL_PUBLIC_SOURCE",
             }
         )
@@ -293,6 +315,10 @@ def load_industry_bom(body: Dict[str, Any]) -> Dict[str, Any]:
     product_id = str(body.get("product_id") or "")
     for bom in industry_boms()["boms"]:
         if bom["product_id"] == product_id:
+            if bom["revision_quality"].get("status") == "AMBIGUOUS_REVISION":
+                return {"error": "AMBIGUOUS_REVISION", "message": "Cannot load a BOM until one revision can be selected unambiguously."}
+            if bom["bom_lines"] == 0:
+                return {"error": "NO_IMPORTED_BOM", "message": "No reportable BOM lines exist in the selected revision."}
             return {
                 "status": "READY",
                 "source": "Industry Dataset",
@@ -301,7 +327,7 @@ def load_industry_bom(body: Dict[str, Any]) -> Dict[str, Any]:
                     if bom["enriched_components"] == 0
                     else f"{bom['enriched_components']} / {bom['unique_mpns']}"
                 ),
-                "last_updated": industry_status().get("latest_manifest", ""),
+                "last_updated": bom["revision_quality"].get("source_observed_at", ""),
                 **bom,
             }
     return {"error": "BOM_NOT_FOUND", "message": "Requested industry BOM is not available in normalized data."}

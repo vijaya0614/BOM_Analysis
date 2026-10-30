@@ -9,7 +9,8 @@ def get_user_dependency(user: User = Depends(get_current_user)):
 
 # Placeholder for role‑based access – extend as needed
 def require_role(role: str):
-    async def role_dependency(user: User = Depends(get_user_dependency)):
-        # For demo, assume all users have all roles
+    def role_dependency(user: User = Depends(get_user_dependency)):
+        if role not in user.roles:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Insufficient role")
         return user
     return role_dependency

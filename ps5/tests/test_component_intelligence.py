@@ -83,7 +83,8 @@ def test_reliability_outlook_uses_available_evidence_only():
 def test_substitute_integration_keeps_existing_logic_and_adds_reliability_layer():
     result = compare_components("U1", "REG_DROPIN_5V_3A")
     candidate = result["candidate"]
-    assert candidate["classification"] == "DROP_IN_CANDIDATE"
+    assert candidate["classification"] == "INSUFFICIENT_EVIDENCE"
+    assert candidate["drop_in_evidence"]["status"] == INSUFFICIENT_DATA
     assert "reliability_outlook" in candidate
     assert candidate["reliability_outlook"]["outcome"] == INSUFFICIENT_DATA
     assert "final_engineering_recommendation" in candidate

@@ -1,0 +1,2089 @@
+[
+  {
+    "mpn": "NE556DR",
+    "manufacturer": "Texas Instruments",
+    "description": "Dual Timer 556 SO-14 (Legacy)",
+    "category": "Logic",
+    "references": [
+      "U15"
+    ],
+    "quantity": 1,
+    "package": "SO-14",
+    "v_rated": 18.0,
+    "v_operating": 5.0,
+    "i_max_ma": 200,
+    "p_max_mw": 600,
+    "tj_max_c": 125,
+    "theta_ja": 80.0,
+    "theta_jc": 20.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 35,
+    "mtbf_hrs": 28571429,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "EOL",
+    "introduced_year": 1998,
+    "years_in_stage": 6,
+    "stock_level": 450,
+    "lead_time_weeks": 52,
+    "unit_price_usd": 0.65,
+    "moq": 2500,
+    "vendor_count": 1,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/ne556.pdf",
+    "alternates": [
+      "ICM7556IPD",
+      "LMC556CIMX/NOPB"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 70,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Parameter Drift",
+      "Output Stage Failure"
+    ],
+    "severity": 6,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 58.6,
+      "voltage_derate_pct": 27.8,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.448,
+      "life_consumption_10yr_pct": 12.7,
+      "arrhenius_af": 59.364,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.7439,
+          "p_lower": 0.6784,
+          "p_upper": 0.8094
+        },
+        "3yr": {
+          "p_nominal": 0.9832,
+          "p_lower": 0.9639,
+          "p_upper": 1
+        },
+        "5yr": {
+          "p_nominal": 0.9989,
+          "p_lower": 0.9939,
+          "p_upper": 1
+        }
+      },
+      "composite_risk_score": 73.4,
+      "inventory_exposure_usd": 287.59,
+      "lead_time_risk_multiplier": 4.33,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 6,
+        "O": 9,
+        "D": 4,
+        "RPN_initial": 216,
+        "RPN_residual": 90,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 82230.51,
+        "redesign_cost_component_usd": 9832.0,
+        "delay_cost_usd": 72115.75,
+        "inventory_write_off_usd": 287.59
+      }
+    }
+  },
+  {
+    "mpn": "PTN78060WAH",
+    "manufacturer": "Texas Instruments",
+    "description": "Non-Isolated DC/DC Module 5V 6A Wide-Vin",
+    "category": "Power",
+    "references": [
+      "U10"
+    ],
+    "quantity": 1,
+    "package": "SIP-7",
+    "v_rated": 14.0,
+    "v_operating": 12.0,
+    "i_max_ma": 6000,
+    "p_max_mw": 30000,
+    "tj_max_c": 125,
+    "theta_ja": 12.0,
+    "theta_jc": 2.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 120,
+    "mtbf_hrs": 8333333,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "NRND",
+    "introduced_year": 2009,
+    "years_in_stage": 4,
+    "stock_level": 980,
+    "lead_time_weeks": 26,
+    "unit_price_usd": 18.9,
+    "moq": 100,
+    "vendor_count": 2,
+    "defect_free_history": false,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/ptn78060w.pdf",
+    "alternates": [
+      "PTMA401120P2AD",
+      "OKL-T/3-W5N-C"
+    ],
+    "mission_temp_c": 75,
+    "duty_cycle_pct": 90,
+    "environment": "ground_mobile",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Inductor Saturation",
+      "Overcurrent",
+      "Thermal Runaway"
+    ],
+    "severity": 9,
+    "detection": 3,
+    "calculated": {
+      "junction_temp_c": 349.0,
+      "voltage_derate_pct": 85.7,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 1.0,
+      "life_consumption_10yr_pct": 0.0,
+      "arrhenius_af": 0.001,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.3505,
+          "p_lower": 0.2789,
+          "p_upper": 0.4221
+        },
+        "3yr": {
+          "p_nominal": 0.726,
+          "p_lower": 0.6591,
+          "p_upper": 0.7929
+        },
+        "5yr": {
+          "p_nominal": 0.8844,
+          "p_lower": 0.8365,
+          "p_upper": 0.9324
+        }
+      },
+      "composite_risk_score": 65.4,
+      "inventory_exposure_usd": 13446.97,
+      "lead_time_risk_multiplier": 2.17,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 9,
+        "O": 10,
+        "D": 3,
+        "RPN_initial": 270,
+        "RPN_residual": 80,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 38806.86,
+        "redesign_cost_component_usd": 7260.0,
+        "delay_cost_usd": 21784.36,
+        "inventory_write_off_usd": 13446.97
+      }
+    }
+  },
+  {
+    "mpn": "ATMEGA328P-AU",
+    "manufacturer": "Microchip (Atmel)",
+    "description": "AVR MCU 8-bit 32KB Flash 2KB SRAM TQFP-32",
+    "category": "Compute",
+    "references": [
+      "U17"
+    ],
+    "quantity": 1,
+    "package": "TQFP-32",
+    "v_rated": 5.5,
+    "v_operating": 3.3,
+    "i_max_ma": 200,
+    "p_max_mw": 330,
+    "tj_max_c": 85,
+    "theta_ja": 57.0,
+    "theta_jc": 12.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 30,
+    "mtbf_hrs": 33333333,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "NRND",
+    "introduced_year": 2009,
+    "years_in_stage": 4,
+    "stock_level": 1200,
+    "lead_time_weeks": 22,
+    "unit_price_usd": 2.8,
+    "moq": 500,
+    "vendor_count": 2,
+    "defect_free_history": true,
+    "datasheet_url": "https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf",
+    "alternates": [
+      "STM32F030C8T6",
+      "ATTINY88-AU"
+    ],
+    "mission_temp_c": 60,
+    "duty_cycle_pct": 75,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Flash Wear-out",
+      "ESD",
+      "Clock Drift"
+    ],
+    "severity": 7,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 39.1,
+      "voltage_derate_pct": 60.0,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.567,
+      "life_consumption_10yr_pct": 54.0,
+      "arrhenius_af": 273.762,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.4639,
+          "p_lower": 0.3891,
+          "p_upper": 0.5387
+        },
+        "3yr": {
+          "p_nominal": 0.8459,
+          "p_lower": 0.7917,
+          "p_upper": 0.9001
+        },
+        "5yr": {
+          "p_nominal": 0.9557,
+          "p_lower": 0.9248,
+          "p_upper": 0.9866
+        }
+      },
+      "composite_risk_score": 64.2,
+      "inventory_exposure_usd": 2842.22,
+      "lead_time_risk_multiplier": 1.83,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 7,
+        "O": 9,
+        "D": 4,
+        "RPN_initial": 252,
+        "RPN_residual": 108,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 30604.85,
+        "redesign_cost_component_usd": 8459.0,
+        "delay_cost_usd": 19741.61,
+        "inventory_write_off_usd": 2842.22
+      }
+    }
+  },
+  {
+    "mpn": "SMSC9514-JZX",
+    "manufacturer": "Microchip Technology",
+    "description": "USB2.0 Hub+Ethernet Controller 10/100 USB",
+    "category": "Interface",
+    "references": [
+      "U11"
+    ],
+    "quantity": 1,
+    "package": "64-LQFP",
+    "v_rated": 3.6,
+    "v_operating": 3.3,
+    "i_max_ma": 500,
+    "p_max_mw": 1650,
+    "tj_max_c": 85,
+    "theta_ja": 32.0,
+    "theta_jc": 7.5,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 68,
+    "mtbf_hrs": 14705882,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "NRND",
+    "introduced_year": 2011,
+    "years_in_stage": 3,
+    "stock_level": 1850,
+    "lead_time_weeks": 18,
+    "unit_price_usd": 5.2,
+    "moq": 500,
+    "vendor_count": 2,
+    "defect_free_history": true,
+    "datasheet_url": "https://ww1.microchip.com/downloads/en/DeviceDoc/9514.pdf",
+    "alternates": [
+      "LAN9514-JZX",
+      "RTL8152B-VB-CG"
+    ],
+    "mission_temp_c": 65,
+    "duty_cycle_pct": 75,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "ESD Latch-up",
+      "Signal Integrity Failure",
+      "PHY Timeout"
+    ],
+    "severity": 8,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 64.6,
+      "voltage_derate_pct": 91.7,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.813,
+      "life_consumption_10yr_pct": 17.2,
+      "arrhenius_af": 38.424,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.3841,
+          "p_lower": 0.3112,
+          "p_upper": 0.4571
+        },
+        "3yr": {
+          "p_nominal": 0.7664,
+          "p_lower": 0.7029,
+          "p_upper": 0.8299
+        },
+        "5yr": {
+          "p_nominal": 0.9114,
+          "p_lower": 0.8688,
+          "p_upper": 0.954
+        }
+      },
+      "composite_risk_score": 63.9,
+      "inventory_exposure_usd": 7372.77,
+      "lead_time_risk_multiplier": 1.5,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 8,
+        "O": 9,
+        "D": 4,
+        "RPN_initial": 288,
+        "RPN_residual": 126,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 26090.38,
+        "redesign_cost_component_usd": 7664.0,
+        "delay_cost_usd": 12775.89,
+        "inventory_write_off_usd": 7372.77
+      }
+    }
+  },
+  {
+    "mpn": "MT41K256M16TW-107:P",
+    "manufacturer": "Micron Technology",
+    "description": "DDR3L SDRAM 4Gb 1866MHz 78-FBGA",
+    "category": "Memory",
+    "references": [
+      "U2",
+      "U3"
+    ],
+    "quantity": 2,
+    "package": "78-FBGA",
+    "v_rated": 1.35,
+    "v_operating": 1.35,
+    "i_max_ma": 600,
+    "p_max_mw": 810,
+    "tj_max_c": 95,
+    "theta_ja": 25.0,
+    "theta_jc": 6.0,
+    "ea_ev": 0.6,
+    "tolerance_pct": null,
+    "fit_rate": 40,
+    "mtbf_hrs": 25000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "NRND",
+    "introduced_year": 2013,
+    "years_in_stage": 2,
+    "stock_level": 3200,
+    "lead_time_weeks": 20,
+    "unit_price_usd": 4.75,
+    "moq": 500,
+    "vendor_count": 3,
+    "defect_free_history": true,
+    "datasheet_url": "https://media-www.micron.com/media/document/MT41K256M16TW.pdf",
+    "alternates": [
+      "IS43TR16256BL-107MBLI",
+      "K4B4G1646E-BYK0"
+    ],
+    "mission_temp_c": 70,
+    "duty_cycle_pct": 80,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Retention Loss",
+      "Bit Flip",
+      "Thermal Derating"
+    ],
+    "severity": 8,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 41.2,
+      "voltage_derate_pct": 100.0,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.705,
+      "life_consumption_10yr_pct": 29.7,
+      "arrhenius_af": 105.855,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.294,
+          "p_lower": 0.2257,
+          "p_upper": 0.3624
+        },
+        "3yr": {
+          "p_nominal": 0.6482,
+          "p_lower": 0.5765,
+          "p_upper": 0.7198
+        },
+        "5yr": {
+          "p_nominal": 0.8246,
+          "p_lower": 0.7676,
+          "p_upper": 0.8817
+        }
+      },
+      "composite_risk_score": 58.3,
+      "inventory_exposure_usd": 9852.64,
+      "lead_time_risk_multiplier": 1.67,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 8,
+        "O": 8,
+        "D": 4,
+        "RPN_initial": 256,
+        "RPN_residual": 112,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 25835.07,
+        "redesign_cost_component_usd": 6482.0,
+        "delay_cost_usd": 12966.59,
+        "inventory_write_off_usd": 9852.64
+      }
+    }
+  },
+  {
+    "mpn": "LM1117IMPX-3.3/NOPB",
+    "manufacturer": "Texas Instruments",
+    "description": "LDO 3.3V 800mA SOT-223 (Aging Inventory Risk)",
+    "category": "Power",
+    "references": [
+      "U16"
+    ],
+    "quantity": 1,
+    "package": "SOT-223",
+    "v_rated": 15.0,
+    "v_operating": 5.0,
+    "i_max_ma": 800,
+    "p_max_mw": 1400,
+    "tj_max_c": 125,
+    "theta_ja": 90.0,
+    "theta_jc": 15.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 28,
+    "mtbf_hrs": 35714286,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "NRND",
+    "introduced_year": 2005,
+    "years_in_stage": 5,
+    "stock_level": 2100,
+    "lead_time_weeks": 16,
+    "unit_price_usd": 0.95,
+    "moq": 1000,
+    "vendor_count": 3,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/lm1117.pdf",
+    "alternates": [
+      "AZ1117-3.3TRE1",
+      "AP2114H-3.3TRG1"
+    ],
+    "mission_temp_c": 65,
+    "duty_cycle_pct": 90,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Thermal Shutdown",
+      "Dropout Failure"
+    ],
+    "severity": 8,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 138.4,
+      "voltage_derate_pct": 33.3,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.795,
+      "life_consumption_10yr_pct": 0.1,
+      "arrhenius_af": 0.515,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.2861,
+          "p_lower": 0.2183,
+          "p_upper": 0.3539
+        },
+        "3yr": {
+          "p_nominal": 0.6361,
+          "p_lower": 0.5639,
+          "p_upper": 0.7083
+        },
+        "5yr": {
+          "p_nominal": 0.8145,
+          "p_lower": 0.7562,
+          "p_upper": 0.8728
+        }
+      },
+      "composite_risk_score": 57.1,
+      "inventory_exposure_usd": 1269.02,
+      "lead_time_risk_multiplier": 1.33,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 8,
+        "O": 8,
+        "D": 4,
+        "RPN_initial": 256,
+        "RPN_residual": 112,
+        "action_priority": "HIGH"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 15651.25,
+        "redesign_cost_component_usd": 6361.0,
+        "delay_cost_usd": 8483.03,
+        "inventory_write_off_usd": 1269.02
+      }
+    }
+  },
+  {
+    "mpn": "TLV70233DBVR",
+    "manufacturer": "Texas Instruments",
+    "description": "LDO 3.3V 300mA SOT-23-5 Ultra-Low Noise",
+    "category": "Power",
+    "references": [
+      "U8",
+      "U9"
+    ],
+    "quantity": 2,
+    "package": "SOT-23-5",
+    "v_rated": 5.5,
+    "v_operating": 3.6,
+    "i_max_ma": 300,
+    "p_max_mw": 660,
+    "tj_max_c": 125,
+    "theta_ja": 250.0,
+    "theta_jc": 50.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 18,
+    "mtbf_hrs": 55555556,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2014,
+    "years_in_stage": 1,
+    "stock_level": 45000,
+    "lead_time_weeks": 4,
+    "unit_price_usd": 0.55,
+    "moq": 3000,
+    "vendor_count": 6,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/tlv702.pdf",
+    "alternates": [
+      "MIC5219-3.3YM5-TR",
+      "XC6206P332MR-G"
+    ],
+    "mission_temp_c": 60,
+    "duty_cycle_pct": 95,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Dropout Failure",
+      "Thermal Shutdown"
+    ],
+    "severity": 7,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 181.8,
+      "voltage_derate_pct": 65.5,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 1.0,
+      "life_consumption_10yr_pct": 0.0,
+      "arrhenius_af": 0.078,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0395,
+          "p_lower": 0.0103,
+          "p_upper": 0.0687
+        },
+        "3yr": {
+          "p_nominal": 0.1139,
+          "p_lower": 0.0663,
+          "p_upper": 0.1616
+        },
+        "5yr": {
+          "p_nominal": 0.1826,
+          "p_lower": 0.1246,
+          "p_upper": 0.2405
+        }
+      },
+      "composite_risk_score": 33.0,
+      "inventory_exposure_usd": 2819.03,
+      "lead_time_risk_multiplier": 0.33,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 7,
+        "O": 6,
+        "D": 4,
+        "RPN_initial": 168,
+        "RPN_residual": 72,
+        "action_priority": "MEDIUM"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 1460.09,
+        "redesign_cost_component_usd": 1139.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 2819.03
+      }
+    }
+  },
+  {
+    "mpn": "AM3358BZCZ100",
+    "manufacturer": "Texas Instruments",
+    "description": "Sitara ARM Cortex-A8 MPU 1GHz 3D Graphics",
+    "category": "Compute",
+    "references": [
+      "U1"
+    ],
+    "quantity": 1,
+    "package": "NFBGA-324",
+    "v_rated": 1.8,
+    "v_operating": 1.35,
+    "i_max_ma": 800,
+    "p_max_mw": 2000,
+    "tj_max_c": 125,
+    "theta_ja": 18.5,
+    "theta_jc": 3.2,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 85,
+    "mtbf_hrs": 11764706,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2012,
+    "years_in_stage": 3,
+    "stock_level": 12400,
+    "lead_time_weeks": 14,
+    "unit_price_usd": 13.25,
+    "moq": 1000,
+    "vendor_count": 4,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/am3358.pdf",
+    "alternates": [
+      "AM3356BZCZ100",
+      "AM3354BZCZ100"
+    ],
+    "mission_temp_c": 70,
+    "duty_cycle_pct": 85,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Electromigration",
+      "TDDB",
+      "Hot Carrier Injection"
+    ],
+    "severity": 9,
+    "detection": 3,
+    "calculated": {
+      "junction_temp_c": 56.5,
+      "voltage_derate_pct": 75.0,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.636,
+      "life_consumption_10yr_pct": 44.1,
+      "arrhenius_af": 69.645,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0878,
+          "p_lower": 0.0454,
+          "p_upper": 0.1303
+        },
+        "3yr": {
+          "p_nominal": 0.241,
+          "p_lower": 0.1769,
+          "p_upper": 0.3052
+        },
+        "5yr": {
+          "p_nominal": 0.3685,
+          "p_lower": 0.2962,
+          "p_upper": 0.4409
+        }
+      },
+      "composite_risk_score": 32.7,
+      "inventory_exposure_usd": 39596.3,
+      "lead_time_risk_multiplier": 1.17,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 9,
+        "O": 5,
+        "D": 3,
+        "RPN_initial": 135,
+        "RPN_residual": 40,
+        "action_priority": "MEDIUM"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 14363.19,
+        "redesign_cost_component_usd": 2410.0,
+        "delay_cost_usd": 2410.48,
+        "inventory_write_off_usd": 39596.3
+      }
+    }
+  },
+  {
+    "mpn": "IS61WV102416BLL-10TLI",
+    "manufacturer": "Integrated Silicon Solution (ISSI)",
+    "description": "SRAM 16Mb 10ns 3.3V 48-TSOP",
+    "category": "Memory",
+    "references": [
+      "U7"
+    ],
+    "quantity": 1,
+    "package": "48-TSOP",
+    "v_rated": 3.6,
+    "v_operating": 3.3,
+    "i_max_ma": 90,
+    "p_max_mw": 297,
+    "tj_max_c": 85,
+    "theta_ja": 40.0,
+    "theta_jc": 8.0,
+    "ea_ev": 0.65,
+    "tolerance_pct": null,
+    "fit_rate": 22,
+    "mtbf_hrs": 45454545,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2015,
+    "years_in_stage": 1,
+    "stock_level": 7800,
+    "lead_time_weeks": 8,
+    "unit_price_usd": 2.35,
+    "moq": 1000,
+    "vendor_count": 4,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.issi.com/WW/pdf/61WV102416B.pdf",
+    "alternates": [
+      "CY62157EV30LL-45BVXI",
+      "AS6C8016-55ZIN"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 60,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Data Retention Loss",
+      "Address Decoder Fault"
+    ],
+    "severity": 6,
+    "detection": 5,
+    "calculated": {
+      "junction_temp_c": 32.1,
+      "voltage_derate_pct": 91.7,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.611,
+      "life_consumption_10yr_pct": 36.8,
+      "arrhenius_af": 318.518,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0675,
+          "p_lower": 0.0299,
+          "p_upper": 0.1051
+        },
+        "3yr": {
+          "p_nominal": 0.1891,
+          "p_lower": 0.1304,
+          "p_upper": 0.2479
+        },
+        "5yr": {
+          "p_nominal": 0.2949,
+          "p_lower": 0.2265,
+          "p_upper": 0.3633
+        }
+      },
+      "composite_risk_score": 29.6,
+      "inventory_exposure_usd": 3466.2,
+      "lead_time_risk_multiplier": 0.67,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 6,
+        "O": 4,
+        "D": 5,
+        "RPN_initial": 120,
+        "RPN_residual": 60,
+        "action_priority": "MEDIUM"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 2546.46,
+        "redesign_cost_component_usd": 1891.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 3466.2
+      }
+    }
+  },
+  {
+    "mpn": "TPS65217CRSLR",
+    "manufacturer": "Texas Instruments",
+    "description": "PMIC 3 Buck+LDO+USB-OTG I2C 48-VQFN",
+    "category": "Power",
+    "references": [
+      "U4"
+    ],
+    "quantity": 1,
+    "package": "48-VQFN",
+    "v_rated": 6.5,
+    "v_operating": 5.0,
+    "i_max_ma": 2000,
+    "p_max_mw": 1500,
+    "tj_max_c": 125,
+    "theta_ja": 28.1,
+    "theta_jc": 5.4,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 52,
+    "mtbf_hrs": 19230769,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2011,
+    "years_in_stage": 5,
+    "stock_level": 4500,
+    "lead_time_weeks": 6,
+    "unit_price_usd": 3.85,
+    "moq": 1000,
+    "vendor_count": 5,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/tps65217c.pdf",
+    "alternates": [
+      "TPS65218RSLT",
+      "MP2696AGR-Z"
+    ],
+    "mission_temp_c": 65,
+    "duty_cycle_pct": 90,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Thermal Runaway",
+      "Overcurrent",
+      "Gate Oxide Breakdown"
+    ],
+    "severity": 9,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 62.9,
+      "voltage_derate_pct": 76.9,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.676,
+      "life_consumption_10yr_pct": 17.7,
+      "arrhenius_af": 43.287,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.056,
+          "p_lower": 0.0215,
+          "p_upper": 0.0905
+        },
+        "3yr": {
+          "p_nominal": 0.1587,
+          "p_lower": 0.1039,
+          "p_upper": 0.2135
+        },
+        "5yr": {
+          "p_nominal": 0.2502,
+          "p_lower": 0.1853,
+          "p_upper": 0.3152
+        }
+      },
+      "composite_risk_score": 28.2,
+      "inventory_exposure_usd": 2749.48,
+      "lead_time_risk_multiplier": 0.5,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 9,
+        "O": 4,
+        "D": 4,
+        "RPN_initial": 144,
+        "RPN_residual": 64,
+        "action_priority": "MEDIUM"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 2023.34,
+        "redesign_cost_component_usd": 1587.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 2749.48
+      }
+    }
+  },
+  {
+    "mpn": "GRM188R61E106KA73D",
+    "manufacturer": "Murata",
+    "description": "Cap MLCC 10uF 25V X5R 0603 \u00b110%",
+    "category": "Passive",
+    "references": [
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14"
+    ],
+    "quantity": 6,
+    "package": "0603",
+    "v_rated": 25.0,
+    "v_operating": 5.0,
+    "i_max_ma": null,
+    "p_max_mw": null,
+    "tj_max_c": 85,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 1.4,
+    "tolerance_pct": 10.0,
+    "fit_rate": 3,
+    "mtbf_hrs": 333333333,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2013,
+    "years_in_stage": 0.5,
+    "stock_level": 1800000,
+    "lead_time_weeks": 2,
+    "unit_price_usd": 0.022,
+    "moq": 4000,
+    "vendor_count": 10,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.murata.com/en-global/products/productdetail?partno=GRM188R61E106KA73D",
+    "alternates": [
+      "CL10A106KP8NNNC",
+      "CC0603KRX5R8BB106"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 100,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Capacitance Drift (X5R DC Bias)",
+      "Dielectric Breakdown"
+    ],
+    "severity": 5,
+    "detection": 6,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 20.0,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.482,
+      "life_consumption_10yr_pct": 100.0,
+      "arrhenius_af": 64616.434,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.021,
+          "p_lower": 0,
+          "p_upper": 0.0425
+        },
+        "3yr": {
+          "p_nominal": 0.0616,
+          "p_lower": 0.0256,
+          "p_upper": 0.0977
+        },
+        "5yr": {
+          "p_nominal": 0.1006,
+          "p_lower": 0.0555,
+          "p_upper": 0.1457
+        }
+      },
+      "composite_risk_score": 28.2,
+      "inventory_exposure_usd": 2439.36,
+      "lead_time_risk_multiplier": 0.17,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 10.0,
+        "rss_spread_pct": 24.49,
+        "worst_case_pct": 60.0,
+        "qty_in_analysis": 6
+      },
+      "fmea": {
+        "S": 5,
+        "O": 3,
+        "D": 6,
+        "RPN_initial": 90,
+        "RPN_residual": 48,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 766.26,
+        "redesign_cost_component_usd": 616.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 2439.36
+      }
+    }
+  },
+  {
+    "mpn": "UVZ1C101MPD1TD",
+    "manufacturer": "Nichicon",
+    "description": "Cap Aluminum Electrolytic 100uF 16V 105\u00b0C 6.3x5mm",
+    "category": "Passive",
+    "references": [
+      "C15",
+      "C16",
+      "C17",
+      "C18"
+    ],
+    "quantity": 4,
+    "package": "Radial-6.3x5",
+    "v_rated": 16.0,
+    "v_operating": 5.0,
+    "i_max_ma": null,
+    "p_max_mw": null,
+    "tj_max_c": 105,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.94,
+    "tolerance_pct": 20.0,
+    "fit_rate": 25,
+    "mtbf_hrs": 40000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2016,
+    "years_in_stage": 1,
+    "stock_level": 320000,
+    "lead_time_weeks": 4,
+    "unit_price_usd": 0.18,
+    "moq": 2000,
+    "vendor_count": 7,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.nichicon.co.jp/english/products/pdfs/e-uvz.pdf",
+    "alternates": [
+      "EEE-FC1C101P",
+      "TMPE107K016S0045"
+    ],
+    "mission_temp_c": 65,
+    "duty_cycle_pct": 90,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Electrolyte Dry-out",
+      "ESR Increase",
+      "Vent Rupture"
+    ],
+    "severity": 6,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 31.2,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.461,
+      "life_consumption_10yr_pct": 100.0,
+      "arrhenius_af": 1697.468,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0222,
+          "p_lower": 0.0001,
+          "p_upper": 0.0442
+        },
+        "3yr": {
+          "p_nominal": 0.065,
+          "p_lower": 0.028,
+          "p_upper": 0.102
+        },
+        "5yr": {
+          "p_nominal": 0.106,
+          "p_lower": 0.0598,
+          "p_upper": 0.1521
+        }
+      },
+      "composite_risk_score": 27.8,
+      "inventory_exposure_usd": 3744.0,
+      "lead_time_risk_multiplier": 0.33,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 20.0,
+        "rss_spread_pct": 40.0,
+        "worst_case_pct": 80.0,
+        "qty_in_analysis": 4
+      },
+      "fmea": {
+        "S": 6,
+        "O": 3,
+        "D": 4,
+        "RPN_initial": 72,
+        "RPN_residual": 30,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 893.36,
+        "redesign_cost_component_usd": 650.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 3744.0
+      }
+    }
+  },
+  {
+    "mpn": "TMP102AIDRLR",
+    "manufacturer": "Texas Instruments",
+    "description": "Temp Sensor Digital I2C \u00b10.5\u00b0C SOT-563",
+    "category": "Sensor",
+    "references": [
+      "U14"
+    ],
+    "quantity": 1,
+    "package": "SOT-563",
+    "v_rated": 3.6,
+    "v_operating": 3.3,
+    "i_max_ma": 2,
+    "p_max_mw": 6.6,
+    "tj_max_c": 125,
+    "theta_ja": 500.0,
+    "theta_jc": 100.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 5,
+    "mtbf_hrs": 200000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2012,
+    "years_in_stage": 1,
+    "stock_level": 78000,
+    "lead_time_weeks": 4,
+    "unit_price_usd": 1.15,
+    "moq": 3000,
+    "vendor_count": 5,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/tmp102.pdf",
+    "alternates": [
+      "MCP9808T-E/MC",
+      "LM75BIMM-3/NOPB"
+    ],
+    "mission_temp_c": 70,
+    "duty_cycle_pct": 100,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Calibration Drift",
+      "I2C Timeout"
+    ],
+    "severity": 4,
+    "detection": 5,
+    "calculated": {
+      "junction_temp_c": 28.3,
+      "voltage_derate_pct": 91.7,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.623,
+      "life_consumption_10yr_pct": 30.5,
+      "arrhenius_af": 695.723,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0438,
+          "p_lower": 0.0131,
+          "p_upper": 0.0745
+        },
+        "3yr": {
+          "p_nominal": 0.1258,
+          "p_lower": 0.076,
+          "p_upper": 0.1755
+        },
+        "5yr": {
+          "p_nominal": 0.2007,
+          "p_lower": 0.1406,
+          "p_upper": 0.2608
+        }
+      },
+      "composite_risk_score": 27.0,
+      "inventory_exposure_usd": 11284.26,
+      "lead_time_risk_multiplier": 0.33,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 4,
+        "O": 4,
+        "D": 5,
+        "RPN_initial": 80,
+        "RPN_residual": 36,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 2677.56,
+        "redesign_cost_component_usd": 1258.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 11284.26
+      }
+    }
+  },
+  {
+    "mpn": "GRM155R71C104KA88D",
+    "manufacturer": "Murata",
+    "description": "Cap MLCC 0.1uF 16V X7R 0402 \u00b110%",
+    "category": "Passive",
+    "references": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "quantity": 8,
+    "package": "0402",
+    "v_rated": 16.0,
+    "v_operating": 3.3,
+    "i_max_ma": null,
+    "p_max_mw": null,
+    "tj_max_c": 125,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 1.4,
+    "tolerance_pct": 10.0,
+    "fit_rate": 2,
+    "mtbf_hrs": 500000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2010,
+    "years_in_stage": 0.5,
+    "stock_level": 2500000,
+    "lead_time_weeks": 2,
+    "unit_price_usd": 0.008,
+    "moq": 10000,
+    "vendor_count": 10,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.murata.com/en-global/products/productdetail?partno=GRM155R71C104KA88D",
+    "alternates": [
+      "CL05B104KO5NNNC",
+      "CC0402KRX7R7BB104"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 100,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Dielectric Breakdown",
+      "Capacitance Drift"
+    ],
+    "severity": 4,
+    "detection": 6,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 20.6,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.416,
+      "life_consumption_10yr_pct": 100.0,
+      "arrhenius_af": 64616.434,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.021,
+          "p_lower": 0,
+          "p_upper": 0.0425
+        },
+        "3yr": {
+          "p_nominal": 0.0616,
+          "p_lower": 0.0256,
+          "p_upper": 0.0977
+        },
+        "5yr": {
+          "p_nominal": 0.1006,
+          "p_lower": 0.0555,
+          "p_upper": 0.1457
+        }
+      },
+      "composite_risk_score": 26.6,
+      "inventory_exposure_usd": 1232.0,
+      "lead_time_risk_multiplier": 0.17,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 10.0,
+        "rss_spread_pct": 28.28,
+        "worst_case_pct": 80.0,
+        "qty_in_analysis": 8
+      },
+      "fmea": {
+        "S": 4,
+        "O": 2,
+        "D": 6,
+        "RPN_initial": 48,
+        "RPN_residual": 24,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 691.89,
+        "redesign_cost_component_usd": 616.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 1232.0
+      }
+    }
+  },
+  {
+    "mpn": "ABLS-24.000MHZ-L4Q-T",
+    "manufacturer": "Abracon",
+    "description": "Crystal 24.000MHz \u00b130ppm 18pF SMD",
+    "category": "Timing",
+    "references": [
+      "Y1"
+    ],
+    "quantity": 1,
+    "package": "SMD-4",
+    "v_rated": 3.3,
+    "v_operating": 3.3,
+    "i_max_ma": 20,
+    "p_max_mw": 1,
+    "tj_max_c": 85,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.45,
+    "tolerance_pct": 0.003,
+    "fit_rate": 5,
+    "mtbf_hrs": 200000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2014,
+    "years_in_stage": 1,
+    "stock_level": 120000,
+    "lead_time_weeks": 4,
+    "unit_price_usd": 0.32,
+    "moq": 3000,
+    "vendor_count": 7,
+    "defect_free_history": true,
+    "datasheet_url": "https://abracon.com/Resonators/ABLS.pdf",
+    "alternates": [
+      "ECS-240-18-46X-CKM",
+      "ABM8-24.000MHZ-B2-T"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 100,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Frequency Drift",
+      "Aging",
+      "Mechanical Shock"
+    ],
+    "severity": 7,
+    "detection": 3,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 100.0,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.762,
+      "life_consumption_10yr_pct": 1.5,
+      "arrhenius_af": 35.171,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0309,
+          "p_lower": 0.0049,
+          "p_upper": 0.0568
+        },
+        "3yr": {
+          "p_nominal": 0.0898,
+          "p_lower": 0.0469,
+          "p_upper": 0.1327
+        },
+        "5yr": {
+          "p_nominal": 0.1451,
+          "p_lower": 0.0923,
+          "p_upper": 0.198
+        }
+      },
+      "composite_risk_score": 26.3,
+      "inventory_exposure_usd": 3448.32,
+      "lead_time_risk_multiplier": 0.33,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 0.003,
+        "rss_spread_pct": 0.0,
+        "worst_case_pct": 0.0,
+        "qty_in_analysis": 1
+      },
+      "fmea": {
+        "S": 7,
+        "O": 4,
+        "D": 3,
+        "RPN_initial": 84,
+        "RPN_residual": 24,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 1207.66,
+        "redesign_cost_component_usd": 898.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 3448.32
+      }
+    }
+  },
+  {
+    "mpn": "SG-8002CA-32.768KHZ-TJHPA",
+    "manufacturer": "Epson",
+    "description": "Crystal 32.768kHz RTC \u00b120ppm SMD",
+    "category": "Timing",
+    "references": [
+      "Y2"
+    ],
+    "quantity": 1,
+    "package": "SMD-2",
+    "v_rated": 3.3,
+    "v_operating": 3.0,
+    "i_max_ma": 2,
+    "p_max_mw": 0.2,
+    "tj_max_c": 85,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.45,
+    "tolerance_pct": 0.002,
+    "fit_rate": 3,
+    "mtbf_hrs": 333333333,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2012,
+    "years_in_stage": 1,
+    "stock_level": 95000,
+    "lead_time_weeks": 3,
+    "unit_price_usd": 0.28,
+    "moq": 5000,
+    "vendor_count": 6,
+    "defect_free_history": true,
+    "datasheet_url": "https://www5.epsondevice.com/en/products/crystal/sg8002ca.html",
+    "alternates": [
+      "FC-135R 32.7680KA-A0",
+      "VT-170-F"
+    ],
+    "mission_temp_c": 45,
+    "duty_cycle_pct": 100,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Frequency Drift",
+      "Aging"
+    ],
+    "severity": 5,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 90.9,
+      "voltage_derate_flag": true,
+      "mission_stress_factor": 0.73,
+      "life_consumption_10yr_pct": 0.9,
+      "arrhenius_af": 35.171,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0309,
+          "p_lower": 0.0049,
+          "p_upper": 0.0568
+        },
+        "3yr": {
+          "p_nominal": 0.0898,
+          "p_lower": 0.0469,
+          "p_upper": 0.1327
+        },
+        "5yr": {
+          "p_nominal": 0.1451,
+          "p_lower": 0.0923,
+          "p_upper": 0.198
+        }
+      },
+      "composite_risk_score": 25.5,
+      "inventory_exposure_usd": 2388.68,
+      "lead_time_risk_multiplier": 0.25,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 0.002,
+        "rss_spread_pct": 0.0,
+        "worst_case_pct": 0.0,
+        "qty_in_analysis": 1
+      },
+      "fmea": {
+        "S": 5,
+        "O": 4,
+        "D": 4,
+        "RPN_initial": 80,
+        "RPN_residual": 32,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 1112.5,
+        "redesign_cost_component_usd": 898.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 2388.68
+      }
+    }
+  },
+  {
+    "mpn": "SN65HVDA100QDRQ1",
+    "manufacturer": "Texas Instruments",
+    "description": "CAN Bus Transceiver AEC-Q100 3.3V SO-8",
+    "category": "Interface",
+    "references": [
+      "U12",
+      "U13"
+    ],
+    "quantity": 2,
+    "package": "SO-8",
+    "v_rated": 5.5,
+    "v_operating": 3.3,
+    "i_max_ma": 100,
+    "p_max_mw": 330,
+    "tj_max_c": 150,
+    "theta_ja": 178.0,
+    "theta_jc": 45.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 15,
+    "mtbf_hrs": 66666667,
+    "automotive_grade": true,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2016,
+    "years_in_stage": 1,
+    "stock_level": 34000,
+    "lead_time_weeks": 6,
+    "unit_price_usd": 1.85,
+    "moq": 2500,
+    "vendor_count": 5,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/sn65hvda100-q1.pdf",
+    "alternates": [
+      "TCAN1042VDRQ1",
+      "MCP2562FD-E/SN"
+    ],
+    "mission_temp_c": 85,
+    "duty_cycle_pct": 80,
+    "environment": "ground_mobile",
+    "design_life_years": 15,
+    "failure_modes": [
+      "Bus Fault",
+      "EMI Susceptibility",
+      "ESD Damage"
+    ],
+    "severity": 7,
+    "detection": 4,
+    "calculated": {
+      "junction_temp_c": 72.0,
+      "voltage_derate_pct": 60.0,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.586,
+      "life_consumption_10yr_pct": 2.4,
+      "arrhenius_af": 22.956,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0481,
+          "p_lower": 0.016,
+          "p_upper": 0.0802
+        },
+        "3yr": {
+          "p_nominal": 0.1374,
+          "p_lower": 0.0858,
+          "p_upper": 0.1891
+        },
+        "5yr": {
+          "p_nominal": 0.2184,
+          "p_lower": 0.1564,
+          "p_upper": 0.2804
+        }
+      },
+      "composite_risk_score": 23.7,
+      "inventory_exposure_usd": 8642.46,
+      "lead_time_risk_multiplier": 0.5,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 7,
+        "O": 4,
+        "D": 4,
+        "RPN_initial": 112,
+        "RPN_residual": 48,
+        "action_priority": "MEDIUM"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 2561.47,
+        "redesign_cost_component_usd": 1374.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 8642.46
+      }
+    }
+  },
+  {
+    "mpn": "SN74AHC1G08DCKR",
+    "manufacturer": "Texas Instruments",
+    "description": "Single 2-Input AND Gate SC-70-5",
+    "category": "Logic",
+    "references": [
+      "U5",
+      "U6"
+    ],
+    "quantity": 2,
+    "package": "SC-70-5",
+    "v_rated": 5.5,
+    "v_operating": 3.3,
+    "i_max_ma": 50,
+    "p_max_mw": 100,
+    "tj_max_c": 125,
+    "theta_ja": 290.0,
+    "theta_jc": 45.0,
+    "ea_ev": 0.7,
+    "tolerance_pct": null,
+    "fit_rate": 8,
+    "mtbf_hrs": 125000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2003,
+    "years_in_stage": 0.5,
+    "stock_level": 890000,
+    "lead_time_weeks": 2,
+    "unit_price_usd": 0.082,
+    "moq": 3000,
+    "vendor_count": 8,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/sn74ahc1g08.pdf",
+    "alternates": [
+      "NC7SZ08P5X",
+      "74AHC1G08SE-7"
+    ],
+    "mission_temp_c": 55,
+    "duty_cycle_pct": 70,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "ESD Latch-up",
+      "Input Overvoltage"
+    ],
+    "severity": 4,
+    "detection": 5,
+    "calculated": {
+      "junction_temp_c": 45.3,
+      "voltage_derate_pct": 60.0,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.513,
+      "life_consumption_10yr_pct": 8.1,
+      "arrhenius_af": 165.07,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0334,
+          "p_lower": 0.0064,
+          "p_upper": 0.0603
+        },
+        "3yr": {
+          "p_nominal": 0.0968,
+          "p_lower": 0.0524,
+          "p_upper": 0.1411
+        },
+        "5yr": {
+          "p_nominal": 0.156,
+          "p_lower": 0.1016,
+          "p_upper": 0.2104
+        }
+      },
+      "composite_risk_score": 21.0,
+      "inventory_exposure_usd": 7064.46,
+      "lead_time_risk_multiplier": 0.17,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 4,
+        "O": 3,
+        "D": 5,
+        "RPN_initial": 60,
+        "RPN_residual": 27,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 1651.84,
+        "redesign_cost_component_usd": 968.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 7064.46
+      }
+    }
+  },
+  {
+    "mpn": "SRR1260-100Y",
+    "manufacturer": "Bourns",
+    "description": "Inductor 10uH 20% 2.9A 12x12mm Shielded",
+    "category": "Passive",
+    "references": [
+      "L1",
+      "L2"
+    ],
+    "quantity": 2,
+    "package": "12x12mm",
+    "v_rated": 40.0,
+    "v_operating": 5.0,
+    "i_max_ma": 2900,
+    "p_max_mw": 8700,
+    "tj_max_c": 125,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.6,
+    "tolerance_pct": 20.0,
+    "fit_rate": 8,
+    "mtbf_hrs": 125000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2014,
+    "years_in_stage": 1,
+    "stock_level": 85000,
+    "lead_time_weeks": 6,
+    "unit_price_usd": 0.82,
+    "moq": 500,
+    "vendor_count": 6,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.bourns.com/docs/Product-Datasheets/SRR1260.pdf",
+    "alternates": [
+      "SRR1260-100Y",
+      "IHLP4040DZERR10M11"
+    ],
+    "mission_temp_c": 65,
+    "duty_cycle_pct": 85,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Saturation",
+      "Winding Open",
+      "Core Loss"
+    ],
+    "severity": 6,
+    "detection": 5,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 12.5,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.358,
+      "life_consumption_10yr_pct": 6.9,
+      "arrhenius_af": 115.233,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0222,
+          "p_lower": 0.0001,
+          "p_upper": 0.0442
+        },
+        "3yr": {
+          "p_nominal": 0.065,
+          "p_lower": 0.028,
+          "p_upper": 0.102
+        },
+        "5yr": {
+          "p_nominal": 0.106,
+          "p_lower": 0.0598,
+          "p_upper": 0.1521
+        }
+      },
+      "composite_risk_score": 15.9,
+      "inventory_exposure_usd": 4530.5,
+      "lead_time_risk_multiplier": 0.5,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 20.0,
+        "rss_spread_pct": 28.28,
+        "worst_case_pct": 40.0,
+        "qty_in_analysis": 2
+      },
+      "fmea": {
+        "S": 6,
+        "O": 2,
+        "D": 5,
+        "RPN_initial": 60,
+        "RPN_residual": 30,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 944.48,
+        "redesign_cost_component_usd": 650.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 4530.5
+      }
+    }
+  },
+  {
+    "mpn": "10118241-001RLF",
+    "manufacturer": "Amphenol FCI",
+    "description": "USB Type-A Receptacle 2.0 Through-Hole",
+    "category": "Connector",
+    "references": [
+      "J1",
+      "J2"
+    ],
+    "quantity": 2,
+    "package": "THT",
+    "v_rated": 30.0,
+    "v_operating": 5.0,
+    "i_max_ma": 1800,
+    "p_max_mw": 9000,
+    "tj_max_c": 105,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.5,
+    "tolerance_pct": null,
+    "fit_rate": 12,
+    "mtbf_hrs": 83333333,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2010,
+    "years_in_stage": 0.5,
+    "stock_level": 280000,
+    "lead_time_weeks": 2,
+    "unit_price_usd": 0.48,
+    "moq": 100,
+    "vendor_count": 9,
+    "defect_free_history": true,
+    "datasheet_url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/inputoutput/io_usb_10118241.pdf",
+    "alternates": [
+      "USB-A1HSB6",
+      "UX60-MB-5ST(90)"
+    ],
+    "mission_temp_c": 45,
+    "duty_cycle_pct": 50,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Contact Wear",
+      "Solder Fatigue",
+      "Mechanical Stress"
+    ],
+    "severity": 5,
+    "detection": 6,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 16.7,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.33,
+      "life_consumption_10yr_pct": 2.7,
+      "arrhenius_af": 52.237,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.0251,
+          "p_lower": 0.0016,
+          "p_upper": 0.0486
+        },
+        "3yr": {
+          "p_nominal": 0.0735,
+          "p_lower": 0.0343,
+          "p_upper": 0.1126
+        },
+        "5yr": {
+          "p_nominal": 0.1194,
+          "p_lower": 0.0708,
+          "p_upper": 0.1681
+        }
+      },
+      "composite_risk_score": 15.1,
+      "inventory_exposure_usd": 9878.4,
+      "lead_time_risk_multiplier": 0.17,
+      "tolerance_analysis": null,
+      "fmea": {
+        "S": 5,
+        "O": 2,
+        "D": 6,
+        "RPN_initial": 60,
+        "RPN_residual": 32,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 1461.06,
+        "redesign_cost_component_usd": 735.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 9878.4
+      }
+    }
+  },
+  {
+    "mpn": "RC0402FR-0710KL",
+    "manufacturer": "Yageo",
+    "description": "Resistor 10k\u03a9 \u00b11% 0.0625W 0402 Thick Film",
+    "category": "Passive",
+    "references": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9",
+      "R10"
+    ],
+    "quantity": 10,
+    "package": "0402",
+    "v_rated": 50.0,
+    "v_operating": 3.3,
+    "i_max_ma": 2.5,
+    "p_max_mw": 62.5,
+    "tj_max_c": 155,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.5,
+    "tolerance_pct": 1.0,
+    "fit_rate": 1,
+    "mtbf_hrs": 1000000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2008,
+    "years_in_stage": 0.5,
+    "stock_level": 8000000,
+    "lead_time_weeks": 1,
+    "unit_price_usd": 0.004,
+    "moq": 10000,
+    "vendor_count": 12,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf",
+    "alternates": [
+      "CRCW04021K00FKED",
+      "ERJ-2RKF1002X"
+    ],
+    "mission_temp_c": 50,
+    "duty_cycle_pct": 60,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Open Circuit (Crack)",
+      "Resistance Drift"
+    ],
+    "severity": 3,
+    "detection": 7,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 6.6,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.259,
+      "life_consumption_10yr_pct": 0.3,
+      "arrhenius_af": 52.237,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.021,
+          "p_lower": 0,
+          "p_upper": 0.0425
+        },
+        "3yr": {
+          "p_nominal": 0.0616,
+          "p_lower": 0.0256,
+          "p_upper": 0.0977
+        },
+        "5yr": {
+          "p_nominal": 0.1006,
+          "p_lower": 0.0555,
+          "p_upper": 0.1457
+        }
+      },
+      "composite_risk_score": 12.7,
+      "inventory_exposure_usd": 1971.2,
+      "lead_time_risk_multiplier": 0.08,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 1.0,
+        "rss_spread_pct": 3.16,
+        "worst_case_pct": 10.0,
+        "qty_in_analysis": 10
+      },
+      "fmea": {
+        "S": 3,
+        "O": 2,
+        "D": 7,
+        "RPN_initial": 42,
+        "RPN_residual": 20,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 737.43,
+        "redesign_cost_component_usd": 616.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 1971.2
+      }
+    }
+  },
+  {
+    "mpn": "CRCW040249R9FKED",
+    "manufacturer": "Vishay",
+    "description": "Resistor 49.9\u03a9 \u00b11% 0.0625W 0402 Thick Film",
+    "category": "Passive",
+    "references": [
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15"
+    ],
+    "quantity": 5,
+    "package": "0402",
+    "v_rated": 50.0,
+    "v_operating": 1.8,
+    "i_max_ma": 36.0,
+    "p_max_mw": 62.5,
+    "tj_max_c": 155,
+    "theta_ja": null,
+    "theta_jc": null,
+    "ea_ev": 0.5,
+    "tolerance_pct": 1.0,
+    "fit_rate": 1,
+    "mtbf_hrs": 1000000000,
+    "automotive_grade": false,
+    "rohs": true,
+    "lifecycle_status": "ACTIVE",
+    "introduced_year": 2009,
+    "years_in_stage": 0.5,
+    "stock_level": 5000000,
+    "lead_time_weeks": 1,
+    "unit_price_usd": 0.005,
+    "moq": 10000,
+    "vendor_count": 11,
+    "defect_free_history": true,
+    "datasheet_url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "alternates": [
+      "RC0402FR-0749R9L",
+      "ERJ-2RKF49R9X"
+    ],
+    "mission_temp_c": 50,
+    "duty_cycle_pct": 60,
+    "environment": "ground_benign",
+    "design_life_years": 10,
+    "failure_modes": [
+      "Open Circuit (Crack)",
+      "Resistance Drift"
+    ],
+    "severity": 3,
+    "detection": 7,
+    "calculated": {
+      "junction_temp_c": 40,
+      "voltage_derate_pct": 3.6,
+      "voltage_derate_flag": false,
+      "mission_stress_factor": 0.249,
+      "life_consumption_10yr_pct": 0.3,
+      "arrhenius_af": 52.237,
+      "obsolescence_probability": {
+        "1yr": {
+          "p_nominal": 0.021,
+          "p_lower": 0,
+          "p_upper": 0.0425
+        },
+        "3yr": {
+          "p_nominal": 0.0616,
+          "p_lower": 0.0256,
+          "p_upper": 0.0977
+        },
+        "5yr": {
+          "p_nominal": 0.1006,
+          "p_lower": 0.0555,
+          "p_upper": 0.1457
+        }
+      },
+      "composite_risk_score": 12.4,
+      "inventory_exposure_usd": 1540.0,
+      "lead_time_risk_multiplier": 0.08,
+      "tolerance_analysis": {
+        "nominal_tol_pct": 1.0,
+        "rss_spread_pct": 2.24,
+        "worst_case_pct": 5.0,
+        "qty_in_analysis": 5
+      },
+      "fmea": {
+        "S": 3,
+        "O": 2,
+        "D": 7,
+        "RPN_initial": 42,
+        "RPN_residual": 20,
+        "action_priority": "LOW"
+      },
+      "savings_analysis": {
+        "total_risk_cost_usd": 710.86,
+        "redesign_cost_component_usd": 616.0,
+        "delay_cost_usd": 0.0,
+        "inventory_write_off_usd": 1540.0
+      }
+    }
+  }
+]

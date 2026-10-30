@@ -170,6 +170,8 @@ def run_quality() -> List[Dict[str, str]]:
         if mid and mid not in provenanced:
             issues.append(_issue("missing_provenance", mid, "component_model"))
     for conflict in read_csv("data_conflicts.csv"):
+        if (conflict.get("resolution_status") or "UNRESOLVED").upper() == "RESOLVED":
+            continue
         issues.append(_issue("conflicting_specifications", conflict.get("component_model_id", ""), conflict.get("field_name", "")))
 
     out = NORMALIZED / "data_quality_report.csv"

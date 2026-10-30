@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { PageId, BOMComponent } from '../types';
 import { Search, LayoutDashboard, Upload, Layers, FileText, Building2, Settings, Download, X, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -133,7 +133,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                         <p className="text-xs font-black font-mono text-[var(--text-primary)]">{comp.pn}</p>
                         <p className="text-[10px] text-[var(--text-muted)] font-mono">{comp.ref} · qty {comp.qty}</p>
                       </div>
-                      <RiskBadge band={comp.band} score={Math.round(comp.score * 100)} />
+                      <RiskBadge band={comp.band} score={comp.score != null ? Math.round(comp.score * 100) : 0} />
                     </motion.button>
                   );
                 })}

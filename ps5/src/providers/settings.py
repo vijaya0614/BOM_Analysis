@@ -22,6 +22,8 @@ def _is_blank_env(value: str) -> bool:
 
 
 def load_dotenv_file(path: Path | None = None) -> None:
+    if os.environ.get("PS5_DISABLE_PROVIDER_DOTENV", "").strip().lower() in {"1", "true", "yes", "on"}:
+        return
     env_path = path or (ROOT / ".env")
     if not env_path.is_file():
         return

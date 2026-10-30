@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { AlertTriangle, ArrowLeft, CircuitBoard, Database, LoaderCircle, ShieldAlert, XCircle } from 'lucide-react';
 import { SUBSTITUTE_API_BASE } from '../api';
-import type { CandidateDecision, CandidateDecisionResponse, DecisionPathEdge } from '../types';
+import { EngineeringEconomicsCard } from '../components/EngineeringEconomicsCard';
+import { WhatIfScenarioCard } from '../components/WhatIfScenarioCard';
+import type { CandidateDecision, CandidateDecisionResponse, DecisionPathEdge, DropInEvidence } from '../types';
 
 interface DecisionPageProps {
   productId: string;
@@ -38,6 +40,19 @@ const EdgeEvidence: React.FC<{ edge: DecisionPathEdge }> = ({ edge }) => (
     {edge.source && <p className="font-mono text-[10px] text-[var(--text-muted)]">Source: {edge.source}</p>}
   </div>
 );
+
+const DropInEvidencePanel: React.FC<{ evidence?: DropInEvidence }> = ({ evidence }) => {
+  const requirements = evidence?.requirements || [];
+  return <section className="glass-card p-6 rounded-2xl"><div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div><span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-gold)]">Drop-in evidence gate</span><h2 className="mt-1 text-lg font-black">Package, pinout and ratings</h2></div><StatusBadge value={evidence?.status} /></div>
+    {requirements.length ? <div className="mt-4 grid md:grid-cols-2 gap-3">{requirements.map(item => <div key={item.parameter} className="p-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)]"><div className="flex justify-between gap-3"><strong className="text-xs">{item.parameter.replace(/_/g, ' ')}</strong><StatusBadge value={item.status} /></div><p className="mt-2 text-[11px] text-[var(--text-secondary)]">Original: {text(item.original.value)} · Candidate: {text(item.candidate.value)}</p><div className="mt-2 grid sm:grid-cols-2 gap-2">{([['Original source', item.original.source], ['Candidate source', item.candidate.source]] as const).map(([label, source]) => {
+      const url = source?.source_url || source?.url;
+      const title = source?.source_title || source?.source_document || source?.source_id || 'Source unavailable';
+      return <p key={label} className="text-[10px] text-[var(--text-muted)]">{label}: {typeof url === 'string' ? <a href={url} target="_blank" rel="noreferrer" className="underline break-all">{String(title)}{source?.source_page ? ` · p. ${source.source_page}` : ''}</a> : String(title)}</p>;
+    })}</div></div>)}</div> : <p className="mt-3 text-xs text-[var(--text-muted)]">No source-backed package, pinout or rating records were returned.</p>}
+    {!!evidence?.unknown_parameters?.length && <p className="mt-4 text-xs text-[var(--risk-high)]">Unknown evidence: {evidence.unknown_parameters.join(', ')}</p>}
+    {evidence?.limitations?.map(item => <p key={item} className="mt-2 text-xs text-[var(--text-muted)]">{item}</p>)}
+  </section>;
+};
 
 export const DecisionPage: React.FC<DecisionPageProps> = ({ productId, componentId, onBack }) => {
   const [decision, setDecision] = useState<CandidateDecisionResponse | null>(null);
@@ -87,7 +102,13 @@ export const DecisionPage: React.FC<DecisionPageProps> = ({ productId, component
 
       <section className="glass-card p-6 rounded-2xl"><div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div><span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-gold)]">Compatibility and specification evidence</span><h2 className="mt-1 text-lg font-black">{compatibility ?? 'INSUFFICIENT_DATA'} / {generated?.confidence_score ?? 'INSUFFICIENT_DATA'}</h2></div><StatusBadge value={candidate.classification} /></div><div className="mt-5 grid md:grid-cols-2 gap-3">{checks.map(check => <div key={check.parameter} className="p-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)]"><div className="flex justify-between gap-3"><strong className="text-sm">{check.parameter.replace(/_/g, ' ')}</strong><StatusBadge value={check.status} /></div><p className="mt-2 text-xs text-[var(--text-secondary)]">Original: {text(check.original)} · Candidate: {text(check.candidate)}</p></div>)}</div>{checks.length === 0 && <p className="mt-4 text-sm text-[var(--text-muted)]">No verified compatibility checks were returned.</p>}</section>
 
+      <DropInEvidencePanel evidence={candidate.drop_in_evidence} />
+
       <section className="glass-card p-6 rounded-2xl"><span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-gold)]">Engineering gates</span><h2 className="mt-1 text-lg font-black">Limits and tolerance</h2><div className="mt-4 grid md:grid-cols-3 gap-3">{candidate.engineering_gates.map(gate => <div key={gate.parameter} className="p-4 rounded-xl border border-[var(--border-subtle)]"><div className="flex justify-between gap-2"><strong className="text-xs">{gate.parameter.replace(/_/g, ' ')}</strong><StatusBadge value={gate.status} /></div><p className="mt-2 text-xs text-[var(--text-muted)]">{gate.reason.replace(/_/g, ' ')}</p></div>)}</div></section>
+
+      {/* ── PS5 Lifecycle Economics (Part 12) & What-If Sandbox (Part 14) ── */}
+      <EngineeringEconomicsCard partNumber={candidate.candidate_part_number || componentId} />
+      <WhatIfScenarioCard partNumber={candidate.candidate_part_number || componentId} />
 
       <section className="glass-card p-6 rounded-2xl"><div className="flex justify-between gap-4"><div><span className="text-[10px] font-mono uppercase tracking-widest text-[var(--accent-gold)]">Dependency impact</span><h2 className="mt-1 text-lg font-black">{impact?.data.length || 0} affected graph paths</h2></div><StatusBadge value={impact?.status} /></div>{impact?.data.length ? <div className="mt-5 space-y-3">{impact.data.map((node, index) => <div key={`${node.node_id}-${index}`} className="p-4 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)]"><div className="flex items-center gap-2"><CircuitBoard className="w-4 h-4 text-[var(--accent-blue)]" /><strong className="text-sm">{node.path.join(' → ')}</strong></div><div className="mt-3 grid lg:grid-cols-2 gap-3">{node.path_edges?.map((edge, edgeIndex) => <EdgeEvidence key={edgeIndex} edge={edge} />)}</div></div>)}</div> : <p className="mt-4 text-sm text-[var(--text-muted)]">{impact?.limitations?.join(' ') || 'No dependency paths are available.'}</p>}</section>
 

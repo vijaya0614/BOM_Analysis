@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Upload, FileSpreadsheet, CheckCircle2, Cpu, ArrowRight, Zap, Shield, Activity, LayoutDashboard, Database, RefreshCw, Files } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Upload, FileSpreadsheet, CheckCircle2, Cpu, ArrowRight, Zap, Shield, Activity, LayoutDashboard, Database, RefreshCw, Files, Download, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { IndustryBom, IndustryBomSession, IndustryImportResult, IndustryStatus } from '../types';
+import { SUBSTITUTE_API_BASE } from '../api';
+import type { DemoSampleProject, IndustryBom, IndustryBomSession, IndustryImportResult, IndustryStatus } from '../types';
 
 interface BomUploadPageProps {
   onAnalyzeSample: (projectId: string) => void;
@@ -20,16 +21,7 @@ interface BomUploadPageProps {
   onLoadIndustryBom: (bom: IndustryBom) => Promise<boolean>;
 }
 
-const sampleProjects = [
-  { id: 'industrial_iot',            name: 'Industrial IoT Gateway',      parts: 25, risk: 'CRITICAL', color: '#E76F51' },
-  { id: 'drone_controller',          name: 'Smart Drone Controller',       parts: 30, risk: 'HIGH',     color: '#F4A261' },
-  { id: 'medical_oximeter',          name: 'Medical Oximeter',             parts: 20, risk: 'HIGH',     color: '#F4A261' },
-  { id: 'burglar_alarm',             name: 'Burglar Alarm System',         parts: 12, risk: 'MEDIUM',   color: '#E9C46A' },
-  { id: 'fan_controller',            name: 'Mini Fan Controller',          parts: 13, risk: 'LOW',      color: '#2A9D8F' },
-  { id: 'smart_cooling',             name: 'Smart Cooling Controller',     parts: 16, risk: 'MEDIUM',   color: '#E9C46A' },
-  { id: 'touch_lamp',                name: 'Touch Sensor Lamp',           parts: 30, risk: 'LOW',      color: '#2A9D8F' },
-  { id: 'water_level',               name: 'Water Level Indicator',        parts: 20, risk: 'LOW',      color: '#2A9D8F' },
-];
+const sampleProjectColors = ['#8B7CFF', '#5D9CEC', '#48B8A8', '#B07AE0', '#4CA6C8', '#A68B5B', '#6C8ED4', '#58A789'];
 
 const steps = [
   { icon: FileSpreadsheet, text: 'Parsing CSV Line Items & References' },
@@ -47,10 +39,58 @@ export const BomUploadPage: React.FC<BomUploadPageProps> = ({
   const [fileName, setFileName] = useState('');
   const [isDragging, setIsDragging] = useState(false);
   const [loadingIndustryBom, setLoadingIndustryBom] = useState<string | null>(null);
+  const [sampleProjects, setSampleProjects] = useState<DemoSampleProject[]>([]);
+  const [sampleProjectsLoading, setSampleProjectsLoading] = useState(true);
+  const [sampleProjectsError, setSampleProjectsError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${SUBSTITUTE_API_BASE}/api/demo/sample-projects`)
+      .then(async response => {
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.message || payload.detail || 'Sample BOM list is unavailable.');
+        return payload;
+      })
+      .then(payload => { if (!cancelled) setSampleProjects(Array.isArray(payload.projects) ? payload.projects : []); })
+      .catch(error => { if (!cancelled) setSampleProjectsError(error instanceof Error ? error.message : 'Could not load sample BOM metadata.'); })
+      .finally(() => { if (!cancelled) setSampleProjectsLoading(false); });
+    return () => { cancelled = true; };
+  }, []);
 
   const processFile = (file: File) => {
     setFileName(file.name);
     startScanning(() => onUploadCsv(file));
+  };
+
+  const handleDownloadTemplate = () => {
+    const headers = 'Manufacturer Part Number (MPN),Manufacturer,Description,Category,Reference Designator,Quantity Per Product,Unit Cost,Lifecycle Status,Available Stock,Estimated Lead Time Weeks,Operating Voltage Max,Package Code,Mounting Type\n';
+    const row = 'TPS5402DGQR,Texas Instruments,4.5V to 28V Input 2A Step-Down Converter,Power Management,U1,1,1.42,ACTIVE,28400,8.0,28.0,MSOP-PowerPAD-10,SMD\n';
+    const blob = new Blob([headers + row], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ps5_bom_engineering_template.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleLoadSynthetic = async () => {
+    setFileName('PS5 Realistic 15-Part BOM');
+    try {
+      const res = await fetch(`${SUBSTITUTE_API_BASE}/api/bom/synthetic`);
+      if (res.ok) {
+        const data = await res.json();
+        const csvBlob = new Blob([data.csv_content], { type: 'text/csv' });
+        const file = new File([csvBlob], data.filename || 'ps5_realistic_prototype_bom.csv', { type: 'text/csv' });
+        startScanning(() => onUploadCsv(file));
+        return;
+      }
+    } catch (err) {
+      console.warn('Backend synthetic BOM fetch error, using sample project:', err);
+    }
+    handleSampleClick('smart_cooling', 'Smart Cooling Controller');
   };
 
   const handleSampleClick = (id: string, name: string) => {
@@ -139,11 +179,29 @@ export const BomUploadPage: React.FC<BomUploadPageProps> = ({
                 <p className="text-xs text-[var(--text-muted)]">CSV or XLSX · Part Number, Reference Designator, Quantity columns</p>
               </div>
 
-              <label className="relative z-10 px-6 py-2.5 rounded-xl text-sm font-black text-white cursor-pointer transition-all hover:brightness-110 active:scale-95 shadow-lg"
-                style={{ background: 'var(--gradient-brand)', boxShadow: '0 4px 20px -4px color-mix(in oklab, var(--accent-gold) 45%, transparent)' }}>
-                Browse Files
-                <input type="file" accept=".csv" onChange={e => { if (e.target.files?.[0]) processFile(e.target.files[0]); }} className="hidden" />
-              </label>
+              <div className="flex flex-wrap items-center justify-center gap-3 relative z-10">
+                <label className="px-5 py-2.5 rounded-xl text-sm font-black text-white cursor-pointer transition-all hover:brightness-110 active:scale-95 shadow-lg"
+                  style={{ background: 'var(--gradient-brand)', boxShadow: '0 4px 20px -4px color-mix(in oklab, var(--accent-gold) 45%, transparent)' }}>
+                  Browse Files
+                  <input type="file" accept=".csv" onChange={e => { if (e.target.files?.[0]) processFile(e.target.files[0]); }} className="hidden" />
+                </label>
+                <button
+                  type="button"
+                  onClick={handleDownloadTemplate}
+                  className="px-4 py-2.5 rounded-xl text-xs font-bold border transition-all cursor-pointer flex items-center gap-1.5 hover:brightness-110"
+                  style={{ background: 'var(--bg-elevated)', borderColor: 'var(--border-strong)', color: 'var(--accent-gold)' }}
+                >
+                  <Download className="w-3.5 h-3.5" /> Download CSV Template
+                </button>
+                <button
+                  type="button"
+                  onClick={handleLoadSynthetic}
+                  className="px-4 py-2.5 rounded-xl text-xs font-black text-white transition-all cursor-pointer flex items-center gap-1.5 hover:brightness-110 shadow-md"
+                  style={{ background: 'linear-gradient(135deg, #2A9D8F 0%, #1D7066 100%)' }}
+                >
+                  <Sparkles className="w-3.5 h-3.5" /> Load Realistic 15-Part BOM
+                </button>
+              </div>
             </motion.div>
 
             {/* Industry data status: uses only backend-reported, provenance-tagged values. */}
@@ -201,10 +259,12 @@ export const BomUploadPage: React.FC<BomUploadPageProps> = ({
               <div className="flex items-center gap-2">
                 <FileSpreadsheet className="w-4 h-4 text-[var(--accent-gold)]" />
                 <h3 className="text-sm font-bold text-[var(--text-primary)]">Or load a sample BOM project</h3>
-                <span className="ml-auto text-[10px] font-mono text-[var(--text-muted)]">{sampleProjects.length} available</span>
+                <span className="ml-auto text-[10px] font-mono text-[var(--text-muted)]">{sampleProjectsLoading ? 'Loading…' : `${sampleProjects.length} available`}</span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {sampleProjects.map((p, i) => (
+                {sampleProjects.map((p, i) => {
+                  const color = sampleProjectColors[i % sampleProjectColors.length];
+                  return (
                   <motion.button
                     key={p.id}
                     initial={{ opacity: 0, y: 8 }}
@@ -214,27 +274,30 @@ export const BomUploadPage: React.FC<BomUploadPageProps> = ({
                     onClick={() => handleSampleClick(p.id, p.name)}
                     className="p-3.5 rounded-xl text-left cursor-pointer border transition-all group relative overflow-hidden"
                     style={{
-                      background: `color-mix(in oklab, ${p.color} 6%, var(--bg-elevated))`,
-                      borderColor: `color-mix(in oklab, ${p.color} 25%, transparent)`,
-                      boxShadow: `0 2px 10px -4px color-mix(in oklab, ${p.color} 20%, transparent)`,
+                      background: `color-mix(in oklab, ${color} 6%, var(--bg-elevated))`,
+                      borderColor: `color-mix(in oklab, ${color} 25%, transparent)`,
+                      boxShadow: `0 2px 10px -4px color-mix(in oklab, ${color} 20%, transparent)`,
                     }}
                   >
                     <div className="absolute top-0 right-0 w-16 h-16 rounded-full pointer-events-none"
-                      style={{ background: `radial-gradient(circle, color-mix(in oklab, ${p.color} 15%, transparent) 0%, transparent 70%)` }} />
+                      style={{ background: `radial-gradient(circle, color-mix(in oklab, ${color} 15%, transparent) 0%, transparent 70%)` }} />
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-[9px] font-black font-mono tracking-widest uppercase px-1.5 py-0.5 rounded-md"
-                          style={{ color: p.color, background: `color-mix(in oklab, ${p.color} 18%, var(--bg-card))` }}>
-                          {p.risk}
+                          style={{ color, background: `color-mix(in oklab, ${color} 18%, var(--bg-card))` }}>
+                          DEMO BOM
                         </span>
-                        <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" style={{ color: p.color }} />
+                        <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" style={{ color }} />
                       </div>
                       <p className="text-xs font-bold text-[var(--text-primary)] leading-tight line-clamp-2">{p.name}</p>
-                      <p className="text-[10px] text-[var(--text-muted)] font-mono mt-1">{p.parts} parts</p>
+                      <p className="text-[10px] text-[var(--text-muted)] font-mono mt-1">{p.bom_lines} BOM lines · {p.unique_mpns} MPNs</p>
+                      <p className="text-[10px] text-[var(--text-muted)] font-mono">{p.total_quantity} total units{p.unresolved_lines ? ` · ${p.unresolved_lines} unresolved` : ''}</p>
                     </div>
                   </motion.button>
-                ))}
+                  );
+                })}
               </div>
+              {sampleProjectsError && <p className="text-[11px] text-[var(--risk-high)]">Could not load verified sample counts: {sampleProjectsError}</p>}
             </div>
 
             {/* Dashboard Shortcut Option */}

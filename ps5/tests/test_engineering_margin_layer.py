@@ -95,7 +95,9 @@ def test_candidate_orchestrator_decision_api_remains_backward_compatible():
 def test_candidate_reliability_evidence_is_additive_and_traceable():
     result = evaluate_candidate_decision("demo", "U1", candidate_id="REG_DROPIN_5V_3A")
     candidate = result["candidates"][0]
-    assert candidate["classification"] == "DROP_IN_CANDIDATE"
+    assert candidate["classification"] == "INSUFFICIENT_EVIDENCE"
+    assert candidate["overall_status"] == "INSUFFICIENT_DATA"
+    assert candidate["drop_in_evidence"]["status"] == "INSUFFICIENT_DATA"
     assert candidate["rank"] == 1
     assert candidate["reliability_outlook"]["outcome"] == "IMPROVED"
     assert candidate["reliability_confidence"] == "MEDIUM"

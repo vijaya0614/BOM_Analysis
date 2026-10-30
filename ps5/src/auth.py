@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import hmac
-import os
+import secrets
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Dict, Optional
@@ -12,14 +12,24 @@ from typing import Dict, Optional
 import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
+from src.config import settings
 
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("JWT_EXPIRE_MINUTES", "60"))
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+_EPHEMERAL_DEV_SECRET = secrets.token_urlsafe(48)
 
 
 def jwt_secret() -> str:
-    return os.environ.get("JWT_SECRET_KEY", "bom-dev-jwt-secret-change-me-32b+")
+    configured = settings.JWT_SECRET_KEY.strip()
+    environment = settings.ENV.lower()
+    if configured:
+        if len(configured) < 32:
+            raise RuntimeError("JWT_SECRET_KEY must contain at least 32 characters.")
+        return configured
+    if environment in {"prod", "production", "staging"}:
+        raise RuntimeError("JWT_SECRET_KEY must be configured outside development.")
+    return _EPHEMERAL_DEV_SECRET
 
 
 def hash_password(password: str, salt: Optional[str] = None) -> str:
@@ -36,17 +46,23 @@ class User:
     username: str
     hashed_password: str
     disabled: bool = False
+    roles: tuple[str, ...] = ("viewer",)
 
 
 def _bootstrap_users() -> Dict[str, User]:
-    demo_user = os.environ.get("JWT_DEMO_USER", "engineer")
-    demo_password = os.environ.get("JWT_DEMO_PASSWORD", "changeme")
-    reviewer_password = os.environ.get("JWT_REVIEWER_PASSWORD", "changeme")
-    return {
-        demo_user: User(username=demo_user, hashed_password=hash_password(demo_password)),
-        "reviewer": User(username="reviewer", hashed_password=hash_password(reviewer_password)),
-        "auditor": User(username="auditor", hashed_password=hash_password(reviewer_password)),
-    }
+    users: Dict[str, User] = {}
+    demo_user = settings.JWT_DEMO_USER.strip()
+    demo_password = settings.JWT_DEMO_PASSWORD.get_secret_value()
+    if demo_user and demo_password:
+        users[demo_user] = User(username=demo_user, hashed_password=hash_password(demo_password), roles=("viewer", "engineer"))
+    for username, env_key, roles in (
+        ("reviewer", settings.JWT_REVIEWER_PASSWORD.get_secret_value(), ("viewer", "reviewer")),
+        ("auditor", settings.JWT_AUDITOR_PASSWORD.get_secret_value(), ("viewer", "auditor")),
+    ):
+        password = env_key
+        if password:
+            users[username] = User(username=username, hashed_password=hash_password(password), roles=roles)
+    return users
 
 
 USERS = _bootstrap_users()
@@ -65,7 +81,8 @@ def authenticate_user(username: str, password: str) -> Optional[User]:
 
 def create_access_token(subject: str, expires_delta: Optional[timedelta] = None) -> str:
     expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
-    payload = {"sub": subject, "exp": expire}
+    user = get_user(subject)
+    payload = {"sub": subject, "exp": expire, "roles": list(user.roles) if user else []}
     return jwt.encode(payload, jwt_secret(), algorithm=ALGORITHM)
 
 

@@ -20,7 +20,8 @@ def test_analyze_industry_product_exports_only_normalized_bom_identity(monkeypat
 
     result = risk_api.analyze_industry_product("beaglebone_black", "BeagleBone Black System")
 
-    assert result == {"dashboard": {}}
+    assert result["dashboard"]["input_integrity"]["bom_line_count"] == 1
+    assert result["input_integrity"]["status"] == "NO_REVISION_METADATA"
     content = (tmp_path / "normalized_beaglebone_black.csv").read_text(encoding="utf-8")
     assert "TPS65217C" in content
     assert captured["title"] == "BeagleBone Black System"

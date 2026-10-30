@@ -1,0 +1,302 @@
+{
+  "AM3358BZCZ100": [
+    {
+      "mpn": "AM3356BZCZ100",
+      "manufacturer": "Texas Instruments",
+      "description": "Sitara A8 720MHz (lower clock, pin-compatible)",
+      "package": "NFBGA-324",
+      "v_rated": 1.8,
+      "v_operating": 1.35,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 8900,
+      "lead_time_weeks": 10,
+      "unit_price_usd": 9.8,
+      "vendor_count": 4,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.0,
+      "notes": "Clock speed 720MHz vs 1GHz \u2014 validate timing-critical firmware paths",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 48.4,
+        "score_nominal": 55.0,
+        "score_optimistic": 59.4,
+        "breakdown": {
+          "spec_margin_score": 0.0,
+          "price_score": 90.1,
+          "supplier_score": 50.0,
+          "lifecycle_score": 100.0
+        }
+      }
+    },
+    {
+      "mpn": "MCIMX6S4AVM08AC",
+      "manufacturer": "NXP",
+      "description": "i.MX6 Solo Cortex-A9 800MHz BGA",
+      "package": "BGA-624",
+      "v_rated": 1.8,
+      "v_operating": 1.2,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 3400,
+      "lead_time_weeks": 16,
+      "unit_price_usd": 11.5,
+      "vendor_count": 5,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": false,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.1,
+      "notes": "Package mismatch \u2014 requires PCB spin; higher performance ceiling",
+      "feasibility": {
+        "passes_hard_gates": false,
+        "gate_failures": [
+          "package_match"
+        ],
+        "score": 0
+      }
+    }
+  ],
+  "MT41K256M16TW-107:P": [
+    {
+      "mpn": "IS43TR16256BL-107MBLI",
+      "manufacturer": "ISSI",
+      "description": "DDR3L 4Gb 1866MHz FBGA-96 drop-in",
+      "package": "FBGA-96",
+      "v_rated": 1.35,
+      "v_operating": 1.35,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 14000,
+      "lead_time_weeks": 8,
+      "unit_price_usd": 4.2,
+      "vendor_count": 4,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.05,
+      "notes": "Pin-compatible. Validated on AM335x reference schematic.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 49.1,
+        "score_nominal": 55.8,
+        "score_optimistic": 60.3,
+        "breakdown": {
+          "spec_margin_score": 15.0,
+          "price_score": 75.4,
+          "supplier_score": 50.0,
+          "lifecycle_score": 100.0
+        }
+      }
+    },
+    {
+      "mpn": "K4B4G1646E-BYK0",
+      "manufacturer": "Samsung",
+      "description": "DDR3L 4Gb 1600MHz FBGA-96",
+      "package": "FBGA-96",
+      "v_rated": 1.35,
+      "v_operating": 1.35,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 22000,
+      "lead_time_weeks": 6,
+      "unit_price_usd": 3.95,
+      "vendor_count": 6,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.12,
+      "notes": "Slightly lower max freq (1600 vs 1866). Verify with AM3358 memory controller at 1600MHz.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 61.2,
+        "score_nominal": 69.6,
+        "score_optimistic": 75.2,
+        "breakdown": {
+          "spec_margin_score": 36.0,
+          "price_score": 80.2,
+          "supplier_score": 75.0,
+          "lifecycle_score": 100.0
+        }
+      }
+    }
+  ],
+  "SMSC9514-JZX": [
+    {
+      "mpn": "LAN9514-JZX",
+      "manufacturer": "Microchip",
+      "description": "USB2.0+Ethernet Hub 64-LQFP exact replacement",
+      "package": "64-LQFP",
+      "v_rated": 3.6,
+      "v_operating": 3.3,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 5600,
+      "lead_time_weeks": 8,
+      "unit_price_usd": 4.95,
+      "vendor_count": 4,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.15,
+      "notes": "Direct drop-in. Used in official BeagleBone Black Rev C production runs.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 55.9,
+        "score_nominal": 63.5,
+        "score_optimistic": 68.6,
+        "breakdown": {
+          "spec_margin_score": 45.0,
+          "price_score": 70.0,
+          "supplier_score": 50.0,
+          "lifecycle_score": 100.0
+        }
+      }
+    }
+  ],
+  "NE556DR": [
+    {
+      "mpn": "ICM7556IPD",
+      "manufacturer": "Renesas",
+      "description": "Dual Timer CMOS SO-14 5V compatible",
+      "package": "SO-14",
+      "v_rated": 15.0,
+      "v_operating": 5.0,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 28000,
+      "lead_time_weeks": 4,
+      "unit_price_usd": 0.58,
+      "vendor_count": 6,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.2,
+      "notes": "CMOS version: lower power, pin-compatible. Lower sourcing current output \u2014 verify load.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 66.4,
+        "score_nominal": 75.4,
+        "score_optimistic": 81.5,
+        "breakdown": {
+          "spec_margin_score": 60.0,
+          "price_score": 74.7,
+          "supplier_score": 75.0,
+          "lifecycle_score": 100.0
+        }
+      }
+    },
+    {
+      "mpn": "LMC556CIMX/NOPB",
+      "manufacturer": "Texas Instruments",
+      "description": "Dual Timer CMOS SO-14 TI same-family",
+      "package": "SO-14",
+      "v_rated": 15.0,
+      "v_operating": 5.0,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 45000,
+      "lead_time_weeks": 4,
+      "unit_price_usd": 0.72,
+      "vendor_count": 5,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.18,
+      "notes": "TI same-source substitute. Source from same vendor as U1 to reduce PO overhead.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 58.8,
+        "score_nominal": 66.9,
+        "score_optimistic": 72.2,
+        "breakdown": {
+          "spec_margin_score": 54.0,
+          "price_score": 60.2,
+          "supplier_score": 62.5,
+          "lifecycle_score": 100.0
+        }
+      }
+    }
+  ],
+  "PTN78060WAH": [
+    {
+      "mpn": "OKL-T/3-W5N-C",
+      "manufacturer": "Murata Power",
+      "description": "Non-isolated DC/DC 5V 3A SIP-7 wide-Vin",
+      "package": "SIP-7",
+      "v_rated": 14.0,
+      "v_operating": 12.0,
+      "tolerance_pct": null,
+      "lifecycle_status": "ACTIVE",
+      "stock_level": 1200,
+      "lead_time_weeks": 12,
+      "unit_price_usd": 14.5,
+      "vendor_count": 3,
+      "defect_free_history": true,
+      "hard_gates": {
+        "package_match": true,
+        "voltage_ok": true,
+        "temp_ok": true,
+        "lifecycle_ok": true,
+        "rohs": true
+      },
+      "spec_margin": 0.08,
+      "notes": "3A vs 6A \u2014 verify full load current requirement. If load <3A, this is a direct drop-in.",
+      "feasibility": {
+        "passes_hard_gates": true,
+        "gate_failures": [],
+        "score_pessimistic": 51.3,
+        "score_nominal": 58.3,
+        "score_optimistic": 63.0,
+        "breakdown": {
+          "spec_margin_score": 24.0,
+          "price_score": 86.9,
+          "supplier_score": 37.5,
+          "lifecycle_score": 100.0
+        }
+      }
+    }
+  ]
+}

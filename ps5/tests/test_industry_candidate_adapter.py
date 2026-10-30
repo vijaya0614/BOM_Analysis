@@ -16,7 +16,9 @@ def test_beaglebone_u2_uses_real_same_package_pmic_candidate():
     candidate = result["candidates"][0]
     assert candidate["part_number"] == "TPS65218D0RSLR"
     assert candidate["compatibility_score"] == 70
-    assert candidate["confidence_score"] == 70
+    # Technical similarity is 70, but confidence is capped by its missing
+    # package, pinout, and rating source coverage.
+    assert candidate["confidence_score"] == 57
     assert candidate["evidence_summary"]["unknown_count"] == 2
 
 

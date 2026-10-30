@@ -8,6 +8,7 @@ import { SidebarNav } from './components/SidebarNav';
 import { CommandPalette } from './components/CommandPalette';
 import { LiveRiskPulseStrip } from './components/LiveRiskPulseStrip';
 import { normalizeBand } from './components/primitives';
+import { SENTINEL_API_BASE } from './api';
 
 import { DashboardPage } from './pages/DashboardPage';
 import { BomUploadPage } from './pages/BomUploadPage';
@@ -17,6 +18,7 @@ import { VendorComparisonPage } from './pages/VendorComparisonPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { ReportDownloadPage } from './pages/ReportDownloadPage';
 import { DecisionPage } from './pages/DecisionPage';
+import { FmeaMatrixPage } from './pages/FmeaMatrixPage';
 
 // Approved substitutes: map from original pn → approved substitute pn
 export type ApprovalMap = Record<string, string>;
@@ -77,7 +79,7 @@ export const MainApp: React.FC = () => {
 
   const loadIndustryStatus = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/industry/status');
+      const response = await fetch(`${SENTINEL_API_BASE}/api/industry/status`);
       if (!response.ok) return;
       setIndustryStatus(await response.json());
     } catch {
@@ -87,7 +89,7 @@ export const MainApp: React.FC = () => {
 
   const loadIndustryBoms = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/industry/boms');
+      const response = await fetch(`${SENTINEL_API_BASE}/api/industry/boms`);
       if (response.ok) setIndustryBoms((await response.json()).boms || []);
     } catch { setIndustryBoms([]); }
   };
@@ -95,7 +97,7 @@ export const MainApp: React.FC = () => {
   const runIndustryImport = async (dryRun: boolean) => {
     setIsIndustryImporting(true); setIndustryError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/industry/import', {
+      const response = await fetch(`${SENTINEL_API_BASE}/api/industry/import`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ dry_run: dryRun })
       });
       const payload = await response.json();
@@ -117,7 +119,7 @@ export const MainApp: React.FC = () => {
         reader.onerror = () => reject(new Error('The selected file could not be read.'));
         reader.readAsDataURL(file);
       });
-      const response = await fetch('http://127.0.0.1:8001/api/industry/upload', {
+      const response = await fetch(`${SENTINEL_API_BASE}/api/industry/upload`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ filename: file.name, content_base64: contentBase64 }),
       });
@@ -133,7 +135,7 @@ export const MainApp: React.FC = () => {
   const loadIndustryBom = async (bom: IndustryBom) => {
     setIndustryError(null);
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/industry/bom/load', {
+      const response = await fetch(`${SENTINEL_API_BASE}/api/industry/bom/load`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ product_id: bom.product_id }),
       });
       const session = await response.json();
@@ -163,7 +165,7 @@ export const MainApp: React.FC = () => {
   const loadRiskReport = async (projectId: string) => {
     setActiveProjectId(projectId);
     try {
-      const res = await fetch(`http://127.0.0.1:8001/risk/analyze?project=${encodeURIComponent(projectId)}`);
+      const res = await fetch(`${SENTINEL_API_BASE}/risk/analyze?project=${encodeURIComponent(projectId)}`);
       const data = await res.json();
       if (data.dashboard) {
         applyDashboard(data.dashboard, projectId);
@@ -175,7 +177,7 @@ export const MainApp: React.FC = () => {
     void (async () => {
       await loadIndustryStatus();
       try {
-        const response = await fetch('http://127.0.0.1:8001/api/industry/boms');
+        const response = await fetch(`${SENTINEL_API_BASE}/api/industry/boms`);
         const payload = response.ok ? await response.json() : { boms: [] };
         const boms: IndustryBom[] = payload.boms || [];
         setIndustryBoms(boms);
@@ -195,7 +197,7 @@ export const MainApp: React.FC = () => {
   const handleUploadCsvText = async (file: File) => {
     try {
       const csvText = await file.text();
-      const res = await fetch(`http://127.0.0.1:8001/risk/analyze`, {
+      const res = await fetch(`${SENTINEL_API_BASE}/risk/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ filename: file.name, csv_text: csvText })
@@ -298,6 +300,14 @@ export const MainApp: React.FC = () => {
 
           {activePage === 'decision' && decisionTarget && (
             <DecisionPage productId={decisionTarget.productId} componentId={decisionTarget.componentId} onBack={() => setActivePage('detail')} />
+          )}
+
+          {activePage === 'fmea' && (
+            <FmeaMatrixPage
+              components={report?.parts || []}
+              bomName={report?.name || activeProjectId}
+              onSelectComponent={(comp) => { setSelectedComponent(comp); setActivePage('detail'); }}
+            />
           )}
 
           {activePage === 'vendor' && <VendorComparisonPage components={report?.parts || []} onNavigateToUpload={() => setActivePage('upload')} onDataUpdated={() => void loadRiskReport(activeProjectId)} />}

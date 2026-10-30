@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-10-28T16:25:06.718326Z",
+  "bom_name": "BeagleBone_Black_Industrial_Rev_C",
+  "total_bom_lines": 22,
+  "total_component_qty": 56,
+  "high_risk_lines": 6,
+  "nrnd_eol_lines": 6,
+  "single_source_lines": 4,
+  "total_inventory_exposure_usd": 141865.86,
+  "total_redesign_risk_cost_usd": 255028.37,
+  "avg_substitute_feasibility_score": 72.4,
+  "critical_rpn_parts": 6,
+  "pareto_top5_risk_pct": 82.3,
+  "methodology": {
+    "obsolescence_model": "Mastrangelo 2021 / Trabelsi 2021 exponential hazard",
+    "thermal_model": "Arrhenius (Ea per component category, MIL-HDBK-217F)",
+    "tolerance_model": "Tian & Shi 2000 RSS + worst-case",
+    "substitution_model": "Kim et al. 2012 CSP with feasibility confidence band",
+    "fmea_standard": "AIAG-VDA 2019 with mission-profile O-rating",
+    "cost_model": "Singh & Sandborn 2006 / Amigues & Ferrazzi 2026"
+  }
+}

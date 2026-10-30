@@ -8,9 +8,14 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/risk': 'http://127.0.0.1:8001',
+      '/api': 'http://127.0.0.1:8000',
+      '/risk': 'http://127.0.0.1:8000',
       '/components': 'http://127.0.0.1:8000',
+      '/industry': 'http://127.0.0.1:8000',
       '/substitutes': 'http://127.0.0.1:8000',
+      '/decision': 'http://127.0.0.1:8000',
+      '/evidence': 'http://127.0.0.1:8000',
+      '/risk-report': 'http://127.0.0.1:8000',
     }
   }
 })

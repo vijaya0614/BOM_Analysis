@@ -1,0 +1,4 @@
+# Optional semantic-search integrations. The core API uses lexical/local
+# substitution paths and does not import these packages unless enabled.
+sentence-transformers>=2.2
+pinecone>=5.0

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import type { RiskReportDashboard, BOMComponent } from '../types';
 import {
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip
@@ -8,10 +8,12 @@ import {
   Flame, TrendingUp, Activity, ArrowRight, Layers, Package, Radar,
   Power, Waves, Boxes, Zap
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Sparkline, RiskBadge, bandColorVar, StatsStat } from '../components/primitives';
 import type { RiskBand } from '../components/primitives';
-import { buildPerformanceCurve, bandHex, scoreHex, hasNumericScore, scoreDisplay } from '../utils/riskUtils';
+import { buildPerformanceCurve, bandHex, scoreHex, hasNumericScore } from '../utils/riskUtils';
+import { ProductRiskSummaryCard } from '../components/ProductRiskSummaryCard';
+import { ComponentVisualExposureMap } from '../components/ComponentVisualExposureMap';
 
 const CATEGORY_ICONS: Record<string, React.FC<{ className?: string }>> = {
   'Microcontroller': Cpu,
@@ -34,10 +36,10 @@ interface DashboardPageProps {
 // ── AI Risk Summary Panel ───────────────────────────────────────────────────
 const AISummaryPanel: React.FC<{ report: RiskReportDashboard }> = ({ report }) => {
   const parts = report.parts || [];
-  const topRisk = [...parts].filter(p => hasNumericScore(p.score)).sort((a, b) => b.score - a.score).slice(0, 3);
+  const topRisk = [...parts].filter(p => hasNumericScore(p.score)).sort((a, b) => (b.score ?? 0) - (a.score ?? 0)).slice(0, 3);
   const criticalPart = parts.find(p => p.band === 'CRITICAL');
   const insufficient = String(report.overall || '').toUpperCase() === 'INSUFFICIENT_DATA' || !hasNumericScore(report.avg_score);
-  const healthScore = insufficient ? null : Math.max(0, Math.min(100, Math.round((1 - report.avg_score) * 100)));
+  const healthScore = insufficient || report.avg_score == null ? null : Math.max(0, Math.min(100, Math.round((1 - report.avg_score) * 100)));
   const urgencyColor = healthScore == null ? '#94867F' : healthScore < 40 ? '#E76F51' : healthScore < 60 ? '#F4A261' : '#2A9D8F';
 
   const insights = insufficient
@@ -54,7 +56,7 @@ const AISummaryPanel: React.FC<{ report: RiskReportDashboard }> = ({ report }) =
           ? { icon: '🟠', text: `${report.high} parts at HIGH risk — review sourcing strategy`, color: '#F4A261' }
           : { icon: '✅', text: 'No high-risk sourcing issues', color: '#2A9D8F' },
         { icon: '📊', text: `BOM completeness ${report.completeness}% — ${report.completeness > 90 ? 'excellent data quality' : 'consider enriching part specs'}`, color: '#E9C46A' },
-        { icon: '⚡', text: `Average exposure ${(report.avg_score * 100).toFixed(0)}% across ${report.total_parts} parts`, color: '#4EA8DE' },
+        { icon: '⚡', text: report.avg_score != null ? `Average exposure ${(report.avg_score * 100).toFixed(0)}% across ${report.total_parts} parts` : `Average exposure INSUFFICIENT_DATA across ${report.total_parts} parts`, color: '#4EA8DE' },
       ];
 
   return (
@@ -161,6 +163,33 @@ const AISummaryPanel: React.FC<{ report: RiskReportDashboard }> = ({ report }) =
   );
 };
 
+const DataQualityPanel: React.FC<{ report: RiskReportDashboard }> = ({ report }) => {
+  const integrity = report.input_integrity;
+  const quality = report.source_quality;
+  if (!integrity && !quality) return null;
+  const status = integrity?.status || 'UNKNOWN';
+  const concerns = (quality?.vendor_supply_stale_parts || 0)
+    + (quality?.vendor_supply_unknown_parts || 0)
+    + (quality?.parts_with_unresolved_conflicts || 0);
+  return (
+    <section aria-label="Input data quality" className="glass-card rounded-2xl border border-amber-500/30 p-4">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="text-sm font-semibold">Input data quality</h2>
+        <span className="rounded-full bg-amber-500/15 px-2.5 py-1 text-xs font-semibold text-amber-300">{status}</span>
+      </div>
+      <p className="mt-2 text-sm text-slate-400">
+        {integrity?.selected_revision
+          ? `Selected BOM revision ${integrity.selected_revision}${integrity.revision_verified ? '' : ' (release revision unverified)'}.`
+          : integrity?.source_bom
+            ? `Input snapshot: ${integrity.source_bom}; manufacturer revision is unverified.`
+            : 'BOM revision and source freshness need review.'}
+        {quality ? ` Supplier inputs: ${quality.vendor_supply_current_parts || 0} part(s) have current offers; ${concerns} stale, unknown, or conflict flags need review.` : ''}
+      </p>
+      {integrity?.limitations?.[0] && <p className="mt-1 text-xs text-slate-500">{integrity.limitations[0]}</p>}
+    </section>
+  );
+};
+
 // ── Needs Attention row ─────────────────────────────────────────────────────
 const AttentionRow: React.FC<{
   comp: BOMComponent;
@@ -244,7 +273,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       <div className="p-8 text-center glass-panel rounded-2xl">
         <Cpu className="w-12 h-12 text-[var(--accent-gold)] mx-auto animate-bounce mb-3" />
         <h2 className="text-xl font-bold">Connecting to Risk Engine…</h2>
-        <p className="text-sm text-[var(--text-muted)] mt-1">Make sure the Python API is running on <code className="font-mono">:8001</code></p>
+        <p className="text-sm text-[var(--text-muted)] mt-1">Make sure the Python API is running on <code className="font-mono">:8000</code></p>
       </div>
     );
   }
@@ -252,14 +281,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const parts = report.parts || [];
   const filteredParts = activeFilter === 'ALL' ? parts : parts.filter(p => p.band === activeFilter);
   const insufficientOverall = String(report.overall || '').toUpperCase() === 'INSUFFICIENT_DATA' || !hasNumericScore(report.avg_score);
-  const healthScore = insufficientOverall ? null : Math.max(0, Math.min(100, Math.round((1 - report.avg_score) * 100)));
-  const healthColor = insufficientOverall ? bandHex('INSUFFICIENT_DATA') : scoreHex(report.avg_score);
-  const avgRiskLabel = insufficientOverall ? 'INSUFFICIENT_DATA' : String(Math.round(report.avg_score * 100));
+  const healthScore = insufficientOverall || report.avg_score == null ? null : Math.max(0, Math.min(100, Math.round((1 - report.avg_score) * 100)));
+  const healthColor = insufficientOverall || report.avg_score == null ? bandHex('INSUFFICIENT_DATA') : scoreHex(report.avg_score);
+  const avgRiskLabel = insufficientOverall || report.avg_score == null ? 'INSUFFICIENT_DATA' : String(Math.round(report.avg_score * 100));
 
   const trendData = [...parts]
     .filter(p => hasNumericScore(p.score))
-    .sort((a, b) => b.score - a.score)
-    .map((p, i) => ({ time: p.ref || `P${i}`, risk: parseFloat(p.score.toFixed(3)) }));
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+    .map((p, i) => ({ time: p.ref || `P${i}`, risk: parseFloat((p.score ?? 0).toFixed(3)) }));
 
   // Derive real counts from normalized parts
   const critCount = parts.filter(p => p.band === 'CRITICAL').length;
@@ -353,7 +382,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       </div>
 
       {/* ── AI Summary */}
+      <DataQualityPanel report={report} />
       <AISummaryPanel report={report} />
+
+      {/* ── PS5 Product-Level Risk Aggregation (Part 13) ── */}
+      <ProductRiskSummaryCard />
 
       {/* ── Filter pills (real counts, consistent with components page) */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
@@ -386,59 +419,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         ))}
       </div>
 
-      {/* ── Exposure Map (risk-colored same-size bubbles) */}
-      <div className="glass-card p-6 rounded-2xl relative overflow-hidden">
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <span className="text-xs font-mono text-[var(--accent-gold)] uppercase tracking-wider">Visual Exposure Map</span>
-            <h3 className="text-base font-bold text-[var(--text-primary)]">Risk-Weighted Component Bubbles</h3>
-          </div>
-          <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
-            {(['CRITICAL','HIGH','MEDIUM','LOW'] as RiskBand[]).map(b => (
-              <span key={b} className="flex items-center gap-1">
-                <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ backgroundColor: bandHex(b) }} />
-                {b === 'CRITICAL' ? 'Critical' : b === 'HIGH' ? 'At Risk' : b === 'MEDIUM' ? 'Medium' : 'Healthy'}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="min-h-64 w-full relative flex flex-wrap items-center justify-center gap-5 p-4 bg-[var(--bg-elevated)]/40 rounded-xl border border-[var(--border-subtle)]">
-          <AnimatePresence>
-            {parts.map((comp, idx) => {
-              const band = comp.band as RiskBand;
-              const tone = bandHex(band);
-              const SIZE = 80;
-              return (
-                <motion.button
-                  key={comp.pn + idx}
-                  onClick={() => onSelectComponent(comp)}
-                  animate={{ y: [0, -6, 0, 6, 0] }}
-                  transition={{ duration: 4 + (idx % 3), repeat: Infinity, ease: 'easeInOut', delay: idx * 0.4 }}
-                  whileHover={{ scale: 1.14, zIndex: 20 }}
-                  className="rounded-full flex flex-col items-center justify-center text-center cursor-pointer border-2 relative flex-shrink-0"
-                  style={{
-                    width: SIZE,
-                    height: SIZE,
-                    backgroundColor: `color-mix(in oklab, ${tone} 18%, var(--bg-card))`,
-                    borderColor: `color-mix(in oklab, ${tone} 60%, transparent)`,
-                    boxShadow: `0 3px 16px -3px color-mix(in oklab, ${tone} 45%, transparent), 0 0 0 1px color-mix(in oklab, ${tone} 20%, transparent)`,
-                  }}
-                >
-                  <div className="w-2.5 h-2.5 rounded-full mb-0.5 animate-pulse" style={{ backgroundColor: tone }} />
-                  <span className="font-mono font-bold text-[10px] text-[var(--text-primary)] leading-tight max-w-[68px] truncate px-1">
-                    {comp.pn}
-                  </span>
-                  <span className="text-[9px] text-[var(--text-muted)] font-mono">{comp.ref}</span>
-                  <span className="text-[10px] font-mono font-extrabold mt-0.5" style={{ color: tone }}>
-                    {scoreDisplay(comp.score, comp.band)}
-                  </span>
-                </motion.button>
-              );
-            })}
-          </AnimatePresence>
-        </div>
-      </div>
+      {/* ── Visual Exposure Map & Infographic Topology (Uncluttered Treemap, Bubbles & Pareto) ── */}
+      <ComponentVisualExposureMap parts={parts} onSelectComponent={onSelectComponent} />
 
       {/* ── Needs Attention list */}
       <div className="rounded-2xl overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-card)]">

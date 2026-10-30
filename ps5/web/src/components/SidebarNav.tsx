@@ -22,6 +22,7 @@ const navItems: {
   { id: 'dashboard',  label: 'Dashboard',          icon: LayoutDashboard },
   { id: 'components', label: 'Components',         icon: Layers },
   { id: 'detail',     label: 'Component Detail',   icon: FileText },
+  { id: 'fmea',       label: 'FMEA Matrix',        icon: ShieldAlert, badge: 'RPN' },
   { id: 'vendor',     label: 'Vendor Comparison',  icon: Building2, badge: 'LIVE' },
   { id: 'report',     label: 'AI Report',          icon: Download },
   { id: 'settings',   label: 'Settings',           icon: Settings },

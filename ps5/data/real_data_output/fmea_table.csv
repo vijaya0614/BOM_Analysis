@@ -1,0 +1,56 @@
+MPN,Manufacturer,Category,Failure_Mode,S,O,D,RPN_Initial,RPN_Residual,Action_Priority,Lifecycle,Composite_Risk
+NE556DR,Texas Instruments,Logic,Parameter Drift,6,9,4,216,90,HIGH,EOL,73.4
+NE556DR,Texas Instruments,Logic,Output Stage Failure,6,9,4,216,90,HIGH,EOL,73.4
+PTN78060WAH,Texas Instruments,Power,Inductor Saturation,9,10,3,270,80,HIGH,NRND,65.4
+PTN78060WAH,Texas Instruments,Power,Overcurrent,9,10,3,270,80,HIGH,NRND,65.4
+PTN78060WAH,Texas Instruments,Power,Thermal Runaway,9,10,3,270,80,HIGH,NRND,65.4
+ATMEGA328P-AU,Microchip (Atmel),Compute,Flash Wear-out,7,9,4,252,108,HIGH,NRND,64.2
+ATMEGA328P-AU,Microchip (Atmel),Compute,ESD,7,9,4,252,108,HIGH,NRND,64.2
+ATMEGA328P-AU,Microchip (Atmel),Compute,Clock Drift,7,9,4,252,108,HIGH,NRND,64.2
+SMSC9514-JZX,Microchip Technology,Interface,ESD Latch-up,8,9,4,288,126,HIGH,NRND,63.9
+SMSC9514-JZX,Microchip Technology,Interface,Signal Integrity Failure,8,9,4,288,126,HIGH,NRND,63.9
+SMSC9514-JZX,Microchip Technology,Interface,PHY Timeout,8,9,4,288,126,HIGH,NRND,63.9
+MT41K256M16TW-107:P,Micron Technology,Memory,Retention Loss,8,8,4,256,112,HIGH,NRND,58.3
+MT41K256M16TW-107:P,Micron Technology,Memory,Bit Flip,8,8,4,256,112,HIGH,NRND,58.3
+MT41K256M16TW-107:P,Micron Technology,Memory,Thermal Derating,8,8,4,256,112,HIGH,NRND,58.3
+LM1117IMPX-3.3/NOPB,Texas Instruments,Power,Thermal Shutdown,8,8,4,256,112,HIGH,NRND,57.1
+LM1117IMPX-3.3/NOPB,Texas Instruments,Power,Dropout Failure,8,8,4,256,112,HIGH,NRND,57.1
+TLV70233DBVR,Texas Instruments,Power,Dropout Failure,7,6,4,168,72,MEDIUM,ACTIVE,33.0
+TLV70233DBVR,Texas Instruments,Power,Thermal Shutdown,7,6,4,168,72,MEDIUM,ACTIVE,33.0
+AM3358BZCZ100,Texas Instruments,Compute,Electromigration,9,5,3,135,40,MEDIUM,ACTIVE,32.7
+AM3358BZCZ100,Texas Instruments,Compute,TDDB,9,5,3,135,40,MEDIUM,ACTIVE,32.7
+AM3358BZCZ100,Texas Instruments,Compute,Hot Carrier Injection,9,5,3,135,40,MEDIUM,ACTIVE,32.7
+IS61WV102416BLL-10TLI,Integrated Silicon Solution (ISSI),Memory,Data Retention Loss,6,4,5,120,60,MEDIUM,ACTIVE,29.6
+IS61WV102416BLL-10TLI,Integrated Silicon Solution (ISSI),Memory,Address Decoder Fault,6,4,5,120,60,MEDIUM,ACTIVE,29.6
+TPS65217CRSLR,Texas Instruments,Power,Thermal Runaway,9,4,4,144,64,MEDIUM,ACTIVE,28.2
+TPS65217CRSLR,Texas Instruments,Power,Overcurrent,9,4,4,144,64,MEDIUM,ACTIVE,28.2
+TPS65217CRSLR,Texas Instruments,Power,Gate Oxide Breakdown,9,4,4,144,64,MEDIUM,ACTIVE,28.2
+GRM188R61E106KA73D,Murata,Passive,Capacitance Drift (X5R DC Bias),5,3,6,90,48,LOW,ACTIVE,28.2
+GRM188R61E106KA73D,Murata,Passive,Dielectric Breakdown,5,3,6,90,48,LOW,ACTIVE,28.2
+UVZ1C101MPD1TD,Nichicon,Passive,Electrolyte Dry-out,6,3,4,72,30,LOW,ACTIVE,27.8
+UVZ1C101MPD1TD,Nichicon,Passive,ESR Increase,6,3,4,72,30,LOW,ACTIVE,27.8
+UVZ1C101MPD1TD,Nichicon,Passive,Vent Rupture,6,3,4,72,30,LOW,ACTIVE,27.8
+TMP102AIDRLR,Texas Instruments,Sensor,Calibration Drift,4,4,5,80,36,LOW,ACTIVE,27.0
+TMP102AIDRLR,Texas Instruments,Sensor,I2C Timeout,4,4,5,80,36,LOW,ACTIVE,27.0
+GRM155R71C104KA88D,Murata,Passive,Dielectric Breakdown,4,2,6,48,24,LOW,ACTIVE,26.6
+GRM155R71C104KA88D,Murata,Passive,Capacitance Drift,4,2,6,48,24,LOW,ACTIVE,26.6
+ABLS-24.000MHZ-L4Q-T,Abracon,Timing,Frequency Drift,7,4,3,84,24,LOW,ACTIVE,26.3
+ABLS-24.000MHZ-L4Q-T,Abracon,Timing,Aging,7,4,3,84,24,LOW,ACTIVE,26.3
+ABLS-24.000MHZ-L4Q-T,Abracon,Timing,Mechanical Shock,7,4,3,84,24,LOW,ACTIVE,26.3
+SG-8002CA-32.768KHZ-TJHPA,Epson,Timing,Frequency Drift,5,4,4,80,32,LOW,ACTIVE,25.5
+SG-8002CA-32.768KHZ-TJHPA,Epson,Timing,Aging,5,4,4,80,32,LOW,ACTIVE,25.5
+SN65HVDA100QDRQ1,Texas Instruments,Interface,Bus Fault,7,4,4,112,48,MEDIUM,ACTIVE,23.7
+SN65HVDA100QDRQ1,Texas Instruments,Interface,EMI Susceptibility,7,4,4,112,48,MEDIUM,ACTIVE,23.7
+SN65HVDA100QDRQ1,Texas Instruments,Interface,ESD Damage,7,4,4,112,48,MEDIUM,ACTIVE,23.7
+SN74AHC1G08DCKR,Texas Instruments,Logic,ESD Latch-up,4,3,5,60,27,LOW,ACTIVE,21.0
+SN74AHC1G08DCKR,Texas Instruments,Logic,Input Overvoltage,4,3,5,60,27,LOW,ACTIVE,21.0
+SRR1260-100Y,Bourns,Passive,Saturation,6,2,5,60,30,LOW,ACTIVE,15.9
+SRR1260-100Y,Bourns,Passive,Winding Open,6,2,5,60,30,LOW,ACTIVE,15.9
+SRR1260-100Y,Bourns,Passive,Core Loss,6,2,5,60,30,LOW,ACTIVE,15.9
+10118241-001RLF,Amphenol FCI,Connector,Contact Wear,5,2,6,60,32,LOW,ACTIVE,15.1
+10118241-001RLF,Amphenol FCI,Connector,Solder Fatigue,5,2,6,60,32,LOW,ACTIVE,15.1
+10118241-001RLF,Amphenol FCI,Connector,Mechanical Stress,5,2,6,60,32,LOW,ACTIVE,15.1
+RC0402FR-0710KL,Yageo,Passive,Open Circuit (Crack),3,2,7,42,20,LOW,ACTIVE,12.7
+RC0402FR-0710KL,Yageo,Passive,Resistance Drift,3,2,7,42,20,LOW,ACTIVE,12.7
+CRCW040249R9FKED,Vishay,Passive,Open Circuit (Crack),3,2,7,42,20,LOW,ACTIVE,12.4
+CRCW040249R9FKED,Vishay,Passive,Resistance Drift,3,2,7,42,20,LOW,ACTIVE,12.4

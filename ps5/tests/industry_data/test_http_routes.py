@@ -83,6 +83,8 @@ def test_uploaded_industry_file_is_written_only_to_controlled_inbox(monkeypatch,
 
 
 def test_industry_components_returns_normalized_models_only(monkeypatch):
+    from src.industry_data import catalog_adapter
+
     rows = {
         "bom_lines.csv": [{"product_id": "custom", "component_model_id": "mdl_one"}],
         "component_models.csv": [
@@ -91,17 +93,22 @@ def test_industry_components_returns_normalized_models_only(monkeypatch):
         ],
     }
     monkeypatch.setattr(http_routes, "read_csv", lambda name: rows.get(name, []))
+    monkeypatch.setattr(catalog_adapter, "lifecycle_quality_for_mpn", lambda _mpn: "UNKNOWN")
+    monkeypatch.setattr(catalog_adapter, "lifecycle_label_for_mpn", lambda _mpn: None)
 
     payload = http_routes.handle_get("/api/industry/components", {"product_id": ["custom"]})
 
     assert payload["total"] == 1
-    assert payload["components"] == [{"mpn": "TPS65217C", "manufacturer": "Texas Instruments", "description": "PMIC", "package": "VQFN", "lifecycle_status": "UNKNOWN"}]
+    assert payload["components"] == [{
+        "mpn": "TPS65217C", "manufacturer": "Texas Instruments", "description": "PMIC",
+        "package": "VQFN", "lifecycle_status": "UNKNOWN", "lifecycle_evidence_status": "UNKNOWN",
+    }]
 
 
 def test_industry_boms_returns_real_counts_and_load_session(monkeypatch):
     rows = {
         "products.csv": [{"product_id": "beaglebone-black", "product_name": "BeagleBone Black", "manufacturer": "BeagleBoard.org"}],
-        "bom_lines.csv": [{"product_id": "beaglebone-black", "component_model_id": "mdl_one"}],
+        "bom_lines.csv": [{"product_id": "beaglebone-black", "component_model_id": "mdl_one", "original_mpn": "TPS65217C"}],
         "documents.csv": [{"product_id": "beaglebone-black", "filename": "bbb-bom.csv"}],
         "vendor_supply_records.csv": [{"component_model_id": "mdl_one"}],
     }

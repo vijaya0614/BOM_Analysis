@@ -38,6 +38,7 @@ from src.industry_candidate_adapter import resolve_industry_candidate, resolve_i
 from src.providers.settings import ROOT
 from src.substitute_engine import (
     DROP_IN,
+    INSUFFICIENT_EVIDENCE_CLASSIFICATION,
     INCOMPATIBLE_CLASSIFICATION,
     REQUIRES_REDESIGN,
     evaluate_candidate,
@@ -344,6 +345,8 @@ def _overall_status(
     if classification == INCOMPATIBLE_CLASSIFICATION or vendor["status"] == VENDOR_FAIL or any(_gate_is_hard_failure(gate) for gate in engineering_gates):
         return "FAIL"
     if (
+        classification == INSUFFICIENT_EVIDENCE_CLASSIFICATION
+        or
         vendor["status"] == INSUFFICIENT_DATA
         or any(gate["status"] == ENGINEERING_INSUFFICIENT_DATA for gate in engineering_gates)
         or reliability.get("outcome") == INSUFFICIENT_DATA
@@ -376,7 +379,7 @@ def _warning_count(result: Dict[str, Any]) -> int:
 
 def _rank_key(result: Dict[str, Any]) -> tuple:
     vendor_order = {FEASIBLE: 0, WARNING: 1, INSUFFICIENT_DATA: 2}
-    classification_order = {DROP_IN: 0, REQUIRES_REDESIGN: 1}
+    classification_order = {DROP_IN: 0, REQUIRES_REDESIGN: 1, INSUFFICIENT_EVIDENCE_CLASSIFICATION: 2}
     return (
         _warning_count(result),
         vendor_order.get(result["vendor_status"], 3),
@@ -411,6 +414,7 @@ def _evaluate_one(product_id: str, target_id: str, original: Any, candidate: Any
         "candidate_id": candidate.component_id,
         "candidate_part_number": candidate.part_number,
         "classification": classification,
+        "drop_in_evidence": generated.get("drop_in_evidence", {"status": INSUFFICIENT_DATA, "unknown_parameters": ["package", "pinout", "applicable_electrical_rating"]}),
         "candidate_generation": generated,
         "vendor_status": vendor["status"],
         "vendor_gate": vendor,
@@ -430,7 +434,12 @@ def _evaluate_one(product_id: str, target_id: str, original: Any, candidate: Any
     result["reason_codes"] = _reason_codes(classification, vendor, gates, reliability, downstream)
     result["reasons"] = result["reason_codes"]
     result["limitations"] = _limitations(gates, reliability, downstream)
-    result["confidence"] = _decision_confidence(gates, reliability, downstream)
+    result["limitations"] = _unique(result["limitations"] + result["drop_in_evidence"].get("limitations", []))
+    result["confidence"] = (
+        INSUFFICIENT_DATA
+        if classification == INSUFFICIENT_EVIDENCE_CLASSIFICATION
+        else _decision_confidence(gates, reliability, downstream)
+    )
     result["hard_gate_failures"] = _unique(
         (["CLASSIFICATION_INCOMPATIBLE"] if classification == INCOMPATIBLE_CLASSIFICATION else [])
         + (["VENDOR_FAIL"] if vendor["status"] == VENDOR_FAIL else [])

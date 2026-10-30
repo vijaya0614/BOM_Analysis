@@ -970,6 +970,8 @@ def final_engineering_recommendation(original_identifier: str, candidate_identif
     )
     if classification == "INCOMPATIBLE":
         result = "AVOID / INCOMPATIBLE"
+    elif classification == "INSUFFICIENT_EVIDENCE":
+        result = "INSUFFICIENT DATA"
     elif outlook["outcome"] == INSUFFICIENT_DATA:
         result = "INSUFFICIENT DATA"
     elif classification == "REQUIRES_REDESIGN":

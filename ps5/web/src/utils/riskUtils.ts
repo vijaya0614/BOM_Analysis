@@ -1,4 +1,4 @@
-﻿import type { BOMComponent } from '../types';
+import type { BOMComponent } from '../types';
 import type { RiskBand } from '../components/primitives';
 
 export function hasNumericScore(score: unknown): score is number {
@@ -34,12 +34,12 @@ export function buildPerformanceCurve(comp: BOMComponent): number[] {
   }
   const lead = comp.lead_time_weeks != null
     ? Math.min(100, (comp.lead_time_weeks / 26) * 100)
-    : Math.round(comp.exp * 100);
+    : Math.round((comp.exp ?? 0.5) * 100);
   const stock = comp.stock_level != null
     ? Math.max(0, 100 - Math.min(100, (comp.stock_level / 1000) * 100))
-    : Math.round(comp.score * 70);
+    : Math.round((comp.score ?? 0.5) * 70);
   const single = comp.reasons.some(r => /single/i.test(r)) ? 85 : 22;
-  const score = Math.round(comp.score * 100);
+  const score = Math.round((comp.score ?? 0.5) * 100);
   return [
     Math.round(life * 0.5),
     Math.round(single * 0.55),

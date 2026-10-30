@@ -84,7 +84,8 @@ Substitute responses contain:
 - `confidence_score`: 0-100 score for evidence completeness, separate from compatibility.
 - `supply_chain_score`: 0-100 health score derived through Person 1's risk engine.
 - `ranking_score`: compatibility plus supply-chain ranking.
-- `classification`: one of `DROP_IN_CANDIDATE`, `REQUIRES_REDESIGN`, `INCOMPATIBLE`.
+- `classification`: one of `DROP_IN_CANDIDATE`, `REQUIRES_REDESIGN`, `INCOMPATIBLE`, `INSUFFICIENT_EVIDENCE`.
+- `drop_in_evidence`: source references and per-side status for package, pinout, and applicable ratings.
 - `checks`: per-parameter match/mismatch/unknown results with impact and weight.
 - `evidence_summary`: matched/mismatched/unknown counts and parameter lists.
 - `insufficient_evidence`: `true` when important specs were missing.
@@ -93,6 +94,50 @@ Substitute responses contain:
 - `advisory_warning`: validation reminder for engineers.
 - `llm_used`: currently `false`.
 - `vector_search_used`: currently `false`.
+
+## Drop-in Evidence Gate
+
+Matching catalog values alone do not establish a drop-in. Both the original and candidate need exact-part source references for package, pinout, and each applicable electrical rating. Each reference must include a source identifier or title, a URL or document/page locator, `HIGH` or `MEDIUM` confidence, and a summary that cites the compared value. Demo fixture data and missing values remain `INSUFFICIENT_DATA`; recommendations expose them in `drop_in_evidence.unknown_parameters` and are not classified as drop-ins.
+
+For `POST /api/substitutes/evaluate-gates`, attach an `evidence` object separately to `original_spec` and each candidate. Its shape is:
+
+```json
+{
+  "evidence": {
+    "package": {
+      "source_id": "SRC-PART-PACKAGE",
+      "source_title": "Manufacturer package drawing",
+      "source_url": "https://manufacturer.example/package.pdf",
+      "source_page": "4",
+      "confidence": "HIGH",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "evidence_summary": "SOIC-8 package"
+    },
+    "pinout": {
+      "source_id": "SRC-PART-PINOUT",
+      "source_title": "Manufacturer datasheet",
+      "source_url": "https://manufacturer.example/datasheet.pdf",
+      "source_page": "5",
+      "confidence": "HIGH",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "evidence_summary": "Pin 1 VIN; pin 2 GND"
+    },
+    "ratings": {
+      "voltage_rating": {
+        "source_id": "SRC-PART-VOLTAGE",
+        "source_title": "Manufacturer datasheet",
+        "source_url": "https://manufacturer.example/datasheet.pdf",
+        "source_page": "6",
+        "confidence": "HIGH",
+        "source_type": "MANUFACTURER_DATASHEET",
+        "evidence_summary": "30 V maximum input rating"
+      }
+    }
+  }
+}
+```
+
+The gate checks that a reference is present and cites the value supplied to the comparison; it does not fetch or independently authenticate external documents. Review the linked source before engineering approval.
 
 ## UI Integration
 
@@ -123,7 +168,7 @@ fabricating recommendations.
 
 For `U1`, demo candidates include:
 
-- `REG_DROPIN_5V_3A`: drop-in candidate.
+- `REG_DROPIN_5V_3A`: matching demo specifications, but `INSUFFICIENT_EVIDENCE` until exact-part package, pinout, and rating sources are supplied.
 - `REG_REDESIGN_5V_3A`: electrically compatible but package/pinout redesign.
 - `REG_BAD_3V3_1A`: incompatible voltage/current.
 - `REG_EOL_COMPAT`: technically compatible but bad supply-chain health.

@@ -5,6 +5,7 @@ from src.risk_report_bridge import substitutes_for_risk_report
 from src.substitute_api import get_component, search_substitutes
 from src.substitute_engine import (
     DROP_IN,
+    INSUFFICIENT_EVIDENCE_CLASSIFICATION,
     INCOMPATIBLE_CLASSIFICATION,
     REQUIRES_REDESIGN,
     compare_components,
@@ -13,13 +14,14 @@ from src.substitute_engine import (
 )
 
 
-def test_regulator_drop_in_classification():
+def test_regulator_values_without_traceable_sources_are_not_called_drop_in():
     result = compare_components("U1", "REG_DROPIN_5V_3A")
     candidate = result["candidate"]
-    assert candidate["classification"] == DROP_IN
+    assert candidate["classification"] == INSUFFICIENT_EVIDENCE_CLASSIFICATION
     assert candidate["compatibility_score"] >= 95
-    assert candidate["confidence_score"] == 100
-    assert candidate["insufficient_evidence"] is False
+    assert candidate["confidence_score"] < 100
+    assert candidate["insufficient_evidence"] is True
+    assert candidate["drop_in_evidence"]["status"] == "INSUFFICIENT_DATA"
     assert "output_voltage_v" in candidate["matched_parameters"]
     assert not candidate["mismatched_parameters"]
 
@@ -48,7 +50,7 @@ def test_resistor_tolerance_and_package_checks():
     drop_result = evaluate_candidate(original, drop_in)
     redesign_result = evaluate_candidate(original, redesign)
 
-    assert drop_result["classification"] == DROP_IN
+    assert drop_result["classification"] == INSUFFICIENT_EVIDENCE_CLASSIFICATION
     assert "tolerance_pct" in drop_result["matched_parameters"]
     assert redesign_result["classification"] == REQUIRES_REDESIGN
     assert "package" in redesign_result["mismatched_parameters"]
@@ -79,7 +81,8 @@ def test_incompatible_candidates_can_be_filtered_out():
 def test_incompatible_candidate_is_never_the_leading_recommendation():
     response = recommend_substitutes("U1")
     assert response["candidates"][0]["classification"] != INCOMPATIBLE_CLASSIFICATION
-    assert response["recommendation_summary"]["recommended"] == response["candidates"][0]["part_number"]
+    assert response["recommendation_summary"]["recommended"] is None
+    assert response["recommendation_summary"]["unverified_candidates"]
 
 
 def test_insufficient_data_requires_review_not_drop_in():
@@ -138,7 +141,8 @@ def test_substitute_ranking_explanation_uses_existing_scores():
     assert top["ranking_reason"]
     assert top["why_ranked_here"]
     assert top["why_not_ranked_higher"] == "Already highest-ranked candidate."
-    assert response["recommendation_summary"]["recommended"] == top["part_number"]
+    assert response["recommendation_summary"]["recommended"] is None
+    assert "traceable package, pinout, and rating evidence" in response["recommendation_summary"]["why_recommended"]
 
 
 def test_lower_rank_explains_why_not_ranked_higher():
