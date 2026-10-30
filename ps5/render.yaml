@@ -3,8 +3,8 @@ services:
     name: ps5-bom-demo
     runtime: docker
     plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    dockerfilePath: ./ps5/Dockerfile
+    dockerContext: ./ps5
     healthCheckPath: /health
     envVars:
       - key: ENVIRONMENT
